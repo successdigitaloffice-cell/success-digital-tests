@@ -330,7 +330,11 @@
         </div>
     </footer>
 
-    <!-- Data Banks -->
+    <!-- Data Banks: 80 Comprehensive Tests (20 Questions Each = 1,600 Total) -->
+    <script src="data/mahatet1.js"></script>
+    <script src="data/mahatet2.js"></script>
+    <script src="data/ctet1.js"></script>
+    <script src="data/ctet2.js"></script>
     <script src="data/tests_data.js"></script>
 
     <!-- Test Engine Script -->
@@ -388,8 +392,9 @@
 
         // Load Quiz Questions
         let quizData = [];
-        if (typeof allTestsBank !== 'undefined' && allTestsBank[categoryKey] && allTestsBank[categoryKey][testId]) {
-            quizData = allTestsBank[categoryKey][testId];
+        const bank = (typeof allTestsBank !== 'undefined' && allTestsBank) ? allTestsBank : (window.allTestsBank || null);
+        if (bank && bank[categoryKey] && bank[categoryKey][testId]) {
+            quizData = bank[categoryKey][testId];
         } else {
             // Fallback default test questions if database has a gap
             quizData = (typeof defaultQuizQuestions !== 'undefined') ? defaultQuizQuestions : [];
