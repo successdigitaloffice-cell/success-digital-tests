@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Digital - Maha TET Paper 2 | Test 01</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts (Mukta for Marathi) -->
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Mukta', sans-serif;
+            background: #f0fdfa;
+            background-image: radial-gradient(#ccfbf1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .fade-in { animation: fadeIn 0.4s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .slide-up { animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        @keyframes slideUp { 
+            from { transform: translateY(30px); opacity: 0; } 
+            to { transform: translateY(0); opacity: 1; } 
+        }
+
+        .bounce-in { animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.26, 1.55); }
+        @keyframes bounceIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .pulse-btn { animation: pulseBtn 2s infinite; }
+        @keyframes pulseBtn {
+            0% { box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(13, 148, 136, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(13, 148, 136, 0); }
+        }
+
+        .option-label {
+            transition: all 0.25s ease;
+            transform: translateZ(0);
+        }
+        .option-label:hover:not(.disabled) {
+            transform: scale(1.01);
+            border-color: #0d9488;
+            background-color: #f0fdfa;
+        }
+        
+        .correct-answer-show { 
+            background: linear-gradient(to right, #dcfce7, #ecfdf5) !important; 
+            border-color: #22c55e !important; 
+            box-shadow: 0 4px 6px -1px rgba(34, 197, 94, 0.2);
+        }
+        .wrong-answer-show { 
+            background: linear-gradient(to right, #fee2e2, #fef2f2) !important; 
+            border-color: #ef4444 !important; 
+        }
+        
+        .disabled { pointer-events: none; }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            z-index: 1000;
+            opacity: 0;
+        }
+
+        .mahatet2-header {
+            background: linear-gradient(135deg, #0f766e 0%, #0d9488 50%, #115e59 100%);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased min-h-screen flex flex-col selection:bg-teal-200 selection:text-teal-900">
+
+    <header class="mahatet2-header text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <a href="index.html" class="bg-white p-1.5 rounded-lg shadow-sm hover:scale-105 transition">
+                    <i class="fas fa-graduation-cap text-2xl text-teal-700"></i>
+                </a>
+                <div>
+                    <div class="flex items-center gap-2">
+                        <h1 class="text-lg md:text-xl font-bold tracking-wide leading-tight">SUCCESS DIGITAL</h1>
+                        <span class="bg-teal-950/60 text-teal-200 text-[10px] font-black px-2 py-0.5 rounded uppercase">Maha TET 2</span>
+                    </div>
+                    <p class="text-[10px] md:text-xs text-teal-100 font-medium">महाराष्ट्र TET Paper 2 (उच्च प्राथमिक - इयत्ता 6 ते 8)</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-3">
+                <div id="timer-display" class="hidden bg-black/20 backdrop-blur-sm px-3 md:px-4 py-1.5 rounded-full font-bold flex items-center gap-2 border border-white/10">
+                    <i class="far fa-clock text-yellow-300 animate-pulse"></i> <span id="time" class="tracking-wider">20:00</span>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.ezgcka.oujtga&pcampaignid=web_share" target="_blank" class="hidden md:flex bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-300 hover:to-amber-400 text-slate-900 text-xs font-bold px-4 py-2 rounded-full shadow-md items-center gap-2 transition transform hover:scale-105">
+                    <i class="fab fa-google-play"></i> Get App
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-6 max-w-3xl flex flex-col justify-center relative">
+        
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-10 text-center slide-up border border-teal-100">
+            <div class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-teal-100 to-cyan-100 text-teal-800 px-5 py-1.5 rounded-full text-sm font-bold mb-6 shadow-sm border border-teal-200">
+                <i class="fas fa-certificate text-teal-600"></i> MAHA TET PAPER 2 SERIES 2026 <i class="fas fa-certificate text-teal-600"></i>
+            </div>
+            
+            <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-800 to-cyan-900 mb-3">
+                Maha TET Paper 2 | Test 01
+            </h2>
+            <p class="text-gray-600 mb-8 font-medium text-lg">
+                उच्च प्राथमिक शिक्षक भरतीसाठी <span class="text-teal-700 font-bold">Smart Analysis</span> सह दर्जेदार तयारी!
+            </p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 text-sm">
+                <div class="bg-teal-50 p-4 rounded-2xl border border-teal-100 shadow-sm hover:shadow-md transition">
+                    <i class="fas fa-list-ol text-teal-600 text-2xl mb-2"></i>
+                    <p class="font-bold text-gray-700">20 प्रश्न</p>
+                </div>
+                <div class="bg-cyan-50 p-4 rounded-2xl border border-cyan-100 shadow-sm hover:shadow-md transition">
+                    <i class="fas fa-stopwatch text-cyan-600 text-2xl mb-2"></i>
+                    <p class="font-bold text-gray-700">20 मिनिटे</p>
+                </div>
+                <div class="bg-emerald-50 p-4 rounded-2xl border border-emerald-100 shadow-sm hover:shadow-md transition">
+                    <i class="fas fa-bullseye text-emerald-600 text-2xl mb-2"></i>
+                    <p class="font-bold text-gray-700">20 गुण</p>
+                </div>
+                <div class="bg-blue-50 p-4 rounded-2xl border border-blue-100 shadow-sm hover:shadow-md transition">
+                    <i class="fas fa-school text-blue-600 text-2xl mb-2"></i>
+                    <p class="font-bold text-gray-700">इयत्ता 6 ते 8</p>
+                </div>
+            </div>
+
+            <div class="text-left bg-gradient-to-br from-teal-50/50 to-cyan-50/50 p-5 rounded-2xl mb-8 border border-teal-200/60 shadow-inner">
+                <h3 class="font-bold text-gray-800 mb-3 text-lg flex items-center gap-2">
+                    <i class="fas fa-layer-group text-teal-600"></i> समाविष्ट विषय (Maha TET Paper 2 Syllabus):
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-white px-3 py-1 rounded-lg text-sm font-semibold text-gray-700 border border-teal-200 shadow-sm">बालमानसशास्त्र व अध्यापनशास्त्र (CDP)</span>
+                    <span class="bg-white px-3 py-1 rounded-lg text-sm font-semibold text-gray-700 border border-teal-200 shadow-sm">मराठी व्याकरण व भाषा</span>
+                    <span class="bg-white px-3 py-1 rounded-lg text-sm font-semibold text-gray-700 border border-teal-200 shadow-sm">English Language & Grammar</span>
+                    <span class="bg-white px-3 py-1 rounded-lg text-sm font-semibold text-gray-700 border border-teal-200 shadow-sm">गणित व विज्ञान (Maths & Science)</span>
+                    <span class="bg-white px-3 py-1 rounded-lg text-sm font-semibold text-gray-700 border border-teal-200 shadow-sm">सामाजिक शास्त्रे (इतिहास, भूगोल, राज्यशास्त्र)</span>
+                </div>
+            </div>
+
+            <button id="start-btn" class="w-full bg-gradient-to-r from-teal-600 to-cyan-700 hover:from-teal-700 hover:to-cyan-800 text-white font-bold py-4 px-8 rounded-2xl shadow-[0_10px_20px_rgba(13,148,136,0.3)] transform transition hover:-translate-y-1 active:translate-y-1 active:scale-95 text-xl flex justify-center items-center gap-3 pulse-btn">
+                Maha TET 2 टेस्ट सुरू करा <i class="fas fa-play text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="quiz-container" class="hidden">
+            
+            <!-- Progress Bar -->
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 mb-4 slide-up">
+                <div class="flex justify-between text-sm font-bold text-gray-600 mb-2">
+                    <span id="question-counter" class="bg-teal-50 text-teal-800 px-3 py-1 rounded-lg border border-teal-200">प्रश्न 1 / 20</span>
+                    <span id="progress-percent" class="text-teal-600 font-extrabold">5%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden shadow-inner">
+                    <div id="progress-bar" class="bg-gradient-to-r from-teal-500 to-cyan-600 h-full rounded-full transition-all duration-500 relative" style="width: 5%">
+                        <div class="absolute inset-0 bg-white/20 w-full h-full animate-[pulse_2s_ease-in-out_infinite]"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-5 md:p-8 mb-4 border border-gray-100 relative slide-up" id="question-card">
+                <div id="question-tags" class="flex flex-wrap gap-2 mb-4">
+                    <span id="subject-tag" class="bg-teal-100 text-teal-800 text-xs font-extrabold px-3 py-1 rounded-lg shadow-sm border border-teal-200 uppercase tracking-wider">CDP</span>
+                    <span id="type-tag" class="hidden bg-yellow-100 text-yellow-800 text-xs font-extrabold px-3 py-1 rounded-lg shadow-sm border border-yellow-200"><i class="fas fa-star text-[10px]"></i> TET PYQ</span>
+                </div>
+
+                <h3 id="question-text" class="text-xl md:text-2xl font-bold text-gray-800 mb-6 leading-relaxed">
+                    <!-- Question appears here -->
+                </h3>
+
+                <div id="options-container" class="space-y-3">
+                    <!-- Options generated via JS -->
+                </div>
+                
+                <!-- Explanation Area -->
+                <div id="explanation-box" class="hidden mt-6 overflow-hidden rounded-2xl transition-all">
+                    <div class="p-5 bg-gradient-to-r from-teal-50 to-cyan-50 border-l-4 border-teal-600 rounded-t-2xl">
+                        <div class="flex items-start gap-3">
+                            <div class="bg-teal-100 p-2 rounded-full text-teal-600 mt-1">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <p class="font-extrabold text-teal-950 mb-1 text-sm uppercase tracking-wide">सविस्तर स्पष्टीकरण (Explanation)</p>
+                                <p id="explanation-text" class="text-gray-700 font-medium text-sm md:text-base leading-relaxed"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-teal-950 via-cyan-950 to-slate-900 p-4 sm:p-5 rounded-b-2xl shadow-inner relative overflow-hidden group cursor-pointer" onclick="window.open('https://play.google.com/store/apps/details?id=com.ezgcka.oujtga&pcampaignid=web_share', '_blank')">
+                        <i class="fas fa-graduation-cap absolute -right-4 -bottom-4 text-7xl text-white opacity-10 group-hover:scale-110 transition-transform duration-500"></i>
+                        
+                        <div class="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div class="text-left">
+                                <h4 class="text-white font-bold text-sm md:text-base mb-1 flex items-center gap-2">
+                                    <span class="bg-amber-400 text-teal-950 text-[10px] px-2 py-0.5 rounded uppercase font-black tracking-widest">TET Pro</span>
+                                    Success Digital App 🔥
+                                </h4>
+                                <p class="text-teal-100 text-xs md:text-sm font-medium" id="dynamic-promo-text">
+                                    Maha TET Paper 2 च्या सर्व विषयांच्या सराव चाचण्या आणि State Rankings साठी App डाऊनलोड करा!
+                                </p>
+                            </div>
+                            <button class="shrink-0 bg-white text-teal-700 hover:bg-teal-50 font-bold py-2 px-4 rounded-xl text-sm shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition flex items-center gap-2 whitespace-nowrap">
+                                Get App <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex justify-between items-center bg-white p-4 rounded-2xl shadow-sm border border-gray-100 slide-up">
+                <button id="prev-btn" class="hidden px-5 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold rounded-xl transition flex items-center gap-2">
+                    <i class="fas fa-arrow-left"></i> मागील
+                </button>
+                
+                <button id="next-btn" class="ml-auto px-8 py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl shadow-[0_4px_14px_0_rgba(13,148,136,0.39)] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
+                    पुढील <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="result-screen" class="hidden bg-white rounded-3xl shadow-[0_10px_40px_rgb(0,0,0,0.1)] p-6 md:p-10 text-center relative overflow-hidden">
+            <div class="mb-6 bounce-in">
+                <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-teal-100 text-teal-600 mb-4 shadow-inner">
+                    <i class="fas fa-trophy text-5xl"></i>
+                </div>
+                <h2 class="text-3xl font-black text-gray-800 mb-2">MAHA TET 2 TEST COMPLETED! 🎉</h2>
+                <p class="text-gray-500 font-semibold text-lg">तुमचा Maha TET Paper 2 स्कोअर खालीलप्रमाणे आहे:</p>
+            </div>
+
+            <!-- Score Cards -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-8 slide-up" style="animation-delay: 0.1s;">
+                <div class="bg-gradient-to-br from-teal-50 to-teal-100 p-5 rounded-2xl border border-teal-200 shadow-sm relative overflow-hidden">
+                    <i class="fas fa-check-circle absolute -right-2 -bottom-2 text-5xl text-teal-200/50"></i>
+                    <p class="text-sm font-bold text-teal-800 mb-1">Total Score</p>
+                    <p class="text-4xl font-black text-teal-600"><span id="final-score">0</span><span class="text-xl text-teal-400">/20</span></p>
+                </div>
+                <div class="bg-gradient-to-br from-emerald-50 to-emerald-100 p-5 rounded-2xl border border-emerald-200 shadow-sm relative overflow-hidden">
+                    <i class="fas fa-bullseye absolute -right-2 -bottom-2 text-5xl text-emerald-200/50"></i>
+                    <p class="text-sm font-bold text-emerald-800 mb-1">Accuracy</p>
+                    <p class="text-4xl font-black text-emerald-600"><span id="final-accuracy">0</span>%</p>
+                </div>
+                <div class="bg-gradient-to-br from-cyan-50 to-cyan-100 p-5 rounded-2xl border border-cyan-200 shadow-sm relative overflow-hidden">
+                    <i class="fas fa-stopwatch absolute -right-2 -bottom-2 text-5xl text-cyan-200/50"></i>
+                    <p class="text-sm font-bold text-cyan-800 mb-1">Time Taken</p>
+                    <p class="text-4xl font-black text-cyan-600"><span id="final-time">0</span><span class="text-xl text-cyan-400">m</span></p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-5 rounded-2xl border border-purple-200 shadow-sm relative overflow-hidden">
+                    <i class="fas fa-award absolute -right-2 -bottom-2 text-5xl text-purple-200/50"></i>
+                    <p class="text-sm font-bold text-purple-800 mb-1">Estimated Rank</p>
+                    <p class="text-4xl font-black text-purple-600">#<span id="final-rank">--</span></p>
+                </div>
+            </div>
+
+            <!-- Motivation Analysis -->
+            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 mb-8 text-left slide-up" style="animation-delay: 0.2s;">
+                <h3 class="font-black text-gray-800 mb-3 text-lg flex items-center gap-2">
+                    <i class="fas fa-chart-line text-teal-600"></i> Performance Analysis:
+                </h3>
+                <div class="p-4 bg-teal-50 border-l-4 border-teal-600 rounded-r-xl">
+                    <p class="font-bold text-teal-950" id="motivational-message">"Maha TET Paper 2 मध्ये विषयांचे सखोल ज्ञान आणि अचूक सराव हीच यशाची हमी आहे!"</p>
+                </div>
+            </div>
+
+            <!-- App Promotion CTA -->
+            <div class="bg-gradient-to-br from-teal-950 via-cyan-950 to-slate-900 rounded-3xl p-6 md:p-8 shadow-2xl relative overflow-hidden text-left slide-up" style="animation-delay: 0.3s;">
+                <div class="relative z-10 flex flex-col md:flex-row items-center gap-6">
+                    <div class="flex-1">
+                        <div class="inline-block bg-amber-400 text-teal-950 text-xs font-black px-3 py-1 rounded-full mb-4 uppercase tracking-wide">
+                            Top Recommendation
+                        </div>
+                        <h3 class="font-black text-white text-2xl md:text-3xl mb-3 leading-tight">
+                            Success Digital App वर Maha TET Paper 2 ची संपूर्ण तयारी करा!
+                        </h3>
+                        <p class="text-teal-100 font-medium mb-5 text-sm md:text-base">
+                            गणित-विज्ञान व सामाजिक शास्त्रे विषयांच्या मागील १० वर्षांच्या प्रश्नपत्रिका (PYQs) स्पष्टीकरणासह सोडवा.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-3 text-white text-sm font-semibold mb-6">
+                            <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i> गणित व विज्ञान (Maths & Science)</div>
+                            <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i> इतिहास, भूगोल व नागरिकशास्त्र</div>
+                            <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i> प्रगत मानसशास्त्र व अध्ययन उपपत्ती</div>
+                            <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i> All Maharashtra Rank Analysis</div>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-auto shrink-0">
+                        <a href="https://play.google.com/store/apps/details?id=com.ezgcka.oujtga&pcampaignid=web_share" target="_blank" class="block w-full bg-white text-teal-900 hover:bg-gray-100 hover:scale-105 font-black py-4 px-8 rounded-2xl shadow-xl transition transform text-center text-lg pulse-btn">
+                            <i class="fab fa-google-play text-xl mr-2 text-green-600"></i> Download App Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 flex justify-center gap-4 text-sm font-bold flex-wrap">
+                 <button onclick="location.reload()" class="text-gray-500 hover:text-teal-600 transition flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-xl">
+                    <i class="fas fa-redo-alt"></i> पुन्हा सोडवा
+                </button>
+                <a href="index.html" class="text-white hover:bg-teal-700 transition flex items-center gap-2 bg-teal-600 px-4 py-2 rounded-xl shadow-md">
+                    <i class="fas fa-home"></i> सर्व टेस्ट यादी
+                </a>
+                 <button onclick="window.open('whatsapp://send?text=मी Success Digital वर Maha TET Paper 2 Test 01 सोडवली! माझा Score चेक करा! https://successdigitaloffice-cell.github.io/success-digital-tests/')" class="text-white hover:bg-green-600 transition flex items-center gap-2 bg-green-500 px-4 py-2 rounded-xl shadow-md">
+                    <i class="fab fa-whatsapp text-lg"></i> Share Score
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm mt-auto border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <h4 class="text-white font-bold text-lg mb-1">SUCCESS DIGITAL</h4>
+            <p class="mb-3 text-gray-500">Maha TET & CTET परीक्षेसाठी अग्रगण्य व्यासपीठ</p>
+            <p class="text-xs">&copy; 2026 Success Digital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- QUIZ DATA (20 Questions - Maha TET Paper 2 Format) ---
+        const quizData = [
+            // --- CDP (बालमानसशास्त्र व अध्यापनशास्त्र - किशोरावस्था) ---
+            {
+                subject: "CDP", type: "PYQ", tagText: "TET 2021",
+                question: "एडवर्ड थॉर्नडाईक (Edward Thorndike) यांच्या अध्ययन उपपत्तीनुसार, अध्ययनाचा कोणता नियम 'सराव केल्याने अध्ययन दृढ होते' हे स्पष्ट करतो?",
+                options: ["तयारीचा नियम (Law of Readiness)", "अभ्यासाचा / सरावाचा नियम (Law of Exercise)", "परिणामाचा नियम (Law of Effect)", "सादृश्याचा नियम"],
+                answer: 1,
+                explanation: "अभ्यासाच्या नियमानुसार (Law of Exercise), एखाद्या क्रियेचा वारंवार सराव केल्यास चेतक आणि प्रतिसाद यांच्यातील बंध दृढ होतो, तर सराव न केल्यास बंध शिथिल होतो."
+            },
+            {
+                subject: "CDP", type: "Concept", tagText: "Adolescence",
+                question: "'किशोरावस्था हा प्रचंड वादळे, ताण आणि संघर्षाचा काळ आहे' (Storm and Stress) हे प्रसिद्ध विधान कोणत्या मानसशास्त्रज्ञाचे आहे?",
+                options: ["जीन पियाजे", "स्टॅन्ले हॉल (G. Stanley Hall)", "एरिक एरिक्सन", "सिगमंड फ्रॉइड"],
+                answer: 1,
+                explanation: "स्टॅन्ले हॉल यांनी किशोरावस्थेचा सखोल अभ्यास करून या वयातील शारीरिक, भावनिक व मानसिक आंदोलनांमुळे या काळाला 'वादळ आणि तणावाचा काळ' म्हटले आहे."
+            },
+            {
+                subject: "CDP", type: "IMP", tagText: "Constructivism",
+                question: "जेरोम ब्रूनर (Jerome Bruner) यांच्या ज्ञानात्मक विकास उपपत्तीमध्ये वैचारिक संक्रमणाचा योग्य क्रम कोणता?",
+                options: ["प्रतीकात्मक -> दृश्यात्मक -> क्रियात्मक", "क्रियात्मक (Enactive) -> दृश्यात्मक (Iconic) -> प्रतीकात्मक (Symbolic)", "दृश्यात्मक -> क्रियात्मक -> प्रतीकात्मक", "प्रतीकात्मक -> क्रियात्मक -> दृश्यात्मक"],
+                answer: 1,
+                explanation: "ब्रूनर यांच्या मते मूल प्रथम प्रत्यक्ष कृतीतून (Enactive), नंतर चित्रांच्या/प्रतिमांच्या माध्यमातून (Iconic) आणि शेवटी भाषा/प्रतीकांच्या माध्यमातून (Symbolic) ज्ञान संपादन करते."
+            },
+            {
+                subject: "CDP", type: "Expected", tagText: "Intelligence",
+                question: "गार्डनर यांच्या मते, स्वतःच्या अंतर्गत भावना, प्रेरणा आणि सामर्थ्य ओळखण्याच्या क्षमतेला कोणती बुद्धिमत्ता म्हणतात?",
+                options: ["आंतरवैयक्तिक बुद्धिमत्ता (Interpersonal)", "आत्मवैयक्तिक बुद्धिमत्ता (Intrapersonal)", "अवकाशीय बुद्धिमत्ता", "नैसर्गिक बुद्धिमत्ता"],
+                answer: 1,
+                explanation: "स्वतःचे आत्मपरीक्षण करणे, स्वतःच्या भावनांचे नियमन करणे याला 'Intrapersonal' (आत्मवैयक्तिक) बुद्धिमत्ता म्हणतात. इतरांच्या भावना समजण्याला Interpersonal म्हणतात."
+            },
+
+            // --- Marathi Language (मराठी व्याकरण - प्रगत स्तर) ---
+            {
+                subject: "Marathi", type: "PYQ", tagText: "TET 2019",
+                question: "'पंचवटी' या सामासिक शब्दाचा समास कोणता?",
+                options: ["कर्मधारय समास", "द्विगु समास", "द्वंद्व समास", "बहुव्रीही समास"],
+                answer: 1,
+                explanation: "ज्या तत्पुरुष समासातील पहिले पद संख्याविशेषण असते व त्यावरून समूहाचा बोध होतो, त्यास 'द्विगु समास' म्हणतात. (पाच वडांचा समूह = पंचवटी)."
+            },
+            {
+                subject: "Marathi", type: "Concept", tagText: "Metre (वृत्त)",
+                question: "ज्या अक्षरावृत्ताच्या प्रत्येक चरणात 12 अक्षरे असून 'य य य य' हे गण येतात, ते वृत्त कोणते?",
+                options: ["इंद्रवज्रा", "भुजंगप्रयात", "वसन्ततिलका", "शार्दूलविक्रीडित"],
+                answer: 1,
+                explanation: "भुजंगप्रयात वृत्तात प्रत्येक चरणात 12 अक्षरे असतात आणि चारही गण 'य' (यमाचा) असतात. उदा. 'मना सज्जना भक्तिपंथेचि जावे'."
+            },
+            {
+                subject: "Marathi", type: "IMP", tagText: "Sentences",
+                question: "'जे चकाकते ते सर्व सोने नसते.' - हे वाक्य रचनेनुसार कोणत्या प्रकारचे आहे?",
+                options: ["केवल वाक्य", "मिश्र वाक्य", "संयुक्त वाक्य", "नकारार्थी केवल वाक्य"],
+                answer: 1,
+                explanation: "जेव्हा एक मुख्य वाक्य आणि एक किंवा अधिक गौण वाक्ये 'जे... ते' यांसारख्या संबंधवाचक सर्वनामांनी जोडलेली असतात, तेव्हा ते 'मिश्र वाक्य' असते."
+            },
+            {
+                subject: "Marathi", type: "Expected", tagText: "Vocabulary",
+                question: "'उंटावरचा शहाणा' या अलंकारिक शब्दाचा योग्य अर्थ ओळखा.",
+                options: ["अतिशय हुशार मनुष्य", "मूर्खपणाचा सल्ला देणारा", "कष्टाळू व्यक्ती", "दूरदर्शी नेता"],
+                answer: 1,
+                explanation: "स्वतः काहीही न करता इतरांना मूर्खपणाचे आणि बिनकामाचे सल्ले देणाऱ्या व्यक्तीस 'उंटावरचा शहाणा' म्हटले जाते."
+            },
+
+            // --- English Language (Upper Primary Level) ---
+            {
+                subject: "English", type: "PYQ", tagText: "TET 2018",
+                question: "Change to Passive Voice: 'The teacher praised the students.'",
+                options: ["The students praised by the teacher.", "The students were praised by the teacher.", "The students are praised by the teacher.", "The students had been praised by the teacher."],
+                answer: 1,
+                explanation: "The sentence is in Simple Past. The passive form is: Object + were + V3 (praised) + by + Subject. -> 'The students were praised by the teacher.'"
+            },
+            {
+                subject: "English", type: "Concept", tagText: "Clauses",
+                question: "Identify the underlined clause: 'I know the girl _who won the first prize_.'",
+                options: ["Noun Clause", "Adjective Clause", "Adverb Clause of Reason", "Adverb Clause of Time"],
+                answer: 1,
+                explanation: "The clause 'who won the first prize' qualifies and describes the noun 'girl', so it functions as an Adjective Clause (Relative Clause)."
+            },
+            {
+                subject: "English", type: "IMP", tagText: "Figures of Speech",
+                question: "Identify the figure of speech in: 'The wind whispered through the dark forest.'",
+                options: ["Metaphor", "Personification", "Simile", "Hyperbole"],
+                answer: 1,
+                explanation: "Here, an inanimate element ('the wind') is given the human quality of 'whispering'. Hence, it is Personification (चेतनगुणोक्ती)."
+            },
+            {
+                subject: "English", type: "Expected", tagText: "Phrasal Verbs",
+                question: "Choose the correct meaning of the phrasal verb: 'Give up'",
+                options: ["To distribute", "To surrender or stop trying", "To donate", "To start a journey"],
+                answer: 1,
+                explanation: "'Give up' means to cease making an effort or to surrender (सोडून देणे / माघार घेणे)."
+            },
+
+            // --- Maths & Science (गणित व विज्ञान) ---
+            {
+                subject: "Maths & Science", type: "PYQ", tagText: "TET 2021",
+                question: "काटकोन त्रिकोणात कर्णाची लांबी 13 सेमी आणि एका बाजूची लांबी 12 सेमी असल्यास, दुसऱ्या बाजूची लांबी किती असेल?",
+                options: ["5 सेमी", "7 सेमी", "8 सेमी", "10 सेमी"],
+                answer: 0,
+                explanation: "पायथागोरस सिद्धांतानुसार: कर्ण² = पाया² + उंची² -> 13² = 12² + x² -> 169 - 144 = x² -> x² = 25 -> x = 5 सेमी."
+            },
+            {
+                subject: "Maths & Science", type: "Concept", tagText: "Biology",
+                question: "सजीव पेशीमध्ये 'पेशीचे ऊर्जा केंद्र' (Powerhouse of the Cell) म्हणून कोणास ओळखले जाते?",
+                options: ["रायबोझोम (Ribosome)", "तंतुकणिका (Mitochondria)", "लयकारिका (Lysosome)", "हरितलवक (Chloroplast)"],
+                answer: 1,
+                explanation: "तंतुकणिकांमध्ये (Mitochondria) पेशीच्या श्वसनातून ATP च्या स्वरूपात ऊर्जा निर्माण होते, म्हणून त्याला पेशीचे ऊर्जा केंद्र म्हणतात."
+            },
+            {
+                subject: "Maths & Science", type: "IMP", tagText: "Physics",
+                question: "प्रकाश एका पारदर्शक माध्यमातून दुसऱ्या पारदर्शक माध्यमात जाताना आपली दिशा बदलतो, या नैसर्गिक घटनेस काय म्हणतात?",
+                options: ["प्रकाशाचे परावर्तन (Reflection)", "प्रकाशाचे अपवर्तन (Refraction)", "प्रकाशाचे अपस्करण (Dispersion)", "प्रकाशाचे विखुरणे (Scattering)"],
+                answer: 1,
+                explanation: "प्रकाशाचा वेग दोन वेगवेगळ्या माध्यमांत भिन्न असल्याने प्रकाशकिरण सीमाभागावर वाकतात, याला प्रकाशाचे अपवर्तन (Refraction) म्हणतात."
+            },
+            {
+                subject: "Maths & Science", type: "Expected", tagText: "Maths",
+                question: "एका रकमेचे 10% चक्रवाढ व्याजदराने 2 वर्षांत 12,100 रु. रास होते, तर ती मुद्दल किती असेल?",
+                options: ["9,000 रु.", "10,000 रु.", "10,500 रु.", "11,000 रु."],
+                answer: 1,
+                explanation: "रास A = P(1 + r/100)ⁿ -> 12100 = P(1 + 10/100)² = P(1.1)² = P × 1.21 -> P = 12100 ÷ 1.21 = 10,000 रुपये."
+            },
+
+            // --- Social Science (इतिहास, भूगोल व नागरिकशास्त्र) ---
+            {
+                subject: "Social Science", type: "PYQ", tagText: "History",
+                question: "छत्रपती शिवाजी महाराजांच्या अष्टप्रधान मंडळात 'अमात्य' या अधिकाऱ्याचे मुख्य कार्य कोणते होते?",
+                options: ["राज्याचा पत्रव्यवहार सांभाळणे", "राज्याचा जमा-खर्च तपासणे (वित्तमंत्री)", "सैन्याचे नेतृत्व करणे", "धार्मिक विधी व दानधर्म करणे"],
+                answer: 1,
+                explanation: "अष्टप्रधान मंडळात अमात्यांचे काम स्वराज्यातील जमा-खर्च तपासणे आणि आर्थिक व्यवहारांवर देखरेख ठेवणे (वित्तमंत्री) हे होते. रामचंद्र नीलकंठ अमात्य हे प्रसिद्ध अमात्य होते."
+            },
+            {
+                subject: "Social Science", type: "Concept", tagText: "Geography",
+                question: "महाराष्ट्रातील सह्याद्री पर्वतरांगेतील सर्वात उंच शिखर कोणते व ते कोणत्या जिल्ह्यात आहे?",
+                options: ["साल्हेर (नाशिक)", "कळसूबाई (अहमदनगर)", "महाबळेश्वर (सातारा)", "तोरणा (पुणे)"],
+                answer: 1,
+                explanation: "सह्याद्रीतील कळसूबाई हे महाराष्ट्रातील सर्वात उंच शिखर (उंची 1646 मीटर) असून ते अहमदनगर जिल्ह्यातील अकोले तालुक्यात आहे."
+            },
+            {
+                subject: "Social Science", type: "IMP", tagText: "Polity",
+                question: "भारतीय संविधानात 'मूलभूत कर्तव्ये' (Fundamental Duties) कोणत्या कलमांतर्गत समाविष्ट करण्यात आली आहेत?",
+                options: ["कलम 21A", "कलम 51A", "कलम 32", "कलम 45"],
+                answer: 1,
+                explanation: "42 व्या घटनादुरुस्तीद्वारे (1976) स्वर्णसिंह समितीच्या शिफारशीनुसार राज्यघटनेच्या भाग IV-A मध्ये कलम 51A जोडून मूलभूत कर्तव्ये समाविष्ट करण्यात आली."
+            },
+            {
+                subject: "Social Science", type: "Expected", tagText: "Modern History",
+                question: "1857 च्या उठावात खान्देश भागात भिल्ल समाजाचे नेतृत्व खालीलपैकी कोणी केले?",
+                options: ["राघोजी भांगरे", "कजारसिंग आणि भागोजी नाईक", "उमाजी नाईक", "बाबासाहेब भावे"],
+                answer: 1,
+                explanation: "1857 च्या उठावात खान्देश व नाशिक भागात भिल्ल समाजाने कजारसिंग आणि भागोजी नाईक यांच्या नेतृत्वाखाली ब्रिटिशांविरुद्ध तीव्र लढा दिला."
+            }
+        ];
+
+        // --- State Variables ---
+        let currentQuestionIndex = 0;
+        let userAnswers = new Array(quizData.length).fill(null);
+        let timeLeft = 20 * 60;
+        let timerInterval;
+
+        const promoTexts = [
+            "Maha TET Paper 2 मध्ये 120+ Score मिळवायचा आहे? Success Digital App वरील Mock Tests नक्की सोडवा!",
+            "गणित-विज्ञान व सामाजिक शास्त्रे विषयांच्या सखोल तयारीसाठी आजच App डाउनलोड करा.",
+            "मागील सर्व TET Paper 2 पेपर्स सविस्तर मराठी विश्लेषणासह App वर उपलब्ध आहेत.",
+            "All Maharashtra Rank आणि Smart Analysis साठी Success Digital App डाऊनलोड करा!"
+        ];
+
+        // --- DOM Elements ---
+        const welcomeScreen = document.getElementById('welcome-screen');
+        const quizContainer = document.getElementById('quiz-container');
+        const resultScreen = document.getElementById('result-screen');
+        const startBtn = document.getElementById('start-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const timerDisplay = document.getElementById('timer-display');
+        const timeSpan = document.getElementById('time');
+        const questionCard = document.getElementById('question-card');
+
+        // --- Initialization ---
+        startBtn.addEventListener('click', startQuiz);
+
+        function startQuiz() {
+            welcomeScreen.classList.add('hidden');
+            quizContainer.classList.remove('hidden');
+            timerDisplay.classList.remove('hidden');
+            
+            quizContainer.querySelectorAll('.slide-up').forEach(el => {
+                el.style.animation = 'none';
+                void el.offsetWidth;
+                el.style.animation = null;
+            });
+
+            loadQuestion();
+            startTimer();
+        }
+
+        // --- Timer Logic ---
+        function startTimer() {
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    finishQuiz();
+                } else if (timeLeft <= 300) {
+                    timerDisplay.classList.replace('bg-black/20', 'bg-red-500/80');
+                    timerDisplay.classList.add('text-white');
+                    timerDisplay.classList.remove('border-white/10');
+                    timerDisplay.classList.add('border-red-600');
+                    timerDisplay.querySelector('.fa-clock').classList.replace('text-yellow-300', 'text-white');
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timeSpan.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        // --- Core Quiz Logic ---
+        function loadQuestion() {
+            const qData = quizData[currentQuestionIndex];
+            
+            questionCard.classList.remove('slide-up');
+            void questionCard.offsetWidth;
+            questionCard.classList.add('slide-up');
+
+            document.getElementById('question-counter').textContent = `प्रश्न ${currentQuestionIndex + 1} / ${quizData.length}`;
+            const progress = ((currentQuestionIndex) / quizData.length) * 100;
+            document.getElementById('progress-bar').style.width = `${progress}%`;
+            document.getElementById('progress-percent').textContent = `${Math.round(progress)}%`;
+
+            const subjectTag = document.getElementById('subject-tag');
+            subjectTag.textContent = qData.subject;
+            
+            const subjectColors = {
+                'CDP': 'bg-teal-100 text-teal-800 border-teal-200',
+                'Marathi': 'bg-pink-100 text-pink-800 border-pink-200',
+                'English': 'bg-blue-100 text-blue-800 border-blue-200',
+                'Maths & Science': 'bg-emerald-100 text-emerald-800 border-emerald-200',
+                'Social Science': 'bg-amber-100 text-amber-800 border-amber-200'
+            };
+            subjectTag.className = `text-xs font-extrabold px-3 py-1 rounded-lg shadow-sm border uppercase tracking-wider ${subjectColors[qData.subject] || 'bg-gray-100 text-gray-800 border-gray-200'}`;
+
+            const typeTag = document.getElementById('type-tag');
+            typeTag.className = 'text-xs font-extrabold px-3 py-1 rounded-lg shadow-sm border';
+            if(qData.type === 'PYQ') {
+                typeTag.innerHTML = `<i class="fas fa-history text-[10px]"></i> ${qData.tagText}`;
+                typeTag.classList.add('bg-red-100', 'text-red-800', 'border-red-200');
+                typeTag.classList.remove('hidden');
+            } else if (qData.type === 'IMP' || qData.type === 'Constructivism' || qData.type === 'Physics') {
+                typeTag.innerHTML = `<i class="fas fa-star text-[10px]"></i> ${qData.tagText}`;
+                typeTag.classList.add('bg-yellow-100', 'text-yellow-800', 'border-yellow-200');
+                typeTag.classList.remove('hidden');
+            } else if (qData.type === 'Concept' || qData.type === 'Adolescence' || qData.type === 'Biology') {
+                typeTag.innerHTML = `<i class="fas fa-brain text-[10px]"></i> ${qData.tagText}`;
+                typeTag.classList.add('bg-purple-100', 'text-purple-800', 'border-purple-200');
+                typeTag.classList.remove('hidden');
+            } else {
+                 typeTag.classList.add('hidden'); 
+            }
+
+            document.getElementById('question-text').textContent = `${currentQuestionIndex + 1}. ${qData.question}`;
+
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            
+            qData.options.forEach((opt, index) => {
+                const label = document.createElement('label');
+                const isSelected = userAnswers[currentQuestionIndex] === index;
+                const isAnswered = userAnswers[currentQuestionIndex] !== null;
+
+                label.className = `relative flex items-center p-4 rounded-2xl border-2 cursor-pointer option-label group ${isAnswered ? 'disabled' : 'border-gray-200 bg-white'}`;
+                
+                label.innerHTML = `
+                    <input type="radio" name="option" value="${index}" class="hidden" ${isSelected ? 'checked' : ''}>
+                    <div class="dot-container w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4 bg-white group-hover:border-teal-400 shrink-0">
+                    </div>
+                    <span class="text-gray-700 font-bold text-lg select-none">${opt}</span>
+                `;
+
+                if(!isAnswered) {
+                    label.addEventListener('click', () => selectOption(index));
+                }
+                optionsContainer.appendChild(label);
+            });
+
+            prevBtn.classList.toggle('hidden', currentQuestionIndex === 0);
+            
+            const expBox = document.getElementById('explanation-box');
+            if(userAnswers[currentQuestionIndex] !== null) {
+                showFeedback();
+            } else {
+                expBox.classList.add('hidden');
+                nextBtn.disabled = true;
+                nextBtn.innerHTML = `पुढील <i class="fas fa-arrow-right ml-1"></i>`;
+                nextBtn.classList.replace('bg-green-600', 'bg-teal-600');
+                nextBtn.classList.replace('hover:bg-green-700', 'hover:bg-teal-700');
+            }
+        }
+
+        function selectOption(index) {
+            if(userAnswers[currentQuestionIndex] !== null) return; 
+
+            userAnswers[currentQuestionIndex] = index;
+            nextBtn.disabled = false;
+            
+            document.getElementById('dynamic-promo-text').textContent = promoTexts[Math.floor(Math.random() * promoTexts.length)];
+            
+            showFeedback();
+
+            setTimeout(() => {
+                const expBox = document.getElementById('explanation-box');
+                expBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+        }
+
+        function showFeedback() {
+            const labels = document.querySelectorAll('.option-label');
+            const qData = quizData[currentQuestionIndex];
+            const selected = userAnswers[currentQuestionIndex];
+            const correct = qData.answer;
+
+            labels.forEach((label, idx) => {
+                label.classList.add('disabled');
+                const dotContainer = label.querySelector('.dot-container');
+                
+                if (idx === correct) {
+                    label.classList.add('correct-answer-show');
+                    label.classList.remove('border-gray-200');
+                    dotContainer.classList.add('border-green-500', 'bg-green-500');
+                    dotContainer.classList.remove('border-gray-300', 'bg-white');
+                    dotContainer.innerHTML = '<i class="fas fa-check text-white text-xs"></i>';
+                } else if (idx === selected && selected !== correct) {
+                    label.classList.add('wrong-answer-show');
+                    label.classList.remove('border-gray-200');
+                    dotContainer.classList.add('border-red-500', 'bg-red-500');
+                    dotContainer.classList.remove('border-gray-300', 'bg-white');
+                    dotContainer.innerHTML = '<i class="fas fa-times text-white text-xs"></i>';
+                }
+            });
+
+            const expBox = document.getElementById('explanation-box');
+            document.getElementById('explanation-text').textContent = qData.explanation;
+            expBox.classList.remove('hidden');
+            expBox.classList.add('fade-in');
+
+            if (currentQuestionIndex === quizData.length - 1) {
+                nextBtn.innerHTML = `Submit Paper 2 Test <i class="fas fa-check-circle ml-2"></i>`;
+                nextBtn.classList.replace('bg-teal-600', 'bg-green-600');
+                nextBtn.classList.replace('hover:bg-teal-700', 'hover:bg-green-700');
+                nextBtn.classList.add('pulse-btn');
+            }
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentQuestionIndex < quizData.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion();
+            } else {
+                finishQuiz();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        });
+
+        function finishQuiz() {
+            clearInterval(timerInterval);
+            quizContainer.classList.add('hidden');
+            timerDisplay.classList.add('hidden');
+            
+            let score = 0;
+            userAnswers.forEach((ans, idx) => {
+                if (ans === quizData[idx].answer) score++;
+            });
+
+            const accuracy = Math.round((score / quizData.length) * 100);
+            const timeTakenSec = (20 * 60) - timeLeft;
+            const timeTakenMin = Math.max(1, Math.floor(timeTakenSec / 60));
+            
+            let rank = 1890; 
+            if(score === 20) rank = Math.floor(Math.random() * 5) + 1;
+            else if(score >= 17) rank = Math.floor(Math.random() * 25) + 10;
+            else if(score >= 12) rank = Math.floor(Math.random() * 200) + 50;
+            else rank = Math.floor(Math.random() * 800) + 250;
+
+            document.getElementById('final-score').textContent = score;
+            document.getElementById('final-accuracy').textContent = accuracy;
+            document.getElementById('final-time').textContent = timeTakenMin;
+            document.getElementById('final-rank').textContent = rank;
+
+            const msgEl = document.getElementById('motivational-message');
+            if (score >= 17) {
+                msgEl.innerHTML = `<strong>उत्कृष्ट कामगिरी!</strong> Maha TET Paper 2 मध्ये तुमचा स्कोअर अव्वल आहे. अशीच तयारी <strong>Success Digital App</strong> वर सुरू ठेवा!`;
+                setTimeout(fireConfetti, 500);
+            } else if (score >= 12) {
+                msgEl.innerHTML = `<strong>चांगला प्रयत्न!</strong> TET 2 उत्तीर्ण होण्यासाठी थोडी अधिक अचूकता आवश्यक आहे. Success Digital App वरील विषयवार सराव चाचण्या नक्की सोडवा.`;
+                if(score > 14) setTimeout(fireConfetti, 500);
+            } else {
+                msgEl.innerHTML = `<strong>सराव आवश्यक आहे!</strong> Paper 2 मधील मानसशास्त्र व विषय घटकांच्या मूलभूत संकल्पना समजण्यासाठी <strong>Success Digital App</strong> लगेच डाऊनलोड करा.`;
+            }
+
+            resultScreen.classList.remove('hidden');
+            window.scrollTo(0,0);
+        }
+
+        function fireConfetti() {
+            const colors = ['#0d9488', '#06b6d4', '#10b981', '#f59e0b', '#8b5cf6'];
+            for (let i = 0; i < 80; i++) {
+                createConfettiParticle(colors);
+            }
+        }
+
+        function createConfettiParticle(colors) {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.backgroundColor = color;
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.top = -10 + 'px';
+            if(Math.random() > 0.5) confetti.style.borderRadius = '50%';
+            
+            document.body.appendChild(confetti);
+
+            const animation = confetti.animate([
+                { transform: `translate3d(0,0,0) rotate(0deg)`, opacity: 1 },
+                { transform: `translate3d(${Math.random()*300 - 150}px, ${window.innerHeight}px, 0) rotate(${Math.random()*720}deg)`, opacity: 0 }
+            ], {
+                duration: Math.random() * 2000 + 1500,
+                easing: 'cubic-bezier(.37,0,.63,1)'
+            });
+
+            animation.onfinish = () => confetti.remove();
+        }
+    </script>
+</body>
+</html>
