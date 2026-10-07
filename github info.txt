@@ -28,9 +28,9 @@ App Highlights:
 - मोफत दैनिक सराव चाचणी व इन्स्टंट शंका समाधान
 
 
-3. 4 CATEGORIES - COMPLETE 80-TEST SERIES ARCHITECTURE (ALL DIRECT LINKS)
+3. 4 CATEGORIES - COMPLETE 120-TEST SERIES ARCHITECTURE (ALL DIRECT LINKS)
 --------------------------------------------------------------------------------
-The portal hosts 20 tests for each of the 4 exam categories (80 Tests Total, 20 Questions Each).
+The portal hosts 30 tests for each of the 4 exam categories (120 Tests Total, 20 Questions Each = 2,400 Questions Total).
 
 ================================================================================
 CATEGORY 1: Maha TET Paper 1 (महाराष्ट्र - प्राथमिक: इयत्ता 1 ते 5)
@@ -55,6 +55,16 @@ CATEGORY 1: Maha TET Paper 1 (महाराष्ट्र - प्राथ�
 - Test 18: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet1&test=18
 - Test 19: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet1&test=19
 - Test 20: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet1&test=20
+- Test 21: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet1&test=21
+- Test 22: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet1&test=22
+- Test 23: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet1&test=23
+- Test 24: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet1&test=24
+- Test 25: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet1&test=25
+- Test 26: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet1&test=26
+- Test 27: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet1&test=27
+- Test 28: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet1&test=28
+- Test 29: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet1&test=29
+- Test 30: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet1&test=30
 
 ================================================================================
 CATEGORY 2: Maha TET Paper 2 (महाराष्ट्र - उच्च प्राथमिक: इयत्ता 6 ते 8)
@@ -79,6 +89,16 @@ CATEGORY 2: Maha TET Paper 2 (महाराष्ट्र - उच्च प�
 - Test 18: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet2&test=18
 - Test 19: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet2&test=19
 - Test 20: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet2&test=20
+- Test 21: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet2&test=21
+- Test 22: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet2&test=22
+- Test 23: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet2&test=23
+- Test 24: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet2&test=24
+- Test 25: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet2&test=25
+- Test 26: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet2&test=26
+- Test 27: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet2&test=27
+- Test 28: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet2&test=28
+- Test 29: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet2&test=29
+- Test 30: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=mahatet2&test=30
 
 ================================================================================
 CATEGORY 3: CTET Paper 1 (Central TET - Primary: Class 1 to 5)
@@ -103,6 +123,16 @@ CATEGORY 3: CTET Paper 1 (Central TET - Primary: Class 1 to 5)
 - Test 18: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet1&test=18
 - Test 19: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet1&test=19
 - Test 20: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet1&test=20
+- Test 21: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet1&test=21
+- Test 22: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet1&test=22
+- Test 23: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet1&test=23
+- Test 24: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet1&test=24
+- Test 25: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet1&test=25
+- Test 26: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet1&test=26
+- Test 27: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet1&test=27
+- Test 28: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet1&test=28
+- Test 29: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet1&test=29
+- Test 30: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet1&test=30
 
 ================================================================================
 CATEGORY 4: CTET Paper 2 (Central TET - Upper Primary: Class 6 to 8)
@@ -127,13 +157,27 @@ CATEGORY 4: CTET Paper 2 (Central TET - Upper Primary: Class 6 to 8)
 - Test 18: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet2&test=18
 - Test 19: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet2&test=19
 - Test 20: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet2&test=20
+- Test 21: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet2&test=21
+- Test 22: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet2&test=22
+- Test 23: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet2&test=23
+- Test 24: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet2&test=24
+- Test 25: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet2&test=25
+- Test 26: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet2&test=26
+- Test 27: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet2&test=27
+- Test 28: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet2&test=28
+- Test 29: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet2&test=29
+- Test 30: https://successdigitaloffice-cell.github.io/success-digital-tests/test.html?cat=ctet2&test=30
 
 
 4. TECHNICAL FILES OVERVIEW
 --------------------------------------------------------------------------------
-- index.html                : मुख्य पोर्टल. ८० चाचण्यांची यादी, लाईव्ह सर्च बार, फिल्टर टॅब्स आणि ॲप प्रमोशन.
+- index.html                : मुख्य पोर्टल. १२० चाचण्यांची यादी, लाईव्ह सर्च बार, फिल्टर टॅब्स आणि ॲप प्रमोशन.
 - test.html                 : युनिव्हर्सल टेस्ट प्लेअर (Dynamic theming, Real exam timer, explanations, App promos, Rank estimator).
-- data/tests_data.js        : मध्यवर्ती प्रश्नपेढी (Central Question Bank) - सर्व ८० चाचण्यांचा अचूक प्रश्नसंच व स्पष्टीकरणे.
+- data/mahatet1.js          : Maha TET Paper 1 चे ३० संपूर्ण पेपर्स (६०० प्रश्न).
+- data/mahatet2.js          : Maha TET Paper 2 चे ३० संपूर्ण पेपर्स (६०० प्रश्न).
+- data/ctet1.js             : CTET Paper 1 चे ३० संपूर्ण पेपर्स (६०० प्रश्न).
+- data/ctet2.js             : CTET Paper 2 चे ३० संपूर्ण पेपर्स (६०० प्रश्न).
+- data/tests_data.js        : मध्यवर्ती प्रश्नपेढी (Central Question Bank Loader).
 - upload_daily_test.bat     : विंडोज १-क्लिक सिंक बॅच स्क्रिप्ट (Double click to sync all updates to GitHub).
 - upload_daily_test.ps1     : स्वयंचलित GitHub REST API उपलोडर पॉवरशेल स्क्रिप्ट (Intelligent change detection & auto-upload).
 - PROJECT_WORKFLOW_AND_AGENT_GUIDE.md : AI एजंट आणि डेव्हलपरसाठी सविस्तर कार्यपद्धती व सूचना मार्गदर्शक.
