@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Success Digital - Daily TET & CET Test Series Portal</title>
+    <title>Success Digital - Daily TET & CTET 20-Test Series Portal</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <!-- Google Fonts (Mukta) -->
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts (Mukta & Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Mukta:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         body {
-            font-family: 'Mukta', sans-serif;
+            font-family: 'Mukta', 'Inter', sans-serif;
             background: #f8fafc;
             background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
             background-size: 20px 20px;
@@ -30,26 +30,26 @@
             100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
         }
         .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 16px 30px -10px rgba(30, 58, 138, 0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 24px -8px rgba(30, 58, 138, 0.15);
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col text-slate-800">
+<body class="min-h-screen flex flex-col text-slate-800 pb-20 md:pb-16">
 
     <!-- Header -->
     <header class="bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700 text-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-3.5 flex justify-between items-center">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="bg-white p-2 rounded-xl shadow-sm">
-                    <i class="fas fa-graduation-cap text-2xl text-blue-600"></i>
+                <div class="bg-white p-2 rounded-xl shadow-sm text-blue-600">
+                    <i class="fas fa-graduation-cap text-2xl"></i>
                 </div>
                 <div>
                     <h1 class="text-lg md:text-xl font-black tracking-wide leading-tight">SUCCESS DIGITAL</h1>
-                    <p class="text-[11px] md:text-xs text-blue-100 font-medium">TET & CET Smart Online Test Portal</p>
+                    <p class="text-[11px] md:text-xs text-blue-100 font-medium">TET & CTET Smart Online Test Portal</p>
                 </div>
             </div>
 
@@ -58,378 +58,121 @@
                    target="_blank" 
                    class="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-300 hover:to-amber-400 text-slate-900 text-xs md:text-sm font-extrabold px-4 py-2 rounded-full shadow-md flex items-center gap-2 transition transform hover:scale-105">
                     <i class="fab fa-google-play"></i>
-                    <span>Get Android App</span>
+                    <span>Get App Free</span>
                 </a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-gradient text-white py-12 px-4 shadow-inner relative overflow-hidden">
+    <section class="hero-gradient text-white py-10 px-4 shadow-inner relative overflow-hidden">
         <div class="container mx-auto max-w-4xl text-center relative z-10">
-            <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-1.5 rounded-full text-xs md:text-sm font-bold mb-4 border border-white/20">
-                <i class="fas fa-bolt text-yellow-300"></i> मोफत दैनिक सराव चाचणी (Daily Mock Tests)
+            <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-1 rounded-full text-xs md:text-sm font-bold mb-3 border border-white/20">
+                <i class="fas fa-bolt text-yellow-300"></i> 4 श्रेणी • 80 सराव चाचण्यांची संपूर्ण मालिका (80 Online Tests Live)
             </div>
             <h2 class="text-3xl md:text-5xl font-black mb-3 leading-tight">
-                महाराष्ट्र TET & CET तयारी 2026
+                महाराष्ट्र TET व CTET परीक्षा तयारी
             </h2>
-            <p class="text-blue-100 text-base md:text-lg max-w-2xl mx-auto mb-6">
-                दररोज नवीन प्रश्नपत्रिका सोडवा, तुमचा Score आणि Rank तपासा व परीक्षेसाठी पूर्ण तयार व्हा!
+            <p class="text-blue-100 text-sm md:text-base max-w-2xl mx-auto mb-6">
+                100% अभ्यासक्रम कव्हरेज, गैर-पुनरावृत्ती प्रश्न, सविस्तर स्पष्टीकरणे आणि Success Digital App द्वारे All Maharashtra Live Ranking!
             </p>
 
-            <div class="flex flex-wrap justify-center gap-3 text-xs md:text-sm">
-                <span class="bg-black/25 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10 flex items-center gap-2">
-                    <i class="fas fa-check text-green-400"></i> सर्व विषयांचा समावेश
+            <!-- Feature Pills -->
+            <div class="flex flex-wrap justify-center gap-2.5 text-xs md:text-sm">
+                <span class="bg-black/25 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/10 flex items-center gap-1.5">
+                    <i class="fas fa-check-circle text-emerald-400"></i> 100% अचूक अभ्यासक्रम
                 </span>
-                <span class="bg-black/25 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10 flex items-center gap-2">
+                <span class="bg-black/25 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/10 flex items-center gap-1.5">
                     <i class="fas fa-clock text-amber-300"></i> Real Exam Timer
                 </span>
-                <span class="bg-black/25 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10 flex items-center gap-2">
+                <span class="bg-black/25 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/10 flex items-center gap-1.5">
                     <i class="fas fa-lightbulb text-yellow-300"></i> सविस्तर स्पष्टीकरण
+                </span>
+                <span class="bg-black/25 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/10 flex items-center gap-1.5">
+                    <i class="fas fa-mobile-alt text-cyan-300"></i> Success Digital App
                 </span>
             </div>
         </div>
     </section>
 
+    <!-- App Highlight Card (Top) -->
+    <div class="container mx-auto max-w-4xl px-4 -mt-4 relative z-20">
+        <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-blue-950 text-white rounded-2xl p-4 md:p-5 shadow-xl border border-indigo-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 text-slate-950 flex items-center justify-center font-black text-2xl shrink-0 shadow-md">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div>
+                    <h3 class="font-extrabold text-sm md:text-base flex items-center gap-2">
+                        Success Digital Android App
+                        <span class="bg-yellow-400 text-slate-950 text-[10px] font-black px-2 py-0.5 rounded uppercase">Free</span>
+                    </h3>
+                    <p class="text-xs text-blue-200">10,000+ प्रश्न, विषयवार व्हिडिओ लेक्चर्स व All Maharashtra Rank साठी आताच डाऊनलोड करा!</p>
+                </div>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.ezgcka.oujtga&pcampaignid=web_share" 
+               target="_blank" 
+               class="shrink-0 bg-yellow-400 hover:bg-yellow-300 text-slate-950 font-black px-5 py-2.5 rounded-xl text-xs md:text-sm shadow-md transition flex items-center gap-2">
+                <i class="fab fa-google-play"></i> Install App
+            </a>
+        </div>
+    </div>
+
     <!-- Main Content -->
-    <main class="container mx-auto max-w-4xl px-4 py-10 flex-grow">
+    <main class="container mx-auto max-w-4xl px-4 py-8 flex-grow">
         
-        <!-- Category Filter Tabs -->
-        <div class="flex flex-wrap items-center gap-2 mb-8">
-            <button onclick="filterCatalog('all')" id="tab-all" class="filter-btn active bg-slate-900 text-white text-xs md:text-sm font-bold px-4 py-2 rounded-xl shadow-sm transition">
-                <i class="fas fa-th-large mr-1.5"></i> सर्व चाचण्या (All)
-            </button>
-            <button onclick="filterCatalog('mahatet')" id="tab-mahatet" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition">
-                <i class="fas fa-graduation-cap text-blue-600 mr-1.5"></i> Maha TET Paper 1
-            </button>
-            <button onclick="filterCatalog('mahatet2')" id="tab-mahatet2" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition">
-                <i class="fas fa-school text-teal-600 mr-1.5"></i> Maha TET Paper 2
-            </button>
-            <button onclick="filterCatalog('ctet')" id="tab-ctet" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition">
-                <i class="fas fa-award text-orange-600 mr-1.5"></i> CTET Paper 1
-            </button>
-            <button onclick="filterCatalog('ctet2')" id="tab-ctet2" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition">
-                <i class="fas fa-book-reader text-purple-600 mr-1.5"></i> CTET Paper 2
-            </button>
-        </div>
-
-        <!-- ================= SECTION 1: MAHA TET PAPER 1 CATALOG ================= -->
-        <div id="section-mahatet" class="catalog-section mb-10">
-            <div class="flex items-center justify-between mb-4 pb-2 border-b border-blue-200">
-                <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-6 bg-blue-600 rounded-full"></span>
-                    <h3 class="text-xl md:text-2xl font-black text-slate-800">
-                        Maha TET Paper 1 मालिका (महाराष्ट्र)
-                    </h3>
-                </div>
-                <span class="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-lg border border-blue-200">
-                    2 Tests Live
-                </span>
+        <!-- Controls: Category Filter Tabs & Live Search -->
+        <div class="space-y-4 mb-8">
+            <div class="flex flex-wrap items-center gap-2">
+                <button onclick="setCategoryFilter('all')" id="tab-all" class="filter-btn active bg-slate-900 text-white text-xs md:text-sm font-bold px-4 py-2 rounded-xl shadow-sm transition">
+                    <i class="fas fa-th-large mr-1.5"></i> सर्व 80 चाचण्या (All)
+                </button>
+                <button onclick="setCategoryFilter('mahatet1')" id="tab-mahatet1" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition">
+                    <i class="fas fa-graduation-cap text-blue-600 mr-1.5"></i> Maha TET 1 (20 Tests)
+                </button>
+                <button onclick="setCategoryFilter('mahatet2')" id="tab-mahatet2" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition">
+                    <i class="fas fa-school text-teal-600 mr-1.5"></i> Maha TET 2 (20 Tests)
+                </button>
+                <button onclick="setCategoryFilter('ctet1')" id="tab-ctet1" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition">
+                    <i class="fas fa-award text-orange-600 mr-1.5"></i> CTET 1 (20 Tests)
+                </button>
+                <button onclick="setCategoryFilter('ctet2')" id="tab-ctet2" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition">
+                    <i class="fas fa-book-reader text-purple-600 mr-1.5"></i> CTET 2 (20 Tests)
+                </button>
             </div>
 
-            <div class="space-y-4">
-                <!-- Maha TET Test 01 Card -->
-                <div class="bg-white rounded-2xl p-5 md:p-6 border border-slate-200 shadow-sm card-hover flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-black text-lg shrink-0">
-                            01
-                        </div>
-                        <div>
-                            <div class="flex flex-wrap items-center gap-2 mb-1">
-                                <span class="bg-blue-100 text-blue-700 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
-                                    Maha TET Paper 1
-                                </span>
-                                <span class="bg-purple-100 text-purple-700 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
-                                    5 विषय मिश्रित
-                                </span>
-                                <span class="text-xs text-slate-400 font-medium">20 प्रश्न • 20 मिनिटे</span>
-                            </div>
-                            <h4 class="text-lg md:text-xl font-bold text-slate-800">
-                                Maha TET Paper 1 - दैनिक सराव टेस्ट 01
-                            </h4>
-                            <p class="text-xs md:text-sm text-slate-500 mt-1">
-                                बालमानसशास्त्र, मराठी, इंग्रजी, गणित व परिसर अभ्यास (CDP, Marathi, English, Math, EVS)
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-2 shrink-0">
-                        <a href="success_digital_tet_paper_1_test_01.html" 
-                           class="w-full md:w-auto text-center bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl shadow-md transition flex items-center justify-center gap-2 pulse-btn">
-                            <span>टेस्ट सुरू करा</span>
-                            <i class="fas fa-play text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Maha TET Test 02 Card -->
-                <div class="bg-white rounded-2xl p-5 md:p-6 border border-slate-200 shadow-sm card-hover flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-lg shrink-0">
-                            02
-                        </div>
-                        <div>
-                            <div class="flex flex-wrap items-center gap-2 mb-1">
-                                <span class="bg-blue-100 text-blue-700 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
-                                    Maha TET Paper 1
-                                </span>
-                                <span class="bg-emerald-100 text-emerald-700 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
-                                    New Daily Test
-                                </span>
-                                <span class="text-xs text-slate-400 font-medium">20 प्रश्न • 20 मिनिटे</span>
-                            </div>
-                            <h4 class="text-lg md:text-xl font-bold text-slate-800">
-                                Maha TET Paper 1 - दैनिक सराव टेस्ट 02
-                            </h4>
-                            <p class="text-xs md:text-sm text-slate-500 mt-1">
-                                वायगोत्स्की, कोहलबर्ग, RTE 2009, संधी, अलंकार, English Grammar, सरळव्याज, काझीरंगा व फुले
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-2 shrink-0">
-                        <a href="success_digital_tet_paper_1_test_02.html" 
-                           class="w-full md:w-auto text-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3 rounded-xl shadow-md transition flex items-center justify-center gap-2 pulse-btn">
-                            <span>टेस्ट सुरू करा</span>
-                            <i class="fas fa-play text-xs"></i>
-                        </a>
-                    </div>
-                </div>
+            <!-- Instant Search Input -->
+            <div class="relative">
+                <i class="fas fa-search absolute left-4 top-3.5 text-slate-400 text-sm"></i>
+                <input type="text" id="catalog-search" oninput="handleSearch()" placeholder="विषय किंवा घटक शोधा (उदा. पियाजे, समाजशास्त्र, EVS, पायथागोरस, व्याकरण, Vygotsky, Pedagogy...)" 
+                       class="w-full pl-11 pr-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white shadow-sm">
+                <span id="search-counter" class="absolute right-4 top-3 text-xs text-slate-400 font-bold hidden"></span>
             </div>
         </div>
 
-        <!-- ================= SECTION 2: MAHA TET PAPER 2 CATALOG ================= -->
-        <div id="section-mahatet2" class="catalog-section mb-10">
-            <div class="flex items-center justify-between mb-4 pb-2 border-b border-teal-200">
-                <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-6 bg-teal-600 rounded-full"></span>
-                    <h3 class="text-xl md:text-2xl font-black text-slate-800">
-                        Maha TET Paper 2 मालिका (महाराष्ट्र - उच्च प्राथमिक)
-                    </h3>
-                </div>
-                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-3 py-1 rounded-lg border border-teal-200">
-                    New Catalog Added 🔥
-                </span>
-            </div>
-
-            <div class="space-y-4">
-                <!-- Maha TET Paper 2 Test 01 Card -->
-                <div class="bg-white rounded-2xl p-5 md:p-6 border border-teal-200 shadow-sm card-hover flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-black text-lg shrink-0">
-                            01
-                        </div>
-                        <div>
-                            <div class="flex flex-wrap items-center gap-2 mb-1">
-                                <span class="bg-teal-100 text-teal-700 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
-                                    Maha TET Paper 2
-                                </span>
-                                <span class="bg-cyan-100 text-cyan-800 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
-                                    इयत्ता 6 ते 8
-                                </span>
-                                <span class="text-xs text-slate-400 font-medium">20 प्रश्न • 20 मिनिटे</span>
-                            </div>
-                            <h4 class="text-lg md:text-xl font-bold text-slate-800">
-                                Maha TET Paper 2 - दैनिक सराव टेस्ट 01
-                            </h4>
-                            <p class="text-xs md:text-sm text-slate-500 mt-1">
-                                थॉर्नडाईक, किशोरावस्था (हॉल), द्विगु समास, भुजंगप्रयात वृत्त, पायथागोरस, पेशी व अष्टप्रधान मंडळ
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-2 shrink-0">
-                        <a href="success_digital_tet_paper_2_test_01.html" 
-                           class="w-full md:w-auto text-center bg-teal-600 hover:bg-teal-700 text-white font-bold px-6 py-3 rounded-xl shadow-md transition flex items-center justify-center gap-2 pulse-btn">
-                            <span>TET 2 टेस्ट सोडवा</span>
-                            <i class="fas fa-arrow-right text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Maha TET Paper 2 Upcoming Placeholder Card -->
-                <div class="bg-teal-50/50 rounded-2xl p-5 border border-dashed border-teal-200 text-center text-slate-500">
-                    <i class="fas fa-calendar-plus text-teal-500 text-2xl mb-1.5"></i>
-                    <p class="font-bold text-sm text-slate-700">Maha TET Paper 2 Test 02 लवकरच उपलब्ध होईल</p>
-                    <p class="text-xs text-slate-500">गणित-विज्ञान व समाजशास्त्र विषयांची पुढील दैनिक चाचणी लवकरच अपडेट केली जाईल.</p>
-                </div>
-            </div>
+        <!-- Catalogs Container -->
+        <div id="catalogs-root" class="space-y-10">
+            <!-- Rendered by JavaScript for instant responsiveness & 100% accuracy -->
         </div>
 
-        <!-- ================= SECTION 3: CTET PAPER 1 CATALOG ================= -->
-        <div id="section-ctet" class="catalog-section mb-10">
-            <div class="flex items-center justify-between mb-4 pb-2 border-b border-orange-200">
-                <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-6 bg-orange-600 rounded-full"></span>
-                    <h3 class="text-xl md:text-2xl font-black text-slate-800">
-                        CTET Paper 1 मालिका (Primary - Class 1 to 5)
-                    </h3>
-                </div>
-                <span class="bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-lg border border-orange-200">
-                    NCERT Pattern
-                </span>
-            </div>
-
-            <div class="space-y-4">
-                <!-- CTET Test 01 Card -->
-                <div class="bg-white rounded-2xl p-5 md:p-6 border border-orange-200 shadow-sm card-hover flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center font-black text-lg shrink-0">
-                            01
-                        </div>
-                        <div>
-                            <div class="flex flex-wrap items-center gap-2 mb-1">
-                                <span class="bg-orange-100 text-orange-700 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
-                                    CTET Paper 1
-                                </span>
-                                <span class="bg-amber-100 text-amber-800 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
-                                    NCERT Pattern
-                                </span>
-                                <span class="text-xs text-slate-400 font-medium">20 प्रश्न • 20 मिनिटे</span>
-                            </div>
-                            <h4 class="text-lg md:text-xl font-bold text-slate-800">
-                                CTET Paper 1 - केंद्रीय सराव टेस्ट 01
-                            </h4>
-                            <p class="text-xs md:text-sm text-slate-500 mt-1">
-                                Piaget, Vygotsky, Van Hiele Maths Pedagogy, NCERT Class 3-5 EVS, Chomsky & Krashen
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-2 shrink-0">
-                        <a href="success_digital_ctet_paper_1_test_01.html" 
-                           class="w-full md:w-auto text-center bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-3 rounded-xl shadow-md transition flex items-center justify-center gap-2 pulse-btn">
-                            <span>CTET 1 टेस्ट सोडवा</span>
-                            <i class="fas fa-arrow-right text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- CTET Upcoming Placeholder Card -->
-                <div class="bg-orange-50/50 rounded-2xl p-5 border border-dashed border-orange-200 text-center text-slate-500">
-                    <i class="fas fa-calendar-plus text-orange-400 text-2xl mb-1.5"></i>
-                    <p class="font-bold text-sm text-slate-700">CTET Paper 1 Test 02 लवकरच उपलब्ध होईल</p>
-                    <p class="text-xs text-slate-500">NCERT EVS व Child Pedagogy ची पुढील विशेष चाचणी लवकरच अपडेट केली जाईल.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- ================= SECTION 3: CTET PAPER 2 CATALOG ================= -->
-        <div id="section-ctet2" class="catalog-section mb-10">
-            <div class="flex items-center justify-between mb-4 pb-2 border-b border-purple-200">
-                <div class="flex items-center gap-2">
-                    <span class="w-2.5 h-6 bg-purple-600 rounded-full"></span>
-                    <h3 class="text-xl md:text-2xl font-black text-slate-800">
-                        CTET Paper 2 मालिका (Upper Primary - Class 6 to 8)
-                    </h3>
-                </div>
-                <span class="bg-purple-100 text-purple-800 text-xs font-bold px-3 py-1 rounded-lg border border-purple-200">
-                    New Catalog Added 🔥
-                </span>
-            </div>
-
-            <div class="space-y-4">
-                <!-- CTET Paper 2 Test 01 Card -->
-                <div class="bg-white rounded-2xl p-5 md:p-6 border border-purple-200 shadow-sm card-hover flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-black text-lg shrink-0">
-                            01
-                        </div>
-                        <div>
-                            <div class="flex flex-wrap items-center gap-2 mb-1">
-                                <span class="bg-purple-100 text-purple-700 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
-                                    CTET Paper 2
-                                </span>
-                                <span class="bg-indigo-100 text-indigo-800 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
-                                    Class 6 to 8 Pattern
-                                </span>
-                                <span class="text-xs text-slate-400 font-medium">20 प्रश्न • 20 मिनिटे</span>
-                            </div>
-                            <h4 class="text-lg md:text-xl font-bold text-slate-800">
-                                CTET Paper 2 - केंद्रीय सराव टेस्ट 01
-                            </h4>
-                            <p class="text-xs md:text-sm text-slate-500 mt-1">
-                                Adolescent CDP (Piaget/Vygotsky), NCERT Science & Maths Pedagogy, Social Science & BICS/CALP
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-2 shrink-0">
-                        <a href="success_digital_ctet_paper_2_test_01.html" 
-                           class="w-full md:w-auto text-center bg-purple-600 hover:bg-purple-700 text-white font-bold px-6 py-3 rounded-xl shadow-md transition flex items-center justify-center gap-2 pulse-btn">
-                            <span>CTET 2 टेस्ट सोडवा</span>
-                            <i class="fas fa-arrow-right text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- CTET Paper 2 Upcoming Placeholder Card -->
-                <div class="bg-purple-50/50 rounded-2xl p-5 border border-dashed border-purple-200 text-center text-slate-500">
-                    <i class="fas fa-calendar-plus text-purple-400 text-2xl mb-1.5"></i>
-                    <p class="font-bold text-sm text-slate-700">CTET Paper 2 Test 02 लवकरच उपलब्ध होईल</p>
-                    <p class="text-xs text-slate-500">गणित-विज्ञान व सामाजिक शास्त्रांची पुढील उच्च प्राथमिक चाचणी लवकरच अपडेट केली जाईल.</p>
-                </div>
-            </div>
-        </div>
-
-        <script>
-            function filterCatalog(category) {
-                const mahatetSection = document.getElementById('section-mahatet');
-                const mahatet2Section = document.getElementById('section-mahatet2');
-                const ctetSection = document.getElementById('section-ctet');
-                const ctet2Section = document.getElementById('section-ctet2');
-                const tabs = document.querySelectorAll('.filter-btn');
-
-                tabs.forEach(btn => {
-                    btn.classList.remove('bg-slate-900', 'text-white');
-                    btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
-                });
-
-                const activeTab = document.getElementById('tab-' + category);
-                activeTab.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
-                activeTab.classList.add('bg-slate-900', 'text-white');
-
-                // Hide all first
-                mahatetSection.classList.add('hidden');
-                mahatet2Section.classList.add('hidden');
-                ctetSection.classList.add('hidden');
-                ctet2Section.classList.add('hidden');
-
-                if (category === 'all') {
-                    mahatetSection.classList.remove('hidden');
-                    mahatet2Section.classList.remove('hidden');
-                    ctetSection.classList.remove('hidden');
-                    ctet2Section.classList.remove('hidden');
-                } else if (category === 'mahatet') {
-                    mahatetSection.classList.remove('hidden');
-                } else if (category === 'mahatet2') {
-                    mahatet2Section.classList.remove('hidden');
-                } else if (category === 'ctet') {
-                    ctetSection.classList.remove('hidden');
-                } else if (category === 'ctet2') {
-                    ctet2Section.classList.remove('hidden');
-                }
-            }
-        </script>
-
-        <!-- Download App Banner -->
-        <div class="mt-10 bg-gradient-to-br from-indigo-900 via-blue-900 to-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden">
+        <!-- Download App Banner (Bottom) -->
+        <div class="mt-12 bg-gradient-to-br from-indigo-950 via-blue-900 to-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden border border-blue-800">
             <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div>
-                    <span class="bg-amber-400 text-slate-900 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">
-                        Official App
+                    <span class="bg-amber-400 text-slate-950 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                        Official Success App
                     </span>
-                    <h3 class="text-2xl font-black mt-2 mb-1">
-                        Success Digital App इन्स्टॉल करा
+                    <h3 class="text-2xl md:text-3xl font-black mt-2 mb-1">
+                        Success Digital App आजच इन्स्टॉल करा
                     </h3>
                     <p class="text-blue-200 text-sm max-w-lg">
-                        10,000+ प्रश्न, विषयवार सराव चाचण्या आणि सविस्तर रँकिंग ॲनालिसिससाठी प्ले स्टोअरवरून ॲप डाऊनलोड करा.
+                        10,000+ प्रश्न, विषयवार सराव चाचण्या, हस्तलिखित PDF नोट्स आणि राज्यस्तरीय अचूक रँकिंगसाठी गुगल प्ले स्टोअरवरून अधिकृत ॲप मोफत डाऊनलोड करा.
                     </p>
                 </div>
                 <a href="https://play.google.com/store/apps/details?id=com.ezgcka.oujtga&pcampaignid=web_share" 
                    target="_blank"
-                   class="bg-white text-blue-800 hover:bg-slate-100 font-extrabold px-6 py-3.5 rounded-2xl shadow-lg transition flex items-center gap-3 shrink-0 whitespace-nowrap">
-                    <i class="fab fa-google-play text-xl text-green-600"></i>
+                   class="bg-white text-blue-900 hover:bg-slate-100 font-black px-6 py-3.5 rounded-2xl shadow-lg transition flex items-center gap-3 shrink-0 whitespace-nowrap transform hover:scale-105">
+                    <i class="fab fa-google-play text-2xl text-emerald-600"></i>
                     <span>Download on Play Store</span>
                 </a>
             </div>
@@ -437,14 +180,331 @@
 
     </main>
 
+    <!-- Sticky Mobile & Desktop App Install Bar -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 bg-slate-950 text-white px-4 py-2.5 border-t border-slate-800 shadow-2xl flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-yellow-400 text-slate-950 flex items-center justify-center font-black text-lg shrink-0">
+                <i class="fas fa-mobile-screen-button"></i>
+            </div>
+            <div>
+                <p class="text-xs md:text-sm font-black leading-tight text-white">Success Digital Android App</p>
+                <p class="text-[10px] md:text-xs text-slate-400">10,000+ सराव प्रश्न • All Maharashtra Live Rank</p>
+            </div>
+        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.ezgcka.oujtga&pcampaignid=web_share" 
+           target="_blank"
+           class="bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-xs md:text-sm px-4 py-2 rounded-xl flex items-center gap-1.5 shadow-md shrink-0 transition">
+            <i class="fab fa-google-play text-xs"></i> <span>Install Free</span>
+        </a>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs">
         <div class="container mx-auto px-4">
             <p class="text-white font-bold text-sm mb-1">SUCCESS DIGITAL</p>
-            <p class="text-slate-400 mb-2">TET & CET परीक्षेसाठी सर्वोत्तम डिजिटल व्यासपीठ</p>
-            <p>&copy; 2026 Success Digital. All rights reserved.</p>
+            <p class="text-slate-400 mb-2">TET & CTET परीक्षेसाठी सर्वोत्तम डिजिटल व्यासपीठ • 20 Tests for Each Category</p>
+            <p>&copy; Success Digital. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Comprehensive Catalog Data & Render Logic -->
+    <script>
+        // 80 Tests Catalog Database (20 Tests Per Category)
+        const catalogDatabase = {
+            'mahatet1': {
+                id: 'mahatet1',
+                title: 'Maha TET Paper 1 मालिका (महाराष्ट्र - प्राथमिक)',
+                subtext: 'इयत्ता 1 ते 5 साठी 20 संपूर्ण दैनिक सराव चाचण्या',
+                badgeText: '20 Tests Live',
+                badgeClass: 'bg-blue-100 text-blue-800 border-blue-200',
+                themeBarClass: 'bg-blue-600',
+                borderClass: 'border-blue-200',
+                badgeNumClass: 'bg-blue-100 text-blue-700',
+                btnClass: 'bg-blue-600 hover:bg-blue-700',
+                categoryLabel: 'Maha TET Paper 1',
+                tests: [
+                    { id: 1, title: 'दैनिक सराव टेस्ट 01', topics: 'पियाजे अवस्था, समावेशक शिक्षण, म्हणी, भावे प्रयोग, Articles, लसावि-मसावि, पर्यावरण दिन', directUrl: 'success_digital_tet_paper_1_test_01.html', tags: ['CDP', 'मराठी', 'English', 'Maths', 'EVS'] },
+                    { id: 2, title: 'दैनिक सराव टेस्ट 02', topics: 'वायगोत्स्की ZPD, कोहलबर्ग, संधी विग्रह, Present Perfect Tense, सरळव्याज, काझीरंगा उद्यान', directUrl: 'success_digital_tet_paper_1_test_02.html', tags: ['Vygotsky', 'संधी', 'Interest', 'EVS'] },
+                    { id: 3, title: 'दैनिक सराव टेस्ट 03', topics: 'थॉर्नडाईक प्रयत्न-प्रमाद, स्किनर प्रबलीकरण, बहुव्रीही समास, Prepositions, मसावि HCF, हरितद्रव्य व मॅग्नेशियम', directUrl: 'test.html?cat=mahatet1&test=3', tags: ['Thorndike', 'समास', 'Maths', 'Science'] },
+                    { id: 4, title: 'दैनिक सराव टेस्ट 04', topics: 'जेरोम ब्रूनर अवस्था, द्वितीया विभक्ती, Adjectives, त्रिकोणाचे आंतरकोन, वातावरणातील नायट्रोजन 78%', directUrl: 'test.html?cat=mahatet1&test=4', tags: ['Bruner', 'विभक्ती', 'Geometry', 'Atmosphere'] },
+                    { id: 5, title: 'दैनिक सराव टेस्ट 05', topics: 'पाव्हलोव्ह अभिजात अभिसंधान, कर्मणी प्रयोग, Synonyms, शेकडा नफा-तोटा, महाराष्ट्राचा समुद्रकिनारा 720 किमी', directUrl: 'test.html?cat=mahatet1&test=5', tags: ['Pavlov', 'प्रयोग', 'Profit Loss', 'Geography'] },
+                    { id: 6, title: 'दैनिक सराव टेस्ट 06', topics: 'स्पीअरमन बुद्धिमत्ता सिद्धांत, नाम व विशेषण, Indirect Speech, अपूर्णांक बेरीज, जीवनसत्व अ व रातांधळेपणा', directUrl: 'test.html?cat=mahatet1&test=6', tags: ['Spearman', 'व्याकरण', 'Fractions', 'Vitamins'] },
+                    { id: 7, title: 'दैनिक सराव टेस्ट 07', topics: 'कोहलर मर्मदृष्टी उपपत्ती, रीतिवाचक क्रियाविशेषण, Degrees of Comparison, आयताचे क्षेत्रफळ, जलशुद्धीकरण क्लोरीन', directUrl: 'test.html?cat=mahatet1&test=7', tags: ['Gestalt', 'क्रियाविशेषण', 'Mensuration', 'Water'] },
+                    { id: 8, title: 'दैनिक सराव टेस्ट 08', topics: 'RTE Act 2009 कायदेशीर तरतुदी, समानार्थी शब्द, Passive Voice, सरासरी Average, ताडोबा राष्ट्रीय उद्यान चंद्रपूर', directUrl: 'test.html?cat=mahatet1&test=8', tags: ['RTE 2009', 'शब्दसंग्रह', 'Average', 'Sanctuary'] },
+                    { id: 9, title: 'दैनिक सराव टेस्ट 09', topics: 'डिस्लेक्सिया वाचन विकार, विद्यार्थ वाक्य, Conjunctions, छापील किंमत व शेकडा सूट, सूर्यमाला व गुरु ग्रह', directUrl: 'test.html?cat=mahatet1&test=9', tags: ['Dyslexia', 'वाक्यप्रकार', 'Discount', 'Astronomy'] },
+                    { id: 10, title: 'दैनिक सराव टेस्ट 10', topics: 'गार्डनर आंतरवैयक्तिक बुद्धिमत्ता, अव्ययीभाव समास, One Word, दशांश अपूर्णांक गुणाकार, अन्नसाखळी प्राथमिक ग्राहक', directUrl: 'test.html?cat=mahatet1&test=10', tags: ['Gardner', 'समास', 'Decimals', 'Ecology'] },
+                    { id: 11, title: 'दैनिक सराव टेस्ट 11', topics: 'CCE आकारिक मूल्यमापन, मराठी कठोर व्यंजने, Modal Auxiliaries, वर्तुळाचा परीघ 2πr, सिस्मोग्राफ भूकंप तीव्रता', directUrl: 'test.html?cat=mahatet1&test=11', tags: ['CCE', 'वर्णमाला', 'Geometry', 'Disaster'] },
+                    { id: 12, title: 'दैनिक सराव टेस्ट 12', topics: 'अब्राहम मास्लो आत्म-साक्षात्कार, अपूर्ण वर्तमानकाळ, Idioms & Phrases, वेग-वेळ-अंतर, गंगा नदी व जलप्रणाली', directUrl: 'test.html?cat=mahatet1&test=12', tags: ['Maslow', 'काळ', 'Speed-Time', 'Rivers'] },
+                    { id: 13, title: 'दैनिक सराव टेस्ट 13', topics: 'शीर्षपुच्छ विकास तत्त्व, पूर्णविराम नियम, Question Tag, गुणोत्तर व प्रमाण, वातावरणातील ओझोन थर स्थितांबर', directUrl: 'test.html?cat=mahatet1&test=13', tags: ['Development', 'विरामचिन्हे', 'Ratio', 'Ozone'] },
+                    { id: 14, title: 'दैनिक सराव टेस्ट 14', topics: 'अपसारी विचार सृजनशीलता, इतरतर द्वंद्व समास, Phonics Rhyme, 1 ते 20 मूळ संख्या, घटपर्णी कीटकभक्षी वनस्पती', directUrl: 'test.html?cat=mahatet1&test=14', tags: ['Creativity', 'द्वंद्व', 'Prime Numbers', 'Biology'] },
+                    { id: 15, title: 'दैनिक सराव टेस्ट 15', topics: 'धन अध्ययन संक्रमण, शब्दयोगी अव्यये, Silent Letters, इष्टिकाचिती घनफळ, मानवी पचनसंस्था व लाळ टायलीन', directUrl: 'test.html?cat=mahatet1&test=15', tags: ['Transfer', 'अव्यय', 'Volume', 'Digestion'] },
+                    { id: 16, title: 'दैनिक सराव टेस्ट 16', topics: 'NEP 2020 शालेय रचना (5+3+3+4), संयुक्त वाक्य, Irregular Plurals, चक्रवाढ व्याज, गांडूळ खत निर्मिती', directUrl: 'test.html?cat=mahatet1&test=16', tags: ['NEP 2020', 'वाक्य', 'Compound Int', 'Agriculture'] },
+                    { id: 17, title: 'दैनिक सराव टेस्ट 17', topics: 'अध्ययनातील पठार अवस्था, केवलप्रयोगी अव्यय, Antonyms, काटकोन त्रिकोण पायथागोरस, बारव पारंपरिक जलसाठे', directUrl: 'test.html?cat=mahatet1&test=17', tags: ['Learning Curve', 'केवलप्रयोगी', 'Pythagoras', 'Water'] },
+                    { id: 18, title: 'दैनिक सराव टेस्ट 18', topics: 'उपचारात्मक अध्यापन Remedial, मराठी शुद्धलेखन नियम, Subject-Verb Agreement, समभुज त्रिकोण परिमिती, सावित्रीबाई फुले', directUrl: 'test.html?cat=mahatet1&test=18', tags: ['Remedial', 'शुद्धलेखन', 'Grammar', 'History'] },
+                    { id: 19, title: 'दैनिक सराव टेस्ट 19', topics: 'उद्गामी अध्यापन पद्धत, वाक्प्रचार अर्थ, Collective Nouns, संख्यांचे वर्गमूळ, वाळवंटी वनस्पती अनुकूलन काटे', directUrl: 'test.html?cat=mahatet1&test=19', tags: ['Methods', 'वाक्प्रचार', 'Square Root', 'Adaptation'] },
+                    { id: 20, title: 'संपूर्ण सराव महा टेस्ट 20', topics: 'भयमुक्त बालस्नेही शिक्षण, मिश्र वाक्य, Communicative Language CLT, 5 अंकी लहानात लहान संख्या, चिपको आंदोलन', directUrl: 'test.html?cat=mahatet1&test=20', tags: ['Master Mock', 'मिश्र वाक्य', 'CLT', 'Conservation'] }
+                ]
+            },
+            'mahatet2': {
+                id: 'mahatet2',
+                title: 'Maha TET Paper 2 मालिका (महाराष्ट्र - उच्च प्राथमिक)',
+                subtext: 'इयत्ता 6 ते 8 साठी 20 संपूर्ण दैनिक सराव चाचण्या (गणित-विज्ञान व सामाजिक शास्त्रे)',
+                badgeText: '20 Tests Live',
+                badgeClass: 'bg-teal-100 text-teal-800 border-teal-200',
+                themeBarClass: 'bg-teal-600',
+                borderClass: 'border-teal-200',
+                badgeNumClass: 'bg-teal-100 text-teal-700',
+                btnClass: 'bg-teal-600 hover:bg-teal-700',
+                categoryLabel: 'Maha TET Paper 2',
+                tests: [
+                    { id: 1, title: 'दैनिक सराव टेस्ट 01', topics: 'किशोरावस्था स्टॅन्ले हॉल, द्विगु समास, Passive Voice, काटकोन त्रिकोण, पेशी तंतुकणिका, शिवकालीन अष्टप्रधान अमात्य', directUrl: 'success_digital_tet_paper_2_test_01.html', tags: ['Adolescence', 'द्विगु', 'Biology', 'Shivaji Maharaj'] },
+                    { id: 2, title: 'दैनिक सराव टेस्ट 02', topics: 'अधि-संज्ञान Metacognition, उत्प्रेक्षा अलंकार, Adjective Clause, बहिर्गोल आरसा, कळसूबाई सर्वोच्च शिखर 1646 मी.', directUrl: 'test.html?cat=mahatet2&test=2', tags: ['Metacognition', 'उत्प्रेक्षा', 'Optics', 'Geography'] },
+                    { id: 3, title: 'दैनिक सराव टेस्ट 03', topics: 'गार्डनर संगीतमय बुद्धिमत्ता, भुजंगप्रयात वृत्त, English Idioms, बैजिक नित्यसमानता x+1/x, 42 वी घटनादुरुस्ती कलम 51A', directUrl: 'test.html?cat=mahatet2&test=3', tags: ['Musical Intel', 'वृत्त', 'Algebra', 'Constitution'] },
+                    { id: 4, title: 'दैनिक सराव टेस्ट 04', topics: 'विगमन विचार, दृष्टांत अलंकार, Noun Clause, बहुपदींचे अवयव, प्रकाशाचे अपवर्तन, सिंधू संस्कृती लोथल बंदर', directUrl: 'test.html?cat=mahatet2&test=4', tags: ['Reasoning', 'दृष्टांत', 'Refraction', 'Harappa'] },
+                    { id: 5, title: 'दैनिक सराव टेस्ट 05', topics: 'एरिक्सन Identity vs Confusion, तत्सम शब्द, Conditionals, त्रिकोण एकरूपता SSS, सामू pH 7, मौर्य साम्राज्य स्थापना', directUrl: 'test.html?cat=mahatet2&test=5', tags: ['Erikson', 'तत्सम', 'Chemistry', 'Maurya'] },
+                    { id: 6, title: 'दैनिक सराव टेस्ट 06', topics: 'भावनिक बुद्धिमत्ता डॅनियल गोलमन, शार्दूलविक्रीडित वृत्त 19 अक्षरे, Metaphor, वर्तुळ कोन 360°, ध्वनी वेग, 1857 बराकपूर', directUrl: 'test.html?cat=mahatet2&test=6', tags: ['Emotional Intel', 'शार्दूल', 'Sound', '1857 Revolt'] },
+                    { id: 7, title: 'दैनिक सराव टेस्ट 07', topics: 'किशोरावस्था समुपदेशन, व्यतिरेक अलंकार, Imperative Indirect Speech, वर्गसमीकरणे, आर्किमिडीजचे तत्त्व, लोकसभा रचना', directUrl: 'test.html?cat=mahatet2&test=7', tags: ['Counseling', 'व्यतिरेक', 'Archimedes', 'Polity'] },
+                    { id: 8, title: 'दैनिक सराव टेस्ट 08', topics: 'ज्ञानरचनावादी 5E मॉडेल, पोर्तुगीज परभाषीय शब्द, Adverb Clauses, रेषीय समीकरणे, लोखंड गंजणे, शिवछत्रपती राज्याभिषेक', directUrl: 'test.html?cat=mahatet2&test=8', tags: ['5E Model', 'शब्दसिद्धी', 'Oxidation', 'Raigad'] },
+                    { id: 9, title: 'दैनिक सराव टेस्ट 09', topics: 'डिस्ग्राफिया लेखन विकार, श्लेष अलंकार, Complex Sentences, वृत्तचिती घनफळ πr²h, मानवी हृदय 4 कप्पे, पृथ्वी भूकवच', directUrl: 'test.html?cat=mahatet2&test=9', tags: ['Dysgraphia', 'श्लेष', 'Circulation', 'Crust'] },
+                    { id: 10, title: 'दैनिक सराव टेस्ट 10', topics: 'गेने Problem Solving, वसंततिलका वृत्त 14 अक्षरे, Phrasal Verbs, बहुलक Mode, ओहमचा नियम V=IR, 73 वी घटनादुरुस्ती 11 वी अनुसूची', directUrl: 'test.html?cat=mahatet2&test=10', tags: ['Gagne', 'वृत्त', 'Ohms Law', 'Panchayat'] },
+                    { id: 11, title: 'दैनिक सराव टेस्ट 11', topics: 'अल्बर्ट बंडूरा अवधान टप्पा, अनन्वय अलंकार, Gerund, घातांक नियम 2¹⁰, अणुकेंद्रक प्रोटॉन-न्यूट्रॉन, सत्यशोधक समाज', directUrl: 'test.html?cat=mahatet2&test=11', tags: ['Bandura', 'अनन्वय', 'Atomic', 'Satyashodhak'] },
+                    { id: 12, title: 'दैनिक सराव टेस्ट 12', topics: 'औपचारिक क्रियात्मक अमूर्त विचार, वाक्यरूपांतर विधानार्थी, Relative Pronouns, व्यस्त प्रमाण, पर्णरंध्रे Stomata, नैऋत्य मान्सून', directUrl: 'test.html?cat=mahatet2&test=12', tags: ['Piaget', 'वाक्यरूपांतर', 'Biology', 'Monsoon'] },
+                    { id: 13, title: 'दैनिक सराव टेस्ट 13', topics: 'CWSN सर्वसमावेशक लवचिक अभ्यासक्रम, अपन्हुती अलंकार, Neither of Singular, समांतरभुज चौकोन, उष्णता प्रारण, कलम 21', directUrl: 'test.html?cat=mahatet2&test=13', tags: ['Inclusion', 'अपन्हुती', 'Radiation', 'Article 21'] },
+                    { id: 14, title: 'दैनिक सराव टेस्ट 14', topics: 'पोर्टफोलिओ संचिका, इंद्रवज्रा वृत्त 11 अक्षरे, Prepositions Since, नाणे छापा संभाव्यता 1/2, लॅक्टोबॅसिलस, अकबराचे दीन-इ-इलाही', directUrl: 'test.html?cat=mahatet2&test=14', tags: ['Portfolio', 'वृत्त', 'Probability', 'Mughal'] },
+                    { id: 15, title: 'दैनिक सराव टेस्ट 15', topics: 'ज्ञानरचनावादी सुलभक, शब्दालंकार, Compound Sentences, sin θ त्रिकोणमिती, न्यूटनचा तिसरा नियम, बेसॉल्ट अग्निजन्य खडक', directUrl: 'test.html?cat=mahatet2&test=15', tags: ['Facilitator', 'शब्दालंकार', 'Newtons Laws', 'Basalt'] },
+                    { id: 16, title: 'दैनिक सराव टेस्ट 16', topics: 'पहचान संकट Identity Crisis, विधेयविस्तार, Reported Questions, शंकूचे घनफळ 1/3 πr²h, हायड्रोजन, महाड चवदार तळे', directUrl: 'test.html?cat=mahatet2&test=16', tags: ['Identity', 'विधेयविस्तार', 'Cone', 'Ambedkar'] },
+                    { id: 17, title: 'दैनिक सराव टेस्ट 17', topics: 'सहकार्यात्मक अध्ययन गटकार्य, अतिशयोक्ती अलंकार, Voice By whom, त्रिकोण बाह्यकोन प्रमेय, मूत्रपिंड नेफ्रॉन्स, सर्वोच्च न्यायालय', directUrl: 'test.html?cat=mahatet2&test=17', tags: ['Collaboration', 'अतिशयोक्ती', 'Kidney', 'Supreme Court'] },
+                    { id: 18, title: 'दैनिक सराव टेस्ट 18', topics: 'VARK अध्ययन शैली मॉडेल, उपमा अलंकार साधर्म्य, Syntax does not, (a+b)³ विस्तार, पट्टीचुंबक ध्रुव, गोदावरी नदी प्रणाली', directUrl: 'test.html?cat=mahatet2&test=18', tags: ['VARK', 'उपमा', 'Expansion', 'Godavari'] },
+                    { id: 19, title: 'दैनिक सराव टेस्ट 19', topics: 'नैदानिक चाचणी Diagnostic, मराठी अभिजात भाषा दर्जा, Idioms Ignore, अंकगणिती श्रेढी AP, अन्नजाळे Food Web, चले जाव 1942', directUrl: 'test.html?cat=mahatet2&test=19', tags: ['Diagnostic', 'अभिजात भाषा', 'AP Series', 'Quit India'] },
+                    { id: 20, title: 'संपूर्ण सराव महा टेस्ट 20', topics: 'HOTS उच्च विचार कौशल्ये, मिश्र वाक्य, Subject-Verb Concord, वर्तुळ व्यास 2r, प्रिझम वर्णपंक्ती, संविधानाचे शिल्पकार डॉ. आंबेडकर', directUrl: 'test.html?cat=mahatet2&test=20', tags: ['Master Mock', 'HOTS', 'Prism', 'Constitution'] }
+                ]
+            },
+            'ctet1': {
+                id: 'ctet1',
+                title: 'CTET Paper 1 मालिका (Central TET - Primary)',
+                subtext: 'Class 1 to 5 NCERT Curriculum (CDP, Maths, EVS & Language Pedagogy)',
+                badgeText: '20 Tests Live',
+                badgeClass: 'bg-orange-100 text-orange-800 border-orange-200',
+                themeBarClass: 'bg-orange-600',
+                borderClass: 'border-orange-200',
+                badgeNumClass: 'bg-orange-100 text-orange-700',
+                btnClass: 'bg-orange-600 hover:bg-orange-700',
+                categoryLabel: 'CTET Paper 1',
+                tests: [
+                    { id: 1, title: 'केंद्रीय सराव टेस्ट 01', topics: 'Piaget Concrete Operational, Vygotsky Scaffolding, Van Hiele Level 0, 6 NCERT EVS Themes, Chomsky LAD, Skimming', directUrl: 'success_digital_ctet_paper_1_test_01.html', tags: ['Piaget', 'Vygotsky', 'Van Hiele', 'EVS Themes'] },
+                    { id: 2, title: 'केंद्रीय सराव टेस्ट 02', topics: 'Active child-centered learning, Fractions paper strips, Kuduk language Jharkhand, Productive skills LSRW', directUrl: 'test.html?cat=ctet1&test=2', tags: ['Constructivism', 'Fractions', 'Kuduk', 'LSRW'] },
+                    { id: 3, title: 'केंद्रीय सराव टेस्ट 03', topics: 'Kohlberg Pre-conventional morality, Smallest divisible by 1-10 (2520), Weaver bird nests, Krashen i+1 input', directUrl: 'test.html?cat=ctet1&test=3', tags: ['Kohlberg', 'Divisibility', 'NCERT Birds', 'Krashen'] },
+                    { id: 4, title: 'केंद्रीय सराव टेस्ट 04', topics: 'Differentiated inclusive instruction, Place value vs Face value 6745, Pochampally Ikat sarees Telangana, Formative Assessment', directUrl: 'test.html?cat=ctet1&test=4', tags: ['Inclusion', 'Place Value', 'Pochampally', 'Assessment'] },
+                    { id: 5, title: 'केंद्रीय सराव टेस्ट 05', topics: 'Gardner Spatial Intelligence, Equilateral triangle 3 lines of symmetry, Ladakh Changpa Pashmina goats, Bilingual Method', directUrl: 'test.html?cat=ctet1&test=5', tags: ['Gardner', 'Symmetry', 'Pashmina', 'Bilingual'] },
+                    { id: 6, title: 'केंद्रीय सराव टेस्ट 06', topics: 'Gender stereotyping in curriculum, Polya problem solving understanding, Queen Bee in hive, Phoneme sound unit', directUrl: 'test.html?cat=ctet1&test=6', tags: ['Gender', 'Polya', 'Honeybee', 'Phoneme'] },
+                    { id: 7, title: 'केंद्रीय सराव टेस्ट 07', topics: 'Sociocultural mediation & tools, Measuring bucket capacity in Liters, Jim Corbett National Park, Silent reading comprehension', directUrl: 'test.html?cat=ctet1&test=7', tags: ['Sociocultural', 'Measurement', 'Jim Corbett', 'Reading'] },
+                    { id: 8, title: 'केंद्रीय सराव टेस्ट 08', topics: 'Children errors as windows into thinking, Geoboard manipulatives, Australia Desert Oak tree, Remedial interventions', directUrl: 'test.html?cat=ctet1&test=8', tags: ['Errors', 'Geoboard', 'Desert Oak', 'Remedial'] },
+                    { id: 9, title: 'केंद्रीय सराव टेस्ट 09', topics: 'Bloom Taxonomy Evaluation level, Estimation skills in arithmetic, Suryamani Torang nature center, Scanning information', directUrl: 'test.html?cat=ctet1&test=9', tags: ['Bloom', 'Estimation', 'Torang', 'Scanning'] },
+                    { id: 10, title: 'केंद्रीय सराव टेस्ट 10', topics: 'Intrinsic motivation vs rewards, Geometric doubling sequences, Ronald Ross malaria mosquito discovery, Diagnostic testing', directUrl: 'test.html?cat=ctet1&test=10', tags: ['Motivation', 'Sequences', 'Malaria', 'Diagnostic'] },
+                    { id: 11, title: 'केंद्रीय सराव टेस्ट 11', topics: 'CCE Scholastic & co-scholastic domains, Van Hiele Level 1 Analysis, Assam bamboo stilt houses, Pre-reading schema', directUrl: 'test.html?cat=ctet1&test=11', tags: ['CCE', 'Van Hiele 1', 'Assam Houses', 'Reading'] },
+                    { id: 12, title: 'केंद्रीय सराव टेस्ट 12', topics: 'Erikson Industry vs Inferiority, Fractions comparison 4/5, Louis Braille 6-dots matrix, Mother tongue resource', directUrl: 'test.html?cat=ctet1&test=12', tags: ['Erikson', 'Fractions', 'Braille', 'Mother Tongue'] },
+                    { id: 13, title: 'केंद्रीय सराव टेस्ट 13', topics: 'ADHD symptoms & accommodation, Rectangle perimeter & dimensions, Al-Biruni water stepwells, Sight words recognition', directUrl: 'test.html?cat=ctet1&test=13', tags: ['ADHD', 'Perimeter', 'Al-Biruni', 'Sight Words'] },
+                    { id: 14, title: 'केंद्रीय सराव टेस्ट 14', topics: 'Piaget Accommodation schema change, Bar graphs & data handling, Karnam Malleswari AP, Role-play communication', directUrl: 'test.html?cat=ctet1&test=14', tags: ['Accommodation', 'Data Handling', 'Malleswari', 'Speaking'] },
+                    { id: 15, title: 'केंद्रीय सराव टेस्ट 15', topics: 'Vygotsky Private speech self-regulation, NCF Primary math goals, Owl neck rotation 270°, Task-Based Language Teaching TBLT', directUrl: 'test.html?cat=ctet1&test=15', tags: ['Private Speech', 'NCF Goals', 'Owl', 'TBLT'] },
+                    { id: 16, title: 'केंद्रीय सराव टेस्ट 16', topics: 'Universal Design for Learning UDL, Dienes blocks base ten, Traditional food preservation, Multilingualism resource', directUrl: 'test.html?cat=ctet1&test=16', tags: ['UDL', 'Dienes Blocks', 'Food Preserv', 'Multilingual'] },
+                    { id: 17, title: 'केंद्रीय सराव टेस्ट 17', topics: 'Gifted learners enrichment challenges, Time interval calculation 150 min, Sloth 17-hour tree sleeper, Top-down listening', directUrl: 'test.html?cat=ctet1&test=17', tags: ['Gifted', 'Time Math', 'Sloth', 'Listening'] },
+                    { id: 18, title: 'केंद्रीय सराव टेस्ट 18', topics: 'Family primary socialization agent, Letter H symmetry lines, Amrita Devi Bishnoi Khejadi trees, Authentic real texts', directUrl: 'test.html?cat=ctet1&test=18', tags: ['Socialization', 'Symmetry', 'Bishnoi', 'Authentic Texts'] },
+                    { id: 19, title: 'केंद्रीय सराव टेस्ट 19', topics: 'Standardized tests limitations, Fractions division (1/2 ÷ 1/8 = 4), Mid-Day Meal nutritious meals, Grammar in context', directUrl: 'test.html?cat=ctet1&test=19', tags: ['Assessment', 'Division', 'Mid-Day Meal', 'Grammar'] },
+                    { id: 20, title: 'केंद्रीय सराव महा टेस्ट 20', topics: 'Progressive child-centered researchers, Mathematization of thinking, Integrated EVS, Natural language acquisition', directUrl: 'test.html?cat=ctet1&test=20', tags: ['Master Mock', 'Mathematization', 'Integrated EVS', 'Acquisition'] }
+                ]
+            },
+            'ctet2': {
+                id: 'ctet2',
+                title: 'CTET Paper 2 मालिका (Central TET - Upper Primary)',
+                subtext: 'Class 6 to 8 NCERT Pattern (CDP, Science & Maths / Social Science)',
+                badgeText: '20 Tests Live',
+                badgeClass: 'bg-purple-100 text-purple-800 border-purple-200',
+                themeBarClass: 'bg-purple-600',
+                borderClass: 'border-purple-200',
+                badgeNumClass: 'bg-purple-100 text-purple-700',
+                btnClass: 'bg-purple-600 hover:bg-purple-700',
+                categoryLabel: 'CTET Paper 2',
+                tests: [
+                    { id: 1, title: 'केंद्रीय सराव टेस्ट 01', topics: 'Piaget Formal Operational, Vygotsky Private speech, Litmus test acids/bases, Linear equations, Mohenjo-daro Great Bath, BICS vs CALP', directUrl: 'success_digital_ctet_paper_2_test_01.html', tags: ['Formal Ops', 'Private Speech', 'Acids Bases', 'Harappa'] },
+                    { id: 2, title: 'केंद्रीय सराव टेस्ट 02', topics: 'Portfolio assessment cumulative growth, Yeast fermentation Pasteur, Regular hexagon interior angles 720°, Earth core Nickel & Iron NIFE', directUrl: 'test.html?cat=ctet2&test=2', tags: ['Portfolio', 'Fermentation', 'Polygons', 'Core NIFE'] },
+                    { id: 3, title: 'केंद्रीय सराव टेस्ट 03', topics: 'Differentiated instruction for diversity, Lubricants & ball bearings friction, Die prime number probability 1/2, Public Interest Litigation PIL', directUrl: 'test.html?cat=ctet2&test=3', tags: ['Differentiated', 'Friction', 'Probability', 'PIL'] },
+                    { id: 4, title: 'केंद्रीय सराव टेस्ट 04', topics: 'Kohlberg Universal Ethical Principles, Photosynthesis CO₂ & O₂, RHS congruence criteria, Ashoka Dhamma rock edicts, CALP timeline', directUrl: 'test.html?cat=ctet2&test=4', tags: ['Universal Ethics', 'Photosynthesis', 'RHS', 'Ashoka'] },
+                    { id: 5, title: 'केंद्रीय सराव टेस्ट 05', topics: 'Metacognition self-monitoring, Electric bell magnetic effect, Quadratic polynomial factors, Preamble Secular democracy, Krashen Monitor', directUrl: 'test.html?cat=ctet2&test=5', tags: ['Metacognition', 'Electromagnet', 'Factorization', 'Secular'] },
+                    { id: 6, title: 'केंद्रीय सराव टेस्ट 06', topics: 'Vygotskian scaffolding in math, Alveoli gas exchange in lungs, Cylinder curved surface area 2πrh, Akbar Mansabdari system, Textual inferencing', directUrl: 'test.html?cat=ctet2&test=6', tags: ['Scaffolding', 'Alveoli', 'Cylinder', 'Mansab'] },
+                    { id: 7, title: 'केंद्रीय सराव टेस्ट 07', topics: 'Adolescent Imaginary Audience, Conservation of Mass Lavoisier, Exponents laws (3⁰+4⁻¹)×4=5, Troposphere weather sphere, Grammar-Translation flaws', directUrl: 'test.html?cat=ctet2&test=7', tags: ['Imaginary Audience', 'Mass Conserv', 'Exponents', 'Troposphere'] },
+                    { id: 8, title: 'केंद्रीय सराव टेस्ट 08', topics: 'Inquiry science facilitation, Pancreatic Insulin regulation, Similar triangles area ratio 4:9, Dalhousie Doctrine of Lapse, Indirect objects syntax', directUrl: 'test.html?cat=ctet2&test=8', tags: ['Inquiry', 'Insulin', 'Similar Triangles', 'Doctrine Lapse'] },
+                    { id: 9, title: 'केंद्रीय सराव टेस्ट 09', topics: 'Dyscalculia arithmetic barrier, Law of Reflection ∠i = ∠r, Mode = 3 Median - 2 Mean, 73rd Amendment 33% women quota, CLT communicative competence', directUrl: 'test.html?cat=ctet2&test=9', tags: ['Dyscalculia', 'Reflection', 'Mode-Median', '73rd Amend'] },
+                    { id: 10, title: 'केंद्रीय सराव टेस्ट 10', topics: 'Sternberg Triarchic Theory, Zinc + HCl Hydrogen pop sound, Simple interest doubling rate 20%, Cornwallis Permanent Settlement 1793, Collocations', directUrl: 'test.html?cat=ctet2&test=10', tags: ['Sternberg', 'Hydrogen', 'Interest', 'Cornwallis'] },
+                    { id: 11, title: 'केंद्रीय सराव टेस्ट 11', topics: 'Assessment AS Learning self-rubrics, Lysosome suicide bags of cell, Rhombus diagonals 90° bisection, Article 32 Constitutional Remedies, Swain Output', directUrl: 'test.html?cat=ctet2&test=11', tags: ['Assessment AS', 'Lysosome', 'Rhombus', 'Article 32'] },
+                    { id: 12, title: 'केंद्रीय सराव टेस्ट 12', topics: 'Carol Gilligan Ethics of Care, Galvanization zinc coating, Pythagorean triplet (7, 24, 25), Equatorial convectional rainfall, Cohesive devices', directUrl: 'test.html?cat=ctet2&test=12', tags: ['Gilligan', 'Galvanization', 'Pythagoras', 'Convectional'] },
+                    { id: 13, title: 'केंद्रीय सराव टेस्ट 13', topics: 'Cooperative ZPD cognitive conflict, Sound pitch & frequency, Inequalities whole numbers, Razia Sultan Delhi ruler, Interlingual L1 errors', directUrl: 'test.html?cat=ctet2&test=13', tags: ['Cooperative', 'Frequency', 'Inequalities', 'Razia Sultan'] },
+                    { id: 14, title: 'केंद्रीय सराव टेस्ट 14', topics: 'Jerome Bruner Spiral Curriculum, Alexander Fleming Penicillin, Sphere volume 4/3 πr³, Separation of Powers prevention of tyranny, Extensive reading', directUrl: 'test.html?cat=ctet2&test=14', tags: ['Spiral Curric', 'Penicillin', 'Sphere', 'Separation Powers'] },
+                    { id: 15, title: 'केंद्रीय सराव टेस्ट 15', topics: 'Vygotsky More Knowledgeable Other MKO, Ruminant Rumen stomach, Scientific notation 4.5×10⁻⁵, Chauri Chaura 1922, Morphology word roots', directUrl: 'test.html?cat=ctet2&test=15', tags: ['MKO', 'Rumen', 'Scientific Notation', 'Chauri Chaura'] },
+                    { id: 16, title: 'केंद्रीय सराव टेस्ट 16', topics: 'Universal Design for Learning multimodal, Sound speed in steel solids, Convex polygon exterior angles 360°, Labrador & Gulf Stream, Objective passive voice', directUrl: 'test.html?cat=ctet2&test=16', tags: ['UDL', 'Sound Medium', 'Polygon Angles', 'Ocean Currents'] },
+                    { id: 17, title: 'केंद्रीय सराव टेस्ट 17', topics: 'Self-Determination Autonomy & Competence, Salt dissolution physical change, Drawing Ace probability 1/13, Jallianwala Bagh 1919 Dyer, Schema Theory', directUrl: 'test.html?cat=ctet2&test=17', tags: ['Autonomy', 'Physical Change', 'Cards Probability', 'Jallianwala'] },
+                    { id: 18, title: 'केंद्रीय सराव टेस्ट 18', topics: 'High-order counterfactual questioning, Concave lens Myopia correction, Quadrilateral interior angles 360°, Irish Constitution DPSPs, Idioms', directUrl: 'test.html?cat=ctet2&test=18', tags: ['HOTS', 'Myopia', 'Quadrilateral', 'DPSP'] },
+                    { id: 19, title: 'केंद्रीय सराव टेस्ट 19', topics: 'Descriptive actionable feedback, Non-renewable coal energy, Algebraic identity x²+1/x²=11, Sant Tukaram Maharaj Abhangas, Authentic task assessment', directUrl: 'test.html?cat=ctet2&test=19', tags: ['Feedback', 'Coal Energy', 'Algebra', 'Tukaram Maharaj'] },
+                    { id: 20, title: 'केंद्रीय सराव महा टेस्ट 20', topics: 'Constructivist collaborative inquiry, Upper-primary scientific temper, Arithmetic to algebra transition, Critical democratic citizenship, Advanced rhetoric', directUrl: 'test.html?cat=ctet2&test=20', tags: ['Master Mock', 'Scientific Temper', 'Algebra Transition', 'Citizenship'] }
+                ]
+            }
+        };
+
+        let currentActiveCategory = 'all';
+        let currentSearchQuery = '';
+
+        function renderCatalogs() {
+            const root = document.getElementById('catalogs-root');
+            root.innerHTML = '';
+
+            const categoriesToShow = (currentActiveCategory === 'all') 
+                ? ['mahatet1', 'mahatet2', 'ctet1', 'ctet2'] 
+                : [currentActiveCategory];
+
+            let totalMatches = 0;
+
+            categoriesToShow.forEach(catKey => {
+                const cat = catalogDatabase[catKey];
+                if (!cat) return;
+
+                const filteredTests = cat.tests.filter(t => {
+                    if (!currentSearchQuery) return true;
+                    const q = currentSearchQuery.toLowerCase();
+                    return t.title.toLowerCase().includes(q) || 
+                           t.topics.toLowerCase().includes(q) || 
+                           t.tags.some(tag => tag.toLowerCase().includes(q));
+                });
+
+                if (filteredTests.length === 0 && currentSearchQuery) {
+                    return; // Don't show empty category when searching
+                }
+
+                totalMatches += filteredTests.length;
+
+                // Section Wrapper
+                const section = document.createElement('div');
+                section.className = 'catalog-section';
+                section.id = `section-${catKey}`;
+
+                // Header
+                section.innerHTML = `
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-2.5 border-b ${cat.borderClass}">
+                        <div class="flex items-center gap-2.5">
+                            <span class="w-2.5 h-6 ${cat.themeBarClass} rounded-full"></span>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-black text-slate-800 leading-tight">
+                                    ${cat.title}
+                                </h3>
+                                <p class="text-xs text-slate-500 font-medium">${cat.subtext}</p>
+                            </div>
+                        </div>
+                        <span class="${cat.badgeClass} text-xs font-bold px-3 py-1 rounded-lg border shrink-0 self-start sm:self-auto">
+                            ${filteredTests.length} / 20 Tests
+                        </span>
+                    </div>
+                `;
+
+                // Test Cards Grid
+                const list = document.createElement('div');
+                list.className = 'space-y-3.5';
+
+                filteredTests.forEach(t => {
+                    const card = document.createElement('div');
+                    card.className = `bg-white rounded-2xl p-4 md:p-5 border ${cat.borderClass} shadow-sm card-hover flex flex-col md:flex-row md:items-center justify-between gap-4`;
+                    
+                    const numPadded = String(t.id).padStart(2, '0');
+                    const tagsHtml = t.tags.map(tg => `<span class="bg-slate-100 text-slate-700 text-[10px] font-bold px-2 py-0.5 rounded">${tg}</span>`).join(' ');
+
+                    card.innerHTML = `
+                        <div class="flex items-start gap-3.5">
+                            <div class="w-11 h-11 rounded-xl ${cat.badgeNumClass} flex items-center justify-center font-black text-base shrink-0 shadow-inner">
+                                ${numPadded}
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap items-center gap-1.5 mb-1">
+                                    <span class="text-[11px] font-extrabold ${cat.badgeClass} px-2 py-0.5 rounded-full border">
+                                        ${cat.categoryLabel}
+                                    </span>
+                                    ${tagsHtml}
+                                    <span class="text-xs text-slate-400 font-medium ml-1">20 प्रश्न • 20 मिनिटे</span>
+                                </div>
+                                <h4 class="text-base md:text-lg font-bold text-slate-800 leading-snug">
+                                    ${cat.categoryLabel} - ${t.title}
+                                </h4>
+                                <p class="text-xs md:text-sm text-slate-500 mt-0.5 leading-relaxed">
+                                    ${t.topics}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-2 shrink-0 self-end md:self-auto w-full md:w-auto">
+                            <a href="${t.directUrl}" 
+                               class="w-full md:w-auto text-center ${cat.btnClass} text-white font-bold px-5 py-2.5 rounded-xl shadow-md transition flex items-center justify-center gap-2 pulse-btn text-xs md:text-sm whitespace-nowrap">
+                                <span>टेस्ट सुरू करा</span>
+                                <i class="fas fa-play text-[10px]"></i>
+                            </a>
+                        </div>
+                    `;
+                    list.appendChild(card);
+                });
+
+                section.appendChild(list);
+                root.appendChild(section);
+            });
+
+            // Update search counter
+            const counterEl = document.getElementById('search-counter');
+            if (currentSearchQuery) {
+                counterEl.textContent = `${totalMatches} चाचण्या सापडल्या`;
+                counterEl.classList.remove('hidden');
+                if (totalMatches === 0) {
+                    root.innerHTML = `
+                        <div class="bg-white rounded-2xl p-10 text-center border border-slate-200 text-slate-500">
+                            <i class="fas fa-search text-3xl text-slate-300 mb-3"></i>
+                            <p class="font-bold text-slate-700">'${currentSearchQuery}' या घटकासाठी चाचणी सापडली नाही.</p>
+                            <p class="text-xs text-slate-400 mt-1">दुसरा शब्द वापरून शोधा किंवा सर्व चाचण्या पहा.</p>
+                            <button onclick="clearSearch()" class="mt-4 bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded-xl">सर्व चाचण्या दाखवा</button>
+                        </div>
+                    `;
+                }
+            } else {
+                counterEl.classList.add('hidden');
+            }
+        }
+
+        function setCategoryFilter(category) {
+            currentActiveCategory = category;
+            
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-slate-900', 'text-white');
+                btn.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+            });
+
+            const activeBtn = document.getElementById('tab-' + category);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+                activeBtn.classList.add('bg-slate-900', 'text-white');
+            }
+
+            renderCatalogs();
+        }
+
+        function handleSearch() {
+            currentSearchQuery = document.getElementById('catalog-search').value.trim();
+            renderCatalogs();
+        }
+
+        function clearSearch() {
+            document.getElementById('catalog-search').value = '';
+            currentSearchQuery = '';
+            renderCatalogs();
+        }
+
+        // Initial Render
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCatalogs();
+        });
+        // Run immediately as well
+        renderCatalogs();
+    </script>
 </body>
 </html>
