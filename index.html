@@ -102,6 +102,9 @@
             <button onclick="filterCatalog('mahatet')" id="tab-mahatet" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition">
                 <i class="fas fa-graduation-cap text-blue-600 mr-1.5"></i> Maha TET Paper 1
             </button>
+            <button onclick="filterCatalog('mahatet2')" id="tab-mahatet2" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition">
+                <i class="fas fa-school text-teal-600 mr-1.5"></i> Maha TET Paper 2
+            </button>
             <button onclick="filterCatalog('ctet')" id="tab-ctet" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition">
                 <i class="fas fa-award text-orange-600 mr-1.5"></i> CTET Paper 1
             </button>
@@ -195,7 +198,65 @@
             </div>
         </div>
 
-        <!-- ================= SECTION 2: CTET PAPER 1 CATALOG ================= -->
+        <!-- ================= SECTION 2: MAHA TET PAPER 2 CATALOG ================= -->
+        <div id="section-mahatet2" class="catalog-section mb-10">
+            <div class="flex items-center justify-between mb-4 pb-2 border-b border-teal-200">
+                <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-6 bg-teal-600 rounded-full"></span>
+                    <h3 class="text-xl md:text-2xl font-black text-slate-800">
+                        Maha TET Paper 2 मालिका (महाराष्ट्र - उच्च प्राथमिक)
+                    </h3>
+                </div>
+                <span class="bg-teal-100 text-teal-800 text-xs font-bold px-3 py-1 rounded-lg border border-teal-200">
+                    New Catalog Added 🔥
+                </span>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Maha TET Paper 2 Test 01 Card -->
+                <div class="bg-white rounded-2xl p-5 md:p-6 border border-teal-200 shadow-sm card-hover flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center font-black text-lg shrink-0">
+                            01
+                        </div>
+                        <div>
+                            <div class="flex flex-wrap items-center gap-2 mb-1">
+                                <span class="bg-teal-100 text-teal-700 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
+                                    Maha TET Paper 2
+                                </span>
+                                <span class="bg-cyan-100 text-cyan-800 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
+                                    इयत्ता 6 ते 8
+                                </span>
+                                <span class="text-xs text-slate-400 font-medium">20 प्रश्न • 20 मिनिटे</span>
+                            </div>
+                            <h4 class="text-lg md:text-xl font-bold text-slate-800">
+                                Maha TET Paper 2 - दैनिक सराव टेस्ट 01
+                            </h4>
+                            <p class="text-xs md:text-sm text-slate-500 mt-1">
+                                थॉर्नडाईक, किशोरावस्था (हॉल), द्विगु समास, भुजंगप्रयात वृत्त, पायथागोरस, पेशी व अष्टप्रधान मंडळ
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 shrink-0">
+                        <a href="success_digital_tet_paper_2_test_01.html" 
+                           class="w-full md:w-auto text-center bg-teal-600 hover:bg-teal-700 text-white font-bold px-6 py-3 rounded-xl shadow-md transition flex items-center justify-center gap-2 pulse-btn">
+                            <span>TET 2 टेस्ट सोडवा</span>
+                            <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Maha TET Paper 2 Upcoming Placeholder Card -->
+                <div class="bg-teal-50/50 rounded-2xl p-5 border border-dashed border-teal-200 text-center text-slate-500">
+                    <i class="fas fa-calendar-plus text-teal-500 text-2xl mb-1.5"></i>
+                    <p class="font-bold text-sm text-slate-700">Maha TET Paper 2 Test 02 लवकरच उपलब्ध होईल</p>
+                    <p class="text-xs text-slate-500">गणित-विज्ञान व समाजशास्त्र विषयांची पुढील दैनिक चाचणी लवकरच अपडेट केली जाईल.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= SECTION 3: CTET PAPER 1 CATALOG ================= -->
         <div id="section-ctet" class="catalog-section mb-10">
             <div class="flex items-center justify-between mb-4 pb-2 border-b border-orange-200">
                 <div class="flex items-center gap-2">
@@ -314,6 +375,7 @@
         <script>
             function filterCatalog(category) {
                 const mahatetSection = document.getElementById('section-mahatet');
+                const mahatet2Section = document.getElementById('section-mahatet2');
                 const ctetSection = document.getElementById('section-ctet');
                 const ctet2Section = document.getElementById('section-ctet2');
                 const tabs = document.querySelectorAll('.filter-btn');
@@ -327,21 +389,24 @@
                 activeTab.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
                 activeTab.classList.add('bg-slate-900', 'text-white');
 
+                // Hide all first
+                mahatetSection.classList.add('hidden');
+                mahatet2Section.classList.add('hidden');
+                ctetSection.classList.add('hidden');
+                ctet2Section.classList.add('hidden');
+
                 if (category === 'all') {
                     mahatetSection.classList.remove('hidden');
+                    mahatet2Section.classList.remove('hidden');
                     ctetSection.classList.remove('hidden');
                     ctet2Section.classList.remove('hidden');
                 } else if (category === 'mahatet') {
                     mahatetSection.classList.remove('hidden');
-                    ctetSection.classList.add('hidden');
-                    ctet2Section.classList.add('hidden');
+                } else if (category === 'mahatet2') {
+                    mahatet2Section.classList.remove('hidden');
                 } else if (category === 'ctet') {
-                    mahatetSection.classList.add('hidden');
                     ctetSection.classList.remove('hidden');
-                    ctet2Section.classList.add('hidden');
                 } else if (category === 'ctet2') {
-                    mahatetSection.classList.add('hidden');
-                    ctetSection.classList.add('hidden');
                     ctet2Section.classList.remove('hidden');
                 }
             }
