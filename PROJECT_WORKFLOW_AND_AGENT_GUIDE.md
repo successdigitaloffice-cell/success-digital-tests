@@ -11,31 +11,23 @@
 
 | # | घटक (Component) | स्थिती (Status) | तपशील (Details) |
 |---|---|---|---|
-| 1 | **Central Test Portal** (`index.html`) | ✅ पूर्ण (Live) | मुख्य लँडिंग पेज. सर्व दैनिक टेस्ट्सची यादी, मोबाइल ॲप डाउनलोड बॅनर, मॉडर्न UI. |
-| 2 | **TET Paper 1 - Test 01** (`...test_01.html`) | ✅ पूर्ण (Live) | २० प्रश्न, २० मिनिटे टायमर, त्वरित उत्तरे, मराठी स्पष्टीकरणे व स्कोर कार्ड. |
-| 3 | **TET Paper 1 - Test 02** (`...test_02.html`) | ✅ पूर्ण (Live) | नवीन दैनिक टेस्ट (वायगोत्स्की, कोहलबर्ग, RTE 2009, संधी, अलंकार, गणित, EVS). |
-| 4 | **CTET Paper 1 Catalog & Test 01** (`...ctet_paper_1_test_01.html`) | ✅ पूर्ण (Live) | केंद्रीय शिक्षक पात्रता परीक्षा (CTET Paper 1) साठी स्वतंत्र कॅटलॉग, फिल्टर टॅब्स आणि NCERT पॅटर्न टेस्ट ०१. |
-| 5 | **CTET Paper 2 Catalog & Test 01** (`...ctet_paper_2_test_01.html`) | ✅ पूर्ण (Live) | CTET Paper 2 (उच्च प्राथमिक - इयत्ता 6 ते 8) कॅटलॉग, गणित-विज्ञान, सामाजिक शास्त्रे व Pedagogy टेस्ट ०१. |
-| 6 | **Maha TET Paper 2 Catalog & Test 01** (`...tet_paper_2_test_01.html`) | ✅ पूर्ण (Live) | Maha TET Paper 2 (महाराष्ट्र - उच्च प्राथमिक) कॅटलॉग, थॉर्नडाईक, किशोरावस्था, द्विगु समास, पायथागोरस व अष्टप्रधान मंडळ. |
-| 7 | **GitHub Repository Setup** | ✅ पूर्ण | `successdigitaloffice-cell/success-digital-tests` रिपॉझिटरी तयार करून सर्व फाइल्स कमिट केल्या. |
-| 5 | **GitHub Pages Deployment** | ✅ पूर्ण (Live) | ऑटोमॅटिक होस्टिंग सुरू. कोणतीही नवीन टेस्ट अपलोड होताच काही सेकंदांत थेट इंटरनेटवर लाईव्ह होते. |
-| 6 | **1-Click Sync Automation** (`upload_daily_test.bat`) | ✅ पूर्ण | भविष्यात दररोज १-क्लिकवर गिटहबवर टेस्ट सिंक करण्यासाठी विंडोज बॅच व पॉवरशेल स्क्रिप्ट. |
-| 7 | **प्रोजेक्ट डॉक्युमेंटेशन** (`README.md`, `github info.txt`) | ✅ पूर्ण | सर्व लिंक्स, क्रेडेंशियल्स आणि सूचनांची नोंद. |
+| 1 | **Central Test Portal** (`index.html`) | ✅ पूर्ण (Live) | मुख्य लँडिंग पेज. ४ श्रेण्यांमधील संपूर्ण ८० चाचण्यांची सूची, लाईव्ह सर्च बार, फिल्टर टॅब्स, मोबाइल ॲप इन्स्टॉल बॅनर. |
+| 2 | **Maha TET Paper 1 Series** (Tests 1 to 20) | ✅ पूर्ण (Live) | प्राथमिक शिक्षक पात्रता परीक्षेसाठी २० संपूर्ण चाचण्या (पियाजे, वायगोत्स्की, RTE, NEP, मराठी व्याकरण, गणित, EVS). |
+| 3 | **Maha TET Paper 2 Series** (Tests 1 to 20) | ✅ पूर्ण (Live) | उच्च प्राथमिक परीक्षेसाठी २० संपूर्ण चाचण्या (किशोरावस्था, अलंकार, वृत्त, गणित, विज्ञान - Physics, Chem, Bio व समाजशास्त्र). |
+| 4 | **CTET Paper 1 Series** (Tests 1 to 20) | ✅ पूर्ण (Live) | NCERT पॅटर्ननुसार २० संपूर्ण केंद्रीय चाचण्या (Van Hiele, Kuduk, Pochampally, EVS Themes, Chomsky LAD, Krashen). |
+| 5 | **CTET Paper 2 Series** (Tests 1 to 20) | ✅ पूर्ण (Live) | इयत्ता ६ ते ८ NCERT पॅटर्ननुसार २० संपूर्ण केंद्रीय चाचण्या (Formal Operations, Metacognition, Science & Social Pedagogy). |
+| 6 | **Universal Test Player** (`test.html`) | ✅ पूर्ण (Live) | डायनॅमिक थीमिंग, टायमर, रिअल-टाइम स्पष्टीकरण, ॲप प्रमोशन बॅनर, अचूक रँक अंदाज व व्हॉट्सॲप शेअरिंग. |
+| 7 | **Central Question Bank** (`data/tests_data.js`) | ✅ पूर्ण (Live) | ८० चाचण्यांचा गैर-पुनरावृत्ती, १००% अभ्यासक्रम-संरेखित आणि स्पष्टीकरणात्मक समृद्ध प्रश्नसंग्रह (२१२ KB). |
+| 8 | **GitHub Repository & Pages** | ✅ पूर्ण (Live) | `successdigitaloffice-cell/success-digital-tests` वर सर्व ८० चाचण्या लाईव्ह तैनात. |
+| 9 | **1-Click Sync Automation** (`upload_daily_test.bat`) | ✅ पूर्ण | भविष्यात बदल किंवा नवीन प्रश्न १-क्लिकवर गिटहबवर सिंक करण्यासाठी पॉवरशेल ऑटोमेशन. |
 
 ---
 
-## 🚀 २. पुढे काय काम करायचे आहे? (Upcoming Work & Roadmap)
-
-### अ. दैनिक टेस्ट मालिका विस्तार (Daily Test Schedule)
-- [ ] **Test 03 (TET Paper 1):** अध्ययन उपपत्ती (थॉर्नडाईक, स्किनर, पाव्हलोव्ह), मराठी समास, इंग्रजी Prepositions, लसावि-मसावि, महाराष्ट्र भूगोल.
-- [ ] **Test 04 (TET Paper 1):** राष्ट्रीय शैक्षणिक धोरण (NEP 2020), शब्दसिद्धी, Active/Passive Voice, शेकडेवारी व नफा-तोटा, अन्नसाखळी व परिसंस्था.
-- [ ] **Test 05 to Test 10:** TET Paper 1 PYQ स्पेशल (2013 ते 2024 मधील महत्त्वाचे प्रश्न).
-- [ ] **TET Paper 2 सिरीज:** गणित-विज्ञान गट व सामाजिक शास्त्रे गट (Paper 2) साठी स्वतंत्र टेस्ट्स सुरू करणे.
-
-### ब. पोर्टल सुधारणा (Portal Enhancements)
-- [ ] दैनिक चाचणीसाठी **Subject Filter (विषयवार फिल्टर)** बटणे देणे (उदा. All, CDP, Marathi, English, Math, EVS).
-- [ ] प्रत्येक टेस्टचे विद्यार्थी स्कोअर सेव्ह करण्यासाठी **Local Storage Progress Tracker** (विद्यार्थ्याने कोणती टेस्ट सोडवली ते टिकमार्क दिसणे).
-- [ ] दररोजच्या टेस्टच्या लिंकसाठी **WhatsApp Sharing Template** स्वयंचलित करणे.
+## 🎯 २. महत्वाचे नियम व गुणवत्ता मानके (Rules & Quality Standards)
+1. **कोणत्याही चाचणीत किंवा पोर्टलवर कोणत्याही आगामी वर्षाचा उल्लेख नाही** (Strictly No future year mentions).
+2. **प्रश्नांची पुनरावृत्ती नाही** (Zero duplicate questions).
+3. **१००% अभ्यासक्रम अचूकता** (100% syllabus alignment across CDP, Languages, Maths, Science, Social Studies).
+4. **Success Digital Android App चा सतत व योग्य प्रचार** (Google Play Store link: `https://play.google.com/store/apps/details?id=com.ezgcka.oujtga&pcampaignid=web_share`).
 
 ---
 
