@@ -1,6 +1,6 @@
-# Success Digital - TET & CTET Daily 20-Test Series Portal 🚀
+# Success Digital - TET & CTET Daily 30-Test Series Portal 🚀
 
-महाराष्ट्र शिक्षक पात्रता परीक्षा (Maha TET Paper 1 & Paper 2) आणि केंद्रीय शिक्षक पात्रता परीक्षा (CTET Paper 1 & Paper 2) साठी प्रत्येकी 20 संपूर्ण चाचण्यांचे (एकूण 80 चाचण्या) अधिकृत पोर्टल.
+महाराष्ट्र शिक्षक पात्रता परीक्षा (Maha TET Paper 1 & Paper 2) आणि केंद्रीय शिक्षक पात्रता परीक्षा (CTET Paper 1 & Paper 2) साठी प्रत्येकी 30 संपूर्ण चाचण्यांचे (एकूण 120 चाचण्या, 2,400 प्रश्न) अधिकृत पोर्टल.
 
 ## 📱 Official Mobile App
 - **Download on Google Play Store:** [Success Digital App](https://play.google.com/store/apps/details?id=com.ezgcka.oujtga&pcampaignid=web_share)
@@ -14,22 +14,22 @@
 
 ---
 
-## 📚 4 श्रेण्या • प्रत्येकी 20 सराव चाचण्या (80 Tests Total)
+## 📚 4 श्रेण्या • प्रत्येकी 30 सराव चाचण्या (120 Tests Total • 2,400 Questions)
 
 ### 🔵 1. Maha TET Paper 1 (प्राथमिक - इयत्ता 1 ते 5)
-- **20 संपूर्ण चाचण्या (Tests 01 to 20)**
+- **30 संपूर्ण चाचण्या (Tests 01 to 30 • 600 प्रश्न)**
 - बालमानसशास्त्र (CDP), मराठी व्याकरण, इंग्रजी व्याकरण, प्राथमिक गणित व परिसर अभ्यास (EVS) या संपूर्ण अभ्यासक्रमाचे 100% कव्हरेज.
 
 ### 🟢 2. Maha TET Paper 2 (उच्च प्राथमिक - इयत्ता 6 ते 8)
-- **20 संपूर्ण चाचण्या (Tests 01 to 20)**
+- **30 संपूर्ण चाचण्या (Tests 01 to 30 • 600 प्रश्न)**
 - किशोरावस्था CDP, प्रगत मराठी व्याकरण व अलंकार, English Grammar, गणित-विज्ञान (Physics, Chemistry, Biology) व सामाजिक शास्त्रे (इतिहास, भूगोल, नागरिकशास्त्र/संविधान).
 
 ### 🟠 3. CTET Paper 1 (Central TET - Primary)
-- **20 संपूर्ण चाचण्या (Tests 01 to 20)**
+- **30 संपूर्ण चाचण्या (Tests 01 to 30 • 600 प्रश्न)**
 - Piaget, Vygotsky, Kohlberg, Van Hiele Maths Pedagogy, NCERT Class 3-5 EVS, Chomsky & Krashen Language Pedagogy.
 
 ### 🟣 4. CTET Paper 2 (Central TET - Upper Primary)
-- **20 संपूर्ण चाचण्या (Tests 01 to 20)**
+- **30 संपूर्ण चाचण्या (Tests 01 to 30 • 600 प्रश्न)**
 - Adolescent CDP (Formal Operations, Metacognition), NCERT Science & Maths Pedagogy, Social Science (History, Civics, Geography) & BICS/CALP.
 
 ---
@@ -39,4 +39,4 @@
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File "upload_daily_test.ps1"
 ```
-किंवा `upload_daily_test.bat` वर डबल क्लिक करा. सर्व 80 चाचण्या, डेटा व पोर्टल गिटहबवर आपोआप सिंक होऊन गिटहब पेजेसवर लाईव्ह अपडेट होईल.
+किंवा `upload_daily_test.bat` वर डबल क्लिक करा. सर्व 120 चाचण्या, डेटा व पोर्टल गिटहबवर आपोआप सिंक होऊन गिटहब पेजेसवर लाईव्ह अपडेट होईल.
