@@ -15,7 +15,8 @@
 | 2 | **TET Paper 1 - Test 01** (`...test_01.html`) | ✅ पूर्ण (Live) | २० प्रश्न, २० मिनिटे टायमर, त्वरित उत्तरे, मराठी स्पष्टीकरणे व स्कोर कार्ड. |
 | 3 | **TET Paper 1 - Test 02** (`...test_02.html`) | ✅ पूर्ण (Live) | नवीन दैनिक टेस्ट (वायगोत्स्की, कोहलबर्ग, RTE 2009, संधी, अलंकार, गणित, EVS). |
 | 4 | **CTET Paper 1 Catalog & Test 01** (`...ctet_paper_1_test_01.html`) | ✅ पूर्ण (Live) | केंद्रीय शिक्षक पात्रता परीक्षा (CTET Paper 1) साठी स्वतंत्र कॅटलॉग, फिल्टर टॅब्स आणि NCERT पॅटर्न टेस्ट ०१. |
-| 5 | **GitHub Repository Setup** | ✅ पूर्ण | `successdigitaloffice-cell/success-digital-tests` रिपॉझिटरी तयार करून सर्व फाइल्स कमिट केल्या. |
+| 5 | **CTET Paper 2 Catalog & Test 01** (`...ctet_paper_2_test_01.html`) | ✅ पूर्ण (Live) | CTET Paper 2 (उच्च प्राथमिक - इयत्ता 6 ते 8) कॅटलॉग, गणित-विज्ञान, सामाजिक शास्त्रे व Pedagogy टेस्ट ०१. |
+| 6 | **GitHub Repository Setup** | ✅ पूर्ण | `successdigitaloffice-cell/success-digital-tests` रिपॉझिटरी तयार करून सर्व फाइल्स कमिट केल्या. |
 | 5 | **GitHub Pages Deployment** | ✅ पूर्ण (Live) | ऑटोमॅटिक होस्टिंग सुरू. कोणतीही नवीन टेस्ट अपलोड होताच काही सेकंदांत थेट इंटरनेटवर लाईव्ह होते. |
 | 6 | **1-Click Sync Automation** (`upload_daily_test.bat`) | ✅ पूर्ण | भविष्यात दररोज १-क्लिकवर गिटहबवर टेस्ट सिंक करण्यासाठी विंडोज बॅच व पॉवरशेल स्क्रिप्ट. |
 | 7 | **प्रोजेक्ट डॉक्युमेंटेशन** (`README.md`, `github info.txt`) | ✅ पूर्ण | सर्व लिंक्स, क्रेडेंशियल्स आणि सूचनांची नोंद. |
