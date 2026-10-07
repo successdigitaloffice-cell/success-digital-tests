@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Digital - Daily TET & CET Test Series Portal</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts (Mukta) -->
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Mukta', sans-serif;
+            background: #f8fafc;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #4f46e5 100%);
+        }
+        .pulse-btn {
+            animation: pulseBtn 2s infinite;
+        }
+        @keyframes pulseBtn {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.6); }
+            70% { box-shadow: 0 0 0 14px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 30px -10px rgba(30, 58, 138, 0.15);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3.5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="bg-white p-2 rounded-xl shadow-sm">
+                    <i class="fas fa-graduation-cap text-2xl text-blue-600"></i>
+                </div>
+                <div>
+                    <h1 class="text-lg md:text-xl font-black tracking-wide leading-tight">SUCCESS DIGITAL</h1>
+                    <p class="text-[11px] md:text-xs text-blue-100 font-medium">TET & CET Smart Online Test Portal</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <a href="https://play.google.com/store/apps/details?id=com.ezgcka.oujtga&pcampaignid=web_share" 
+                   target="_blank" 
+                   class="bg-gradient-to-r from-yellow-400 to-amber-500 hover:from-yellow-300 hover:to-amber-400 text-slate-900 text-xs md:text-sm font-extrabold px-4 py-2 rounded-full shadow-md flex items-center gap-2 transition transform hover:scale-105">
+                    <i class="fab fa-google-play"></i>
+                    <span>Get Android App</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-12 px-4 shadow-inner relative overflow-hidden">
+        <div class="container mx-auto max-w-4xl text-center relative z-10">
+            <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-1.5 rounded-full text-xs md:text-sm font-bold mb-4 border border-white/20">
+                <i class="fas fa-bolt text-yellow-300"></i> मोफत दैनिक सराव चाचणी (Daily Mock Tests)
+            </div>
+            <h2 class="text-3xl md:text-5xl font-black mb-3 leading-tight">
+                महाराष्ट्र TET & CET तयारी 2026
+            </h2>
+            <p class="text-blue-100 text-base md:text-lg max-w-2xl mx-auto mb-6">
+                दररोज नवीन प्रश्नपत्रिका सोडवा, तुमचा Score आणि Rank तपासा व परीक्षेसाठी पूर्ण तयार व्हा!
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-3 text-xs md:text-sm">
+                <span class="bg-black/25 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10 flex items-center gap-2">
+                    <i class="fas fa-check text-green-400"></i> सर्व विषयांचा समावेश
+                </span>
+                <span class="bg-black/25 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10 flex items-center gap-2">
+                    <i class="fas fa-clock text-amber-300"></i> Real Exam Timer
+                </span>
+                <span class="bg-black/25 backdrop-blur-sm px-3.5 py-1.5 rounded-full border border-white/10 flex items-center gap-2">
+                    <i class="fas fa-lightbulb text-yellow-300"></i> सविस्तर स्पष्टीकरण
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto max-w-4xl px-4 py-10 flex-grow">
+        
+        <!-- Filter / Tabs -->
+        <div class="flex items-center justify-between mb-6 pb-3 border-b border-slate-200">
+            <div>
+                <h3 class="text-xl md:text-2xl font-black text-slate-800 flex items-center gap-2">
+                    <i class="fas fa-book-open text-blue-600"></i> उपलब्ध टेस्ट मालिका (Active Tests)
+                </h3>
+                <p class="text-xs md:text-sm text-slate-500">खालीलपैकी कोणतीही टेस्ट निवडून लगेच सोडवा</p>
+            </div>
+            <span class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1.5 rounded-lg border border-blue-200">
+                Live & Updated
+            </span>
+        </div>
+
+        <!-- Test List Container -->
+        <div id="test-list" class="space-y-4">
+
+            <!-- Test 01 Card -->
+            <div class="bg-white rounded-2xl p-5 md:p-6 border border-slate-200 shadow-sm card-hover flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-black text-lg shrink-0">
+                        01
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap items-center gap-2 mb-1">
+                            <span class="bg-green-100 text-green-700 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
+                                TET Paper 1
+                            </span>
+                            <span class="bg-purple-100 text-purple-700 text-[11px] font-bold px-2.5 py-0.5 rounded-full">
+                                5 विषय मिश्रित
+                            </span>
+                            <span class="text-xs text-slate-400 font-medium">20 प्रश्न • 20 मिनिटे</span>
+                        </div>
+                        <h4 class="text-lg md:text-xl font-bold text-slate-800">
+                            TET Paper 1 - दैनिक सराव टेस्ट 01
+                        </h4>
+                        <p class="text-xs md:text-sm text-slate-500 mt-1">
+                            बालमानसशास्त्र, मराठी, इंग्रजी, गणित व परिसर अभ्यास (CDP, Marathi, English, Math, EVS)
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2 shrink-0">
+                    <a href="success_digital_tet_paper_1_test_01.html" 
+                       class="w-full md:w-auto text-center bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl shadow-md transition flex items-center justify-center gap-2 pulse-btn">
+                        <span>टेस्ट सुरू करा</span>
+                        <i class="fas fa-play text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Coming Soon / Next Daily Tests Placeholder -->
+            <div class="bg-slate-50 rounded-2xl p-5 border border-dashed border-slate-300 text-center text-slate-500">
+                <i class="fas fa-calendar-plus text-slate-400 text-2xl mb-2"></i>
+                <p class="font-bold text-sm text-slate-700">पुढील दैनिक टेस्ट लवकरच अपडेट होईल (Daily Uploads)</p>
+                <p class="text-xs text-slate-500">दररोज नवीन टेस्ट सोडवण्यासाठी या पोर्टलला नियमित भेट द्या.</p>
+            </div>
+
+        </div>
+
+        <!-- Download App Banner -->
+        <div class="mt-10 bg-gradient-to-br from-indigo-900 via-blue-900 to-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-xl relative overflow-hidden">
+            <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <span class="bg-amber-400 text-slate-900 text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                        Official App
+                    </span>
+                    <h3 class="text-2xl font-black mt-2 mb-1">
+                        Success Digital App इन्स्टॉल करा
+                    </h3>
+                    <p class="text-blue-200 text-sm max-w-lg">
+                        10,000+ प्रश्न, विषयवार सराव चाचण्या आणि सविस्तर रँकिंग ॲनालिसिससाठी प्ले स्टोअरवरून ॲप डाऊनलोड करा.
+                    </p>
+                </div>
+                <a href="https://play.google.com/store/apps/details?id=com.ezgcka.oujtga&pcampaignid=web_share" 
+                   target="_blank"
+                   class="bg-white text-blue-800 hover:bg-slate-100 font-extrabold px-6 py-3.5 rounded-2xl shadow-lg transition flex items-center gap-3 shrink-0 whitespace-nowrap">
+                    <i class="fab fa-google-play text-xl text-green-600"></i>
+                    <span>Download on Play Store</span>
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs">
+        <div class="container mx-auto px-4">
+            <p class="text-white font-bold text-sm mb-1">SUCCESS DIGITAL</p>
+            <p class="text-slate-400 mb-2">TET & CET परीक्षेसाठी सर्वोत्तम डिजिटल व्यासपीठ</p>
+            <p>&copy; 2026 Success Digital. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
