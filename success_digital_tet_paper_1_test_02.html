@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Digital - TET Paper 1 | Test 02</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts (Mukta for Marathi) -->
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Mukta', sans-serif;
+            background: #f0f4f8;
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Animations */
+        .fade-in { animation: fadeIn 0.4s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .slide-up { animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        @keyframes slideUp { 
+            from { transform: translateY(30px); opacity: 0; } 
+            to { transform: translateY(0); opacity: 1; } 
+        }
+
+        .bounce-in { animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.26, 1.55); }
+        @keyframes bounceIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .pulse-btn { animation: pulseBtn 2s infinite; }
+        @keyframes pulseBtn {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+
+        /* Option Interactions */
+        .option-label {
+            transition: all 0.25s ease;
+            transform: translateZ(0);
+        }
+        .option-label:hover:not(.disabled) {
+            transform: scale(1.01);
+            border-color: #3b82f6;
+            background-color: #f0f9ff;
+        }
+        
+        .correct-answer-show { 
+            background: linear-gradient(to right, #dcfce7, #ecfdf5) !important; 
+            border-color: #22c55e !important; 
+            box-shadow: 0 4px 6px -1px rgba(34, 197, 94, 0.2);
+        }
+        .wrong-answer-show { 
+            background: linear-gradient(to right, #fee2e2, #fef2f2) !important; 
+            border-color: #ef4444 !important; 
+        }
+        
+        .disabled { pointer-events: none; }
+
+        /* Confetti */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            z-index: 1000;
+            opacity: 0;
+        }
+
+        /* Dynamic App Banner Gradient */
+        .promo-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased min-h-screen flex flex-col selection:bg-blue-200 selection:text-blue-900">
+
+    <header class="bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <a href="index.html" class="bg-white p-1.5 rounded-lg shadow-sm hover:scale-105 transition">
+                    <i class="fas fa-graduation-cap text-2xl text-blue-600"></i>
+                </a>
+                <div>
+                    <h1 class="text-lg md:text-xl font-bold tracking-wide leading-tight">SUCCESS DIGITAL</h1>
+                    <p class="text-[10px] md:text-xs text-blue-100 font-medium">TET & CET Smart Platform</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-3">
+                <div id="timer-display" class="hidden bg-black/20 backdrop-blur-sm px-3 md:px-4 py-1.5 rounded-full font-bold flex items-center gap-2 border border-white/10">
+                    <i class="far fa-clock text-yellow-300 animate-pulse"></i> <span id="time" class="tracking-wider">20:00</span>
+                </div>
+                <!-- Header App Download CTA -->
+                <a href="https://play.google.com/store/apps/details?id=com.ezgcka.oujtga&pcampaignid=web_share" target="_blank" class="hidden md:flex bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-300 hover:to-orange-400 text-slate-900 text-xs font-bold px-4 py-2 rounded-full shadow-md items-center gap-2 transition transform hover:scale-105">
+                    <i class="fab fa-google-play"></i> Get App
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto px-4 py-6 max-w-3xl flex flex-col justify-center relative">
+        
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 md:p-10 text-center slide-up border border-gray-100">
+            <div class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-100 to-blue-100 text-emerald-700 px-5 py-1.5 rounded-full text-sm font-bold mb-6 shadow-sm border border-emerald-200">
+                <i class="fas fa-fire animate-pulse text-orange-500"></i> DAILY FREE TEST SERIES #02 <i class="fas fa-fire animate-pulse text-orange-500"></i>
+            </div>
+            
+            <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-blue-800 mb-3">TET Paper 1 | Test 02</h2>
+            <p class="text-gray-600 mb-8 font-medium text-lg">"रोजचा सराव हीच यशाची खरी किल्ली… <span class="text-blue-600 font-bold">Maha TET 2026</span> क्रॅक करा!"</p>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 text-sm">
+                <div class="bg-blue-50 p-4 rounded-2xl border border-blue-100 shadow-sm hover:shadow-md transition">
+                    <i class="fas fa-list-ol text-blue-500 text-2xl mb-2"></i>
+                    <p class="font-bold text-gray-700">20 प्रश्न</p>
+                </div>
+                <div class="bg-green-50 p-4 rounded-2xl border border-green-100 shadow-sm hover:shadow-md transition">
+                    <i class="fas fa-stopwatch text-green-500 text-2xl mb-2"></i>
+                    <p class="font-bold text-gray-700">20 मिनिटे</p>
+                </div>
+                <div class="bg-purple-50 p-4 rounded-2xl border border-purple-100 shadow-sm hover:shadow-md transition">
+                    <i class="fas fa-bullseye text-purple-500 text-2xl mb-2"></i>
+                    <p class="font-bold text-gray-700">20 गुण</p>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-2xl border border-yellow-100 shadow-sm hover:shadow-md transition">
+                    <i class="fas fa-book-open text-yellow-500 text-2xl mb-2"></i>
+                    <p class="font-bold text-gray-700">5 विषय</p>
+                </div>
+            </div>
+
+            <div class="text-left bg-gradient-to-br from-gray-50 to-gray-100 p-5 rounded-2xl mb-8 border border-gray-200 shadow-inner">
+                <h3 class="font-bold text-gray-800 mb-3 text-lg flex items-center gap-2">
+                    <i class="fas fa-layer-group text-indigo-500"></i> समाविष्ट विषय (Maha TET Syllabus):
+                </h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-white px-3 py-1 rounded-lg text-sm font-semibold text-gray-600 border border-gray-200 shadow-sm">CDP (मानसशास्त्र)</span>
+                    <span class="bg-white px-3 py-1 rounded-lg text-sm font-semibold text-gray-600 border border-gray-200 shadow-sm">मराठी भाषा</span>
+                    <span class="bg-white px-3 py-1 rounded-lg text-sm font-semibold text-gray-600 border border-gray-200 shadow-sm">English Language</span>
+                    <span class="bg-white px-3 py-1 rounded-lg text-sm font-semibold text-gray-600 border border-gray-200 shadow-sm">गणित (Maths)</span>
+                    <span class="bg-white px-3 py-1 rounded-lg text-sm font-semibold text-gray-600 border border-gray-200 shadow-sm">परिसर अभ्यास (EVS)</span>
+                </div>
+            </div>
+
+            <button id="start-btn" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-2xl shadow-[0_10px_20px_rgba(59,130,246,0.3)] transform transition hover:-translate-y-1 active:translate-y-1 active:scale-95 text-xl flex justify-center items-center gap-3 pulse-btn">
+                टेस्ट सुरू करा <i class="fas fa-rocket"></i>
+            </button>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="quiz-container" class="hidden">
+            
+            <!-- Progress Bar -->
+            <div class="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 mb-4 slide-up">
+                <div class="flex justify-between text-sm font-bold text-gray-600 mb-2">
+                    <span id="question-counter" class="bg-gray-100 px-3 py-1 rounded-lg">प्रश्न 1 / 20</span>
+                    <span id="progress-percent" class="text-blue-600">5%</span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-3 overflow-hidden shadow-inner">
+                    <div id="progress-bar" class="bg-gradient-to-r from-blue-500 to-indigo-500 h-full rounded-full transition-all duration-500 relative" style="width: 5%">
+                        <div class="absolute inset-0 bg-white/20 w-full h-full animate-[pulse_2s_ease-in-out_infinite]"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-5 md:p-8 mb-4 border border-gray-100 relative slide-up" id="question-card">
+                <!-- Tags -->
+                <div id="question-tags" class="flex flex-wrap gap-2 mb-4">
+                    <span id="subject-tag" class="bg-indigo-100 text-indigo-800 text-xs font-extrabold px-3 py-1 rounded-lg shadow-sm border border-indigo-200 uppercase tracking-wider">CDP</span>
+                    <span id="type-tag" class="hidden bg-yellow-100 text-yellow-800 text-xs font-extrabold px-3 py-1 rounded-lg shadow-sm border border-yellow-200"><i class="fas fa-star text-[10px]"></i> IMP</span>
+                </div>
+
+                <h3 id="question-text" class="text-xl md:text-2xl font-bold text-gray-800 mb-6 leading-relaxed">
+                    <!-- Question will appear here -->
+                </h3>
+
+                <!-- Options -->
+                <div id="options-container" class="space-y-3">
+                    <!-- Options generated via JS -->
+                </div>
+                
+                <!-- Explanation Area -->
+                <div id="explanation-box" class="hidden mt-6 overflow-hidden rounded-2xl transition-all">
+                    <!-- Concept Box -->
+                    <div class="p-5 bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-500 rounded-t-2xl">
+                        <div class="flex items-start gap-3">
+                            <div class="bg-blue-100 p-2 rounded-full text-blue-600 mt-1">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <p class="font-extrabold text-blue-900 mb-1 text-sm uppercase tracking-wide">स्पष्टीकरण (Explanation)</p>
+                                <p id="explanation-text" class="text-gray-700 font-medium text-sm md:text-base leading-relaxed"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CONTINUOUS PROMOTION BANNER -->
+                    <div class="promo-gradient p-4 sm:p-5 rounded-b-2xl shadow-inner relative overflow-hidden group cursor-pointer" onclick="window.open('https://play.google.com/store/apps/details?id=com.ezgcka.oujtga&pcampaignid=web_share', '_blank')">
+                        <i class="fas fa-mobile-alt absolute -right-4 -bottom-4 text-7xl text-white opacity-10 group-hover:scale-110 transition-transform duration-500 transform rotate-[-15deg]"></i>
+                        
+                        <div class="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div class="text-left">
+                                <h4 class="text-white font-bold text-sm md:text-base mb-1 flex items-center gap-2">
+                                    <span class="bg-yellow-400 text-blue-900 text-[10px] px-2 py-0.5 rounded uppercase font-black tracking-widest">Pro Tip</span>
+                                    Success Digital App 🔥
+                                </h4>
+                                <p class="text-blue-100 text-xs md:text-sm font-medium" id="dynamic-promo-text">
+                                    अशाच रंगीत थीम (Colorful Theme) आणि Smart Analysis सोबत 10,000+ प्रश्नांचा सराव करण्यासाठी App लगेच डाउनलोड करा!
+                                </p>
+                            </div>
+                            <button class="shrink-0 bg-white text-blue-700 hover:bg-gray-50 font-bold py-2 px-4 rounded-xl text-sm shadow-[0_4px_10px_rgba(0,0,0,0.2)] transition flex items-center gap-2 whitespace-nowrap">
+                                Download <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="flex justify-between items-center bg-white p-4 rounded-2xl shadow-sm border border-gray-100 slide-up">
+                <button id="prev-btn" class="hidden px-5 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold rounded-xl transition flex items-center gap-2">
+                    <i class="fas fa-arrow-left"></i> मागील
+                </button>
+                
+                <button id="next-btn" class="ml-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-[0_4px_14px_0_rgba(59,130,246,0.39)] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
+                    पुढील <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="result-screen" class="hidden bg-white rounded-3xl shadow-[0_10px_40px_rgb(0,0,0,0.1)] p-6 md:p-10 text-center relative overflow-hidden">
+            <div class="mb-6 bounce-in">
+                <div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-green-100 text-green-500 mb-4 shadow-inner">
+                    <i class="fas fa-trophy text-5xl"></i>
+                </div>
+                <h2 class="text-3xl font-black text-gray-800 mb-2">CONGRATULATIONS! 🎉</h2>
+                <p class="text-gray-500 font-semibold text-lg">Test 02 Completed Successfully!</p>
+            </div>
+
+            <!-- Score Cards -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-8 slide-up" style="animation-delay: 0.1s;">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-5 rounded-2xl border border-blue-200 shadow-sm relative overflow-hidden">
+                    <i class="fas fa-check-circle absolute -right-2 -bottom-2 text-5xl text-blue-200/50"></i>
+                    <p class="text-sm font-bold text-blue-800 mb-1">Total Score</p>
+                    <p class="text-4xl font-black text-blue-600"><span id="final-score">0</span><span class="text-xl text-blue-400">/20</span></p>
+                </div>
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-5 rounded-2xl border border-green-200 shadow-sm relative overflow-hidden">
+                    <i class="fas fa-bullseye absolute -right-2 -bottom-2 text-5xl text-green-200/50"></i>
+                    <p class="text-sm font-bold text-green-800 mb-1">Accuracy</p>
+                    <p class="text-4xl font-black text-green-600"><span id="final-accuracy">0</span>%</p>
+                </div>
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-5 rounded-2xl border border-orange-200 shadow-sm relative overflow-hidden">
+                    <i class="fas fa-stopwatch absolute -right-2 -bottom-2 text-5xl text-orange-200/50"></i>
+                    <p class="text-sm font-bold text-orange-800 mb-1">Time Taken</p>
+                    <p class="text-4xl font-black text-orange-600"><span id="final-time">0</span><span class="text-xl text-orange-400">m</span></p>
+                </div>
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-5 rounded-2xl border border-purple-200 shadow-sm relative overflow-hidden">
+                    <i class="fas fa-crown absolute -right-2 -bottom-2 text-5xl text-purple-200/50"></i>
+                    <p class="text-sm font-bold text-purple-800 mb-1">Estimated Rank</p>
+                    <p class="text-4xl font-black text-purple-600">#<span id="final-rank">--</span></p>
+                </div>
+            </div>
+
+            <!-- Leaderboard Motivation -->
+            <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 mb-8 text-left slide-up" style="animation-delay: 0.2s;">
+                <h3 class="font-black text-gray-800 mb-3 text-lg flex items-center gap-2">
+                    <i class="fas fa-chart-line text-blue-500"></i> Performance Analysis:
+                </h3>
+                <p class="text-gray-600 font-medium mb-3">"ही टेस्ट फक्त तुमचा Score तपासत नाही, तर तुम्ही इतर TET विद्यार्थ्यांच्या तुलनेत कुठे आहात हेही दाखवते."</p>
+                <div class="p-4 bg-indigo-50 border-l-4 border-indigo-500 rounded-r-xl">
+                    <p class="font-bold text-indigo-900" id="motivational-message">"आजचा Score हा शेवट नाही… पुढच्या Test मध्ये तुमची Rank आणखी वर नेण्याची संधी आहे!"</p>
+                </div>
+            </div>
+
+            <!-- App Promotion CTA -->
+            <div class="bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 rounded-3xl p-6 md:p-8 shadow-2xl relative overflow-hidden text-left slide-up" style="animation-delay: 0.3s;">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+                
+                <div class="relative z-10 flex flex-col md:flex-row items-center gap-6">
+                    <div class="flex-1">
+                        <div class="inline-block bg-yellow-400 text-blue-900 text-xs font-black px-3 py-1 rounded-full mb-4 uppercase tracking-wide">
+                            Highly Recommended
+                        </div>
+                        <h3 class="font-black text-white text-2xl md:text-3xl mb-3 leading-tight">
+                            Success Digital App वर संपूर्ण TET टेस्ट सिरीज सोडवा!
+                        </h3>
+                        <p class="text-blue-100 font-medium mb-5 text-sm md:text-base">
+                            सविस्तर विषयवार सराव, मागील वर्षांच्या प्रश्नपत्रिका (PYQs) आणि Smart State-level Rankings साठी लगेच ॲप डाऊनलोड करा.
+                        </p>
+                        
+                        <div class="grid grid-cols-2 gap-3 text-white text-sm font-semibold mb-6">
+                            <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i> Rank वाढवा</div>
+                            <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i> Accuracy वाढवा</div>
+                            <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i> Speed वाढवा</div>
+                            <div class="flex items-center gap-2"><i class="fas fa-check-circle text-green-400"></i> PYQs + IMP Questions</div>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full md:w-auto shrink-0">
+                        <a href="https://play.google.com/store/apps/details?id=com.ezgcka.oujtga&pcampaignid=web_share" target="_blank" class="block w-full bg-white text-blue-800 hover:bg-gray-100 hover:scale-105 font-black py-4 px-8 rounded-2xl shadow-xl transition transform text-center text-lg pulse-btn">
+                            <i class="fab fa-google-play text-xl mr-2 text-green-500"></i> Download App Now
+                        </a>
+                        <p class="text-center text-blue-200 text-xs mt-3 font-medium">Join 50,000+ TET Aspirants</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 flex justify-center gap-4 text-sm font-bold flex-wrap">
+                 <button onclick="location.reload()" class="text-gray-500 hover:text-blue-600 transition flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-xl">
+                    <i class="fas fa-redo-alt"></i> पुन्हा सोडवा
+                </button>
+                <a href="index.html" class="text-white hover:bg-blue-700 transition flex items-center gap-2 bg-blue-600 px-4 py-2 rounded-xl shadow-md">
+                    <i class="fas fa-home"></i> सर्व टेस्ट यादी
+                </a>
+                 <button onclick="window.open('whatsapp://send?text=मी Success Digital वर TET Test 02 सोडवली! माझा Score चेक करा! https://successdigitaloffice-cell.github.io/success-digital-tests/')" class="text-white hover:bg-green-600 transition flex items-center gap-2 bg-green-500 px-4 py-2 rounded-xl shadow-md">
+                    <i class="fab fa-whatsapp text-lg"></i> Share Score
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-6 text-center text-sm mt-auto border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <h4 class="text-white font-bold text-lg mb-1">SUCCESS DIGITAL</h4>
+            <p class="mb-3 text-gray-500">TET & CET विद्यार्थ्यांसाठी Smart Preparation Platform</p>
+            <p class="text-xs">&copy; 2026 Success Digital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- QUIZ DATA (20 Questions - Maha TET Paper 1 Format | Test 02) ---
+        const quizData = [
+            // --- CDP (Child Development & Pedagogy) ---
+            {
+                subject: "CDP", type: "PYQ", tagText: "PYQ 2021",
+                question: "लेव्ह वायगोत्स्की यांच्या सिद्धांतानुसार, बालकाच्या प्रत्यक्ष विकासाची पातळी आणि संभाव्य विकासाची पातळी यातील अंतराला काय म्हणतात?",
+                options: ["आत्मसातकरण (Assimilation)", "समीपस्थ विकासाचे क्षेत्र (ZPD)", "संरचना (Schema)", "समायोजन (Accommodation)"],
+                answer: 1,
+                explanation: "वायगोत्स्की यांच्या मते, बालक स्वतःहून काय करू शकते आणि प्रौढांच्या मार्गदर्शनाखाली काय साध्य करू शकते यातील अंतराला 'Zone of Proximal Development' (ZPD) म्हणतात."
+            },
+            {
+                subject: "CDP", type: "Concept", tagText: "Concept",
+                question: "लॉरेन्स कोहलबर्ग यांच्या नैतिक विकास सिद्धांतानुसार, 'चांगला मुलगा / चांगली मुलगी' (Good Boy - Nice Girl Orientation) ही अवस्था कोणत्या पातळीत मोडते?",
+                options: ["पूर्व-पारंपरिक पातळी (Pre-conventional)", "पारंपरिक पातळी (Conventional)", "उत्तर-पारंपरिक पातळी (Post-conventional)", "यापैकी नाही"],
+                answer: 1,
+                explanation: "पारंपरिक पातळीच्या (Conventional Level) तिसऱ्या टप्प्यात मूल इतरांना खूश करण्यासाठी किंवा समाजात चांगली प्रतिमा निर्माण करण्यासाठी नियमांचे पालन करते."
+            },
+            {
+                subject: "CDP", type: "IMP", tagText: "RTE Act 2009",
+                question: "बालकांचा मोफत व सक्तीच्या शिक्षणाचा हक्क कायदा 2009 (RTE Act) नुसार, प्राथमिक शाळांमध्ये (इयत्ता 1 ते 5) विद्यार्थी-शिक्षक प्रमाण (PTR) किती असावे?",
+                options: ["25:1", "30:1", "35:1", "40:1"],
+                answer: 1,
+                explanation: "RTE Act 2009 च्या निकषानुसार प्राथमिक स्तरावर (इयत्ता 1 ते 5) प्रत्येक 30 विद्यार्थ्यांमागे 1 शिक्षक (30:1) असणे बंधनकारक आहे."
+            },
+            {
+                subject: "CDP", type: "Expected", tagText: "Expected",
+                question: "एखाद्या विद्यार्थ्याला अक्षरे किंवा शब्द वाचताना उलट दिसणे (उदा. 'b' ऐवजी 'd' किंवा 'was' ऐवजी 'saw' वाचणे) ही कोणत्या प्रकारची अध्ययन अक्षमता आहे?",
+                options: ["डिस्लेक्सिया (Dyslexia)", "डिस्कॅल्क्युलिया (Dyscalculia)", "डिस्ग्राफिया (Dysgraphia)", "अफासिया (Aphasia)"],
+                answer: 0,
+                explanation: "वाचनातील दोषाला 'डिस्लेक्सिया' (Dyslexia) म्हणतात. लेखनातील दोषाला डिस्ग्राफिया तर गणितीय दोषाला डिस्कॅल्क्युलिया म्हणतात."
+            },
+
+            // --- Marathi (मराठी भाषा) ---
+            {
+                subject: "Marathi", type: "PYQ", tagText: "PYQ 2019",
+                question: "'सज्जन' या शब्दाचा योग्य संधी विग्रह ओळखा.",
+                options: ["सज् + जन", "सत् + जन", "सद + जन", "सज + जन"],
+                answer: 1,
+                explanation: "'सत् + जन = सज्जन'. पहिल्या पदातील 'त्' पुढे 'ज्' आल्यास 'त्' चा 'ज्' होतो, हा व्यंजन संधीचा नियम आहे."
+            },
+            {
+                subject: "Marathi", type: "Concept", tagText: "Concept",
+                question: "'मुलांनी शिक्षकांना नमस्कार केला.' या वाक्यातील 'मुलांनी' या शब्दाची विभक्ती कोणती?",
+                options: ["प्रथमा", "द्वितीया", "तृतीया", "चतुर्थी"],
+                answer: 2,
+                explanation: "'ने, ए, शी' आणि अनेकवचनी 'नी, ही, शी' हे 'तृतीया' विभक्तीचे प्रत्यय आहेत. 'मुलांनी' मध्ये 'नी' प्रत्यय असल्यामुळे ही तृतीया विभक्ती आहे."
+            },
+            {
+                subject: "Marathi", type: "IMP", tagText: "IMP",
+                question: "'लहानपण दे गा देवा, मुंगी साखरेचा रवा।' - या काव्यपंक्तीतील अलंकार कोणता?",
+                options: ["उपमा अलंकार", "दृष्टांत अलंकार", "व्यतिरेक अलंकार", "श्लेश अलंकार"],
+                answer: 1,
+                explanation: "एखादी गोष्ट पटवून देण्यासाठी दाखला किंवा उदाहरण दिल्यास 'दृष्टांत अलंकार' होतो. येथे संतांनी नम्रतेचे महत्त्व पटवण्यासाठी मुंगी व साखरेचा दृष्टांत दिला आहे."
+            },
+            {
+                subject: "Marathi", type: "Expected", tagText: "Expected",
+                question: "'उंटावरून शेळ्या हाकणे' या वाक्प्रचाराचा अचूक अर्थ कोणता?",
+                options: ["उंटावर बसून प्रवास करणे", "प्रत्यक्ष कष्ट न करता नुसत्या सूचना देणे", "शेळ्यांचे रक्षण करणे", "अतिशय वेगाने काम करणे"],
+                answer: 1,
+                explanation: "स्वतः काहीही कष्ट वा मेहनत न करता दुरूनच केवळ हुकूम सोडणे किंवा सल्ले देणे याला 'उंटावरून शेळ्या हाकणे' म्हणतात."
+            },
+
+            // --- English Language ---
+            {
+                subject: "English", type: "PYQ", tagText: "PYQ 2018",
+                question: "Choose the correct verb form: 'Neither of the two candidates ____ selected.'",
+                options: ["were", "was", "have been", "are"],
+                answer: 1,
+                explanation: "'Neither of' is followed by a plural noun/pronoun but takes a singular verb. Therefore, 'was' is the correct answer."
+            },
+            {
+                subject: "English", type: "Concept", tagText: "Concept",
+                question: "Change to Indirect Speech: Rohan said, \"I am writing a letter.\"",
+                options: ["Rohan said that he is writing a letter.", "Rohan said that he was writing a letter.", "Rohan says that he was writing a letter.", "Rohan said that he had written a letter."],
+                answer: 1,
+                explanation: "When the reporting verb is in the past tense ('said'), Present Continuous ('am writing') changes to Past Continuous ('was writing')."
+            },
+            {
+                subject: "English", type: "IMP", tagText: "IMP",
+                question: "Identify the antonym of the word 'Frugal' (काटकसरी):",
+                options: ["Economical", "Extravagant", "Miserly", "Prudent"],
+                answer: 1,
+                explanation: "'Frugal' means careful when using money or food (economical). Its opposite is 'Extravagant' (उधळ्या, खर्चिक)."
+            },
+            {
+                subject: "English", type: "Expected", tagText: "Expected",
+                question: "What is the meaning of the idiom: 'A piece of cake'?",
+                options: ["A delicious dessert", "A very easy task", "A difficult challenge", "A small portion"],
+                answer: 1,
+                explanation: "The idiom 'a piece of cake' means something that is very simple and easy to do."
+            },
+
+            // --- Mathematics (गणित) ---
+            {
+                subject: "Maths", type: "PYQ", tagText: "PYQ 2021",
+                question: "द.सा.द.शे. 10 दराने 5000 रुपयांचे 2 वर्षांचे सरळव्याज (Simple Interest) किती होईल?",
+                options: ["500 रु.", "1000 रु.", "1200 रु.", "1500 रु."],
+                answer: 1,
+                explanation: "सूत्र: सरळव्याज = (मुद्दल × दर × मुदत) ÷ 100 = (5000 × 10 × 2) ÷ 100 = 1000 रुपये."
+            },
+            {
+                subject: "Maths", type: "Concept", tagText: "Concept",
+                question: "एका आयताची लांबी 15 सेमी आणि रुंदी 10 सेमी आहे, तर त्या आयताची परिमिती (Perimeter) किती सेमी असेल?",
+                options: ["25 सेमी", "50 सेमी", "150 सेमी", "100 सेमी"],
+                answer: 1,
+                explanation: "आयताची परिमिती = 2 × (लांबी + रुंदी) = 2 × (15 + 10) = 2 × 25 = 50 सेमी."
+            },
+            {
+                subject: "Maths", type: "IMP", tagText: "IMP",
+                question: "12, 18, 24, 30 आणि 36 या पाच क्रमवार सम संख्यांची सरासरी (Average) किती?",
+                options: ["20", "24", "26", "28"],
+                answer: 1,
+                explanation: "संख्यांमधील फरक समान असल्यास मधली संख्या हीच सरासरी असते. किंवा एकूण बेरीज = 120 ÷ 5 = 24."
+            },
+            {
+                subject: "Maths", type: "Expected", tagText: "Expected",
+                question: "एक रेल्वे गाडी 60 किमी/तास या वेगाने धावत असल्यास, ती गाडी 3 तास 30 मिनिटांत किती अंतर पार करेल?",
+                options: ["180 किमी", "200 किमी", "210 किमी", "240 किमी"],
+                answer: 2,
+                explanation: "वेळ = 3 तास 30 मिनिटे = 3.5 तास. अंतर = वेग × वेळ = 60 × 3.5 = 210 किमी."
+            },
+
+            // --- Environmental Studies (EVS - परिसर अभ्यास) ---
+            {
+                subject: "EVS", type: "PYQ", tagText: "PYQ 2021",
+                question: "आसाममधील प्रसिद्ध 'काझीरंगा राष्ट्रीय उद्यान' (Kaziranga National Park) कोणत्या प्राण्यासाठी ओळखले जाते?",
+                options: ["रॉयल बंगाल टायगर", "एकशिंगी गेंडा", "आशियाई सिंह", "रानगवा"],
+                answer: 1,
+                explanation: "काझीरंगा राष्ट्रीय उद्यान हे जगातील प्रसिद्ध अशा दुर्मीळ 'एकशिंगी गेंड्यांच्या' (One-horned Rhinoceros) संवर्धनासाठी जगप्रसिद्ध आहे."
+            },
+            {
+                subject: "EVS", type: "Concept", tagText: "Concept",
+                question: "मानवी शरीरात 'क' जीवनसत्त्वाच्या (Vitamin C) कमतरतेमुळे कोणता आजार होतो?",
+                options: ["बेरीबेरी", "स्कर्वी", "मुडदूस", "रातांधळेपणा"],
+                answer: 1,
+                explanation: "जीवनसत्त्व 'क' (Vitamin C) च्या अभावामुळे 'स्कर्वी' (Scurvy) रोग होतो, ज्यामध्ये हिरड्यांमधून रक्त येते आणि जखमा लवकर भरत नाहीत."
+            },
+            {
+                subject: "EVS", type: "IMP", tagText: "IMP",
+                question: "सूर्यापासून येणाऱ्या घातक अतिनील किरणांपासून (UV Rays) पृथ्वीचे रक्षण करणारा ओझोन थर (Ozone Layer) वातावरणाच्या कोणत्या थरात आढळतो?",
+                options: ["तपांबर (Troposphere)", "स्थितांबर (Stratosphere)", "दलांबर (Mesosphere)", "आयनांबर (Ionosphere)"],
+                answer: 1,
+                explanation: "ओझोन वायूचा थर हा वातावरणातील 'स्थितांबर' (Stratosphere) या थरामध्ये सुमारे 15 ते 35 किमी उंचीवर आढळतो."
+            },
+            {
+                subject: "EVS", type: "Expected", tagText: "Expected",
+                question: "महाराष्ट्रात 24 सप्टेंबर 1873 रोजी 'सत्यशोधक समाज' ची स्थापना कोणी केली?",
+                options: ["महात्मा ज्योतिराव फुले", "डॉ. बाबासाहेब आंबेडकर", "राजर्षी छत्रपती शाहू महाराज", "महर्षी धोंडो केशव कर्वे"],
+                answer: 0,
+                explanation: "शूद्र व अतिशूद्र समाजाला अन्यायाविरुद्ध जागृत करण्यासाठी आणि शिक्षणाचा प्रसार करण्यासाठी महात्मा ज्योतिराव फुले यांनी पुण्यात सत्यशोधक समाजाची स्थापना केली."
+            }
+        ];
+
+        // --- State Variables ---
+        let currentQuestionIndex = 0;
+        let userAnswers = new Array(quizData.length).fill(null);
+        let timeLeft = 20 * 60; // 20 minutes in seconds
+        let timerInterval;
+
+        const promoTexts = [
+            "अशाच रंगीत थीम (Colorful Theme) आणि Smart Analysis सोबत 10,000+ प्रश्नांचा सराव करण्यासाठी App लगेच डाउनलोड करा!",
+            "TET मध्ये 120+ Score मिळवायचा आहे? Success Digital App वर Topic-wise Test नक्की सोडवा.",
+            "मागील वर्षांचे सर्व पेपर्स (PYQ) स्पष्टीकरणासह सोडवण्यासाठी आजच App डाउनलोड करा.",
+            "तुमची All Maharashtra Rank तपासण्यासाठी Success Digital App चा वापर करा. Completely Free!"
+        ];
+
+        // --- DOM Elements ---
+        const welcomeScreen = document.getElementById('welcome-screen');
+        const quizContainer = document.getElementById('quiz-container');
+        const resultScreen = document.getElementById('result-screen');
+        const startBtn = document.getElementById('start-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const timerDisplay = document.getElementById('timer-display');
+        const timeSpan = document.getElementById('time');
+        const questionCard = document.getElementById('question-card');
+
+        // --- Initialization ---
+        startBtn.addEventListener('click', startQuiz);
+
+        function startQuiz() {
+            welcomeScreen.classList.add('hidden');
+            quizContainer.classList.remove('hidden');
+            timerDisplay.classList.remove('hidden');
+            
+            quizContainer.querySelectorAll('.slide-up').forEach(el => {
+                el.style.animation = 'none';
+                void el.offsetWidth;
+                el.style.animation = null;
+            });
+
+            loadQuestion();
+            startTimer();
+        }
+
+        // --- Timer Logic ---
+        function startTimer() {
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                updateTimerDisplay();
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timerInterval);
+                    finishQuiz();
+                } else if (timeLeft <= 300) {
+                    timerDisplay.classList.replace('bg-black/20', 'bg-red-500/80');
+                    timerDisplay.classList.add('text-white');
+                    timerDisplay.classList.remove('border-white/10');
+                    timerDisplay.classList.add('border-red-600');
+                    timerDisplay.querySelector('.fa-clock').classList.replace('text-yellow-300', 'text-white');
+                }
+            }, 1000);
+        }
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timeSpan.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        // --- Core Quiz Logic ---
+        function loadQuestion() {
+            const qData = quizData[currentQuestionIndex];
+            
+            questionCard.classList.remove('slide-up');
+            void questionCard.offsetWidth;
+            questionCard.classList.add('slide-up');
+
+            document.getElementById('question-counter').textContent = `प्रश्न ${currentQuestionIndex + 1} / ${quizData.length}`;
+            const progress = ((currentQuestionIndex) / quizData.length) * 100;
+            document.getElementById('progress-bar').style.width = `${progress}%`;
+            document.getElementById('progress-percent').textContent = `${Math.round(progress)}%`;
+
+            const subjectTag = document.getElementById('subject-tag');
+            subjectTag.textContent = qData.subject;
+            
+            const subjectColors = {
+                'CDP': 'bg-indigo-100 text-indigo-800 border-indigo-200',
+                'Marathi': 'bg-pink-100 text-pink-800 border-pink-200',
+                'English': 'bg-blue-100 text-blue-800 border-blue-200',
+                'Maths': 'bg-green-100 text-green-800 border-green-200',
+                'EVS': 'bg-emerald-100 text-emerald-800 border-emerald-200'
+            };
+            subjectTag.className = `text-xs font-extrabold px-3 py-1 rounded-lg shadow-sm border uppercase tracking-wider ${subjectColors[qData.subject] || 'bg-gray-100 text-gray-800 border-gray-200'}`;
+
+            const typeTag = document.getElementById('type-tag');
+            typeTag.className = 'text-xs font-extrabold px-3 py-1 rounded-lg shadow-sm border';
+            if(qData.type === 'PYQ') {
+                typeTag.innerHTML = `<i class="fas fa-history text-[10px]"></i> ${qData.tagText}`;
+                typeTag.classList.add('bg-red-100', 'text-red-800', 'border-red-200');
+                typeTag.classList.remove('hidden');
+            } else if (qData.type === 'IMP' || qData.type === 'RTE Act 2009') {
+                typeTag.innerHTML = `<i class="fas fa-star text-[10px]"></i> ${qData.tagText}`;
+                typeTag.classList.add('bg-yellow-100', 'text-yellow-800', 'border-yellow-200');
+                typeTag.classList.remove('hidden');
+            } else if (qData.type === 'Concept' || qData.type === 'Tricky') {
+                typeTag.innerHTML = `<i class="fas fa-brain text-[10px]"></i> ${qData.tagText}`;
+                typeTag.classList.add('bg-purple-100', 'text-purple-800', 'border-purple-200');
+                typeTag.classList.remove('hidden');
+            } else {
+                 typeTag.classList.add('hidden'); 
+            }
+
+            document.getElementById('question-text').textContent = `${currentQuestionIndex + 1}. ${qData.question}`;
+
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            
+            qData.options.forEach((opt, index) => {
+                const label = document.createElement('label');
+                const isSelected = userAnswers[currentQuestionIndex] === index;
+                const isAnswered = userAnswers[currentQuestionIndex] !== null;
+
+                label.className = `relative flex items-center p-4 rounded-2xl border-2 cursor-pointer option-label group ${isAnswered ? 'disabled' : 'border-gray-200 bg-white'}`;
+                
+                label.innerHTML = `
+                    <input type="radio" name="option" value="${index}" class="hidden" ${isSelected ? 'checked' : ''}>
+                    <div class="dot-container w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center mr-4 bg-white group-hover:border-blue-400 shrink-0">
+                    </div>
+                    <span class="text-gray-700 font-bold text-lg select-none">${opt}</span>
+                `;
+
+                if(!isAnswered) {
+                    label.addEventListener('click', () => selectOption(index));
+                }
+                optionsContainer.appendChild(label);
+            });
+
+            prevBtn.classList.toggle('hidden', currentQuestionIndex === 0);
+            
+            const expBox = document.getElementById('explanation-box');
+            if(userAnswers[currentQuestionIndex] !== null) {
+                showFeedback();
+            } else {
+                expBox.classList.add('hidden');
+                nextBtn.disabled = true;
+                nextBtn.innerHTML = `पुढील <i class="fas fa-arrow-right ml-1"></i>`;
+                nextBtn.classList.replace('bg-green-600', 'bg-blue-600');
+                nextBtn.classList.replace('hover:bg-green-700', 'hover:bg-blue-700');
+            }
+        }
+
+        function selectOption(index) {
+            if(userAnswers[currentQuestionIndex] !== null) return; 
+
+            userAnswers[currentQuestionIndex] = index;
+            nextBtn.disabled = false;
+            
+            document.getElementById('dynamic-promo-text').textContent = promoTexts[Math.floor(Math.random() * promoTexts.length)];
+            
+            showFeedback();
+
+            setTimeout(() => {
+                const expBox = document.getElementById('explanation-box');
+                expBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+        }
+
+        function showFeedback() {
+            const labels = document.querySelectorAll('.option-label');
+            const qData = quizData[currentQuestionIndex];
+            const selected = userAnswers[currentQuestionIndex];
+            const correct = qData.answer;
+
+            labels.forEach((label, idx) => {
+                label.classList.add('disabled');
+                const dotContainer = label.querySelector('.dot-container');
+                
+                if (idx === correct) {
+                    label.classList.add('correct-answer-show');
+                    label.classList.remove('border-gray-200');
+                    dotContainer.classList.add('border-green-500', 'bg-green-500');
+                    dotContainer.classList.remove('border-gray-300', 'bg-white');
+                    dotContainer.innerHTML = '<i class="fas fa-check text-white text-xs"></i>';
+                } else if (idx === selected && selected !== correct) {
+                    label.classList.add('wrong-answer-show');
+                    label.classList.remove('border-gray-200');
+                    dotContainer.classList.add('border-red-500', 'bg-red-500');
+                    dotContainer.classList.remove('border-gray-300', 'bg-white');
+                    dotContainer.innerHTML = '<i class="fas fa-times text-white text-xs"></i>';
+                }
+            });
+
+            const expBox = document.getElementById('explanation-box');
+            document.getElementById('explanation-text').textContent = qData.explanation;
+            expBox.classList.remove('hidden');
+            expBox.classList.add('fade-in');
+
+            if (currentQuestionIndex === quizData.length - 1) {
+                nextBtn.innerHTML = `Submit Test <i class="fas fa-check-circle ml-2"></i>`;
+                nextBtn.classList.replace('bg-blue-600', 'bg-green-600');
+                nextBtn.classList.replace('hover:bg-blue-700', 'hover:bg-green-700');
+                nextBtn.classList.add('pulse-btn');
+            }
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentQuestionIndex < quizData.length - 1) {
+                currentQuestionIndex++;
+                loadQuestion();
+            } else {
+                finishQuiz();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                loadQuestion();
+            }
+        });
+
+        function finishQuiz() {
+            clearInterval(timerInterval);
+            quizContainer.classList.add('hidden');
+            timerDisplay.classList.add('hidden');
+            
+            let score = 0;
+            userAnswers.forEach((ans, idx) => {
+                if (ans === quizData[idx].answer) score++;
+            });
+
+            const accuracy = Math.round((score / quizData.length) * 100);
+            const timeTakenSec = (20 * 60) - timeLeft;
+            const timeTakenMin = Math.max(1, Math.floor(timeTakenSec / 60));
+            
+            let rank = 1150; 
+            if(score === 20) rank = Math.floor(Math.random() * 5) + 1;
+            else if(score >= 17) rank = Math.floor(Math.random() * 20) + 10;
+            else if(score >= 12) rank = Math.floor(Math.random() * 150) + 50;
+            else rank = Math.floor(Math.random() * 500) + 200;
+
+            document.getElementById('final-score').textContent = score;
+            document.getElementById('final-accuracy').textContent = accuracy;
+            document.getElementById('final-time').textContent = timeTakenMin;
+            document.getElementById('final-rank').textContent = rank;
+
+            const msgEl = document.getElementById('motivational-message');
+            if (score >= 17) {
+                msgEl.innerHTML = `<strong>शानदार कामगिरी!</strong> TET Paper 1 मध्ये तुमचा Score अव्वल आहे. अशीच तयारी <strong>Success Digital App</strong> वर सुरू ठेवा आणि हमखास निवड पक्की करा!`;
+                setTimeout(fireConfetti, 500);
+            } else if (score >= 12) {
+                msgEl.innerHTML = `<strong>चांगला स्कोर!</strong> पण TET मेरिट लिस्टमध्ये येण्यासाठी आणखी थोड्या सरावाची गरज आहे. Success Digital App वरील स्पष्टीकरणात्मक चाचण्या नियमित सोडवा.`;
+                if(score > 14) setTimeout(fireConfetti, 500);
+            } else {
+                msgEl.innerHTML = `<strong>प्रयत्न चालू ठेवा!</strong> प्रत्येक टेस्ट ही शिकण्याची नवीन संधी असते. सर्व विषयांच्या मूलभूत संकल्पना मजबूत करण्यासाठी आजच <strong>Success Digital App</strong> डाउनलोड करा.`;
+            }
+
+            resultScreen.classList.remove('hidden');
+            window.scrollTo(0,0);
+        }
+
+        function fireConfetti() {
+            const colors = ['#3b82f6', '#22c55e', '#f59e0b', '#ec4899', '#8b5cf6'];
+            for (let i = 0; i < 80; i++) {
+                createConfettiParticle(colors);
+            }
+        }
+
+        function createConfettiParticle(colors) {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            
+            const color = colors[Math.floor(Math.random() * colors.length)];
+            confetti.style.backgroundColor = color;
+            
+            confetti.style.left = Math.random() * 100 + 'vw';
+            confetti.style.top = -10 + 'px';
+            
+            if(Math.random() > 0.5) confetti.style.borderRadius = '50%';
+            
+            document.body.appendChild(confetti);
+
+            const animation = confetti.animate([
+                { transform: `translate3d(0,0,0) rotate(0deg)`, opacity: 1 },
+                { transform: `translate3d(${Math.random()*300 - 150}px, ${window.innerHeight}px, 0) rotate(${Math.random()*720}deg)`, opacity: 0 }
+            ], {
+                duration: Math.random() * 2000 + 1500,
+                easing: 'cubic-bezier(.37,0,.63,1)'
+            });
+
+            animation.onfinish = () => confetti.remove();
+        }
+    </script>
+</body>
+</html>
