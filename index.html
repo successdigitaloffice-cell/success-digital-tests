@@ -68,7 +68,7 @@
     <section class="hero-gradient text-white py-10 px-4 shadow-inner relative overflow-hidden">
         <div class="container mx-auto max-w-4xl text-center relative z-10">
             <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-1 rounded-full text-xs md:text-sm font-bold mb-3 border border-white/20">
-                <i class="fas fa-bolt text-yellow-300"></i> 4 श्रेणी • 80 सराव चाचण्यांची संपूर्ण मालिका (80 Online Tests Live)
+                <i class="fas fa-bolt text-yellow-300"></i> 4 श्रेणी • 120 सराव चाचण्यांची संपूर्ण मालिका (120 Online Tests Live)
             </div>
             <h2 class="text-3xl md:text-5xl font-black mb-3 leading-tight">
                 महाराष्ट्र TET व CTET परीक्षा तयारी
@@ -125,19 +125,19 @@
         <div class="space-y-4 mb-8">
             <div class="flex flex-wrap items-center gap-2">
                 <button onclick="setCategoryFilter('all')" id="tab-all" class="filter-btn active bg-slate-900 text-white text-xs md:text-sm font-bold px-4 py-2 rounded-xl shadow-sm transition">
-                    <i class="fas fa-th-large mr-1.5"></i> सर्व 80 चाचण्या (All)
+                    <i class="fas fa-th-large mr-1.5"></i> सर्व 120 चाचण्या (All)
                 </button>
                 <button onclick="setCategoryFilter('mahatet1')" id="tab-mahatet1" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition">
-                    <i class="fas fa-graduation-cap text-blue-600 mr-1.5"></i> Maha TET 1 (20 Tests)
+                    <i class="fas fa-graduation-cap text-blue-600 mr-1.5"></i> Maha TET 1 (30 Tests)
                 </button>
                 <button onclick="setCategoryFilter('mahatet2')" id="tab-mahatet2" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition">
-                    <i class="fas fa-school text-teal-600 mr-1.5"></i> Maha TET 2 (20 Tests)
+                    <i class="fas fa-school text-teal-600 mr-1.5"></i> Maha TET 2 (30 Tests)
                 </button>
                 <button onclick="setCategoryFilter('ctet1')" id="tab-ctet1" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition">
-                    <i class="fas fa-award text-orange-600 mr-1.5"></i> CTET 1 (20 Tests)
+                    <i class="fas fa-award text-orange-600 mr-1.5"></i> CTET 1 (30 Tests)
                 </button>
                 <button onclick="setCategoryFilter('ctet2')" id="tab-ctet2" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 border border-slate-200 text-xs md:text-sm font-bold px-4 py-2 rounded-xl transition">
-                    <i class="fas fa-book-reader text-purple-600 mr-1.5"></i> CTET 2 (20 Tests)
+                    <i class="fas fa-book-reader text-purple-600 mr-1.5"></i> CTET 2 (30 Tests)
                 </button>
             </div>
 
@@ -202,20 +202,20 @@
     <footer class="bg-slate-900 text-slate-400 py-6 border-t border-slate-800 text-center text-xs">
         <div class="container mx-auto px-4">
             <p class="text-white font-bold text-sm mb-1">SUCCESS DIGITAL</p>
-            <p class="text-slate-400 mb-2">TET & CTET परीक्षेसाठी सर्वोत्तम डिजिटल व्यासपीठ • 20 Tests for Each Category</p>
+            <p class="text-slate-400 mb-2">TET & CTET परीक्षेसाठी सर्वोत्तम डिजिटल व्यासपीठ • 30 Tests for Each Category (120 Tests Total)</p>
             <p>&copy; Success Digital. All rights reserved.</p>
         </div>
     </footer>
 
     <!-- Comprehensive Catalog Data & Render Logic -->
     <script>
-        // 80 Tests Catalog Database (20 Tests Per Category)
+        // 120 Tests Catalog Database (30 Tests Per Category)
         const catalogDatabase = {
             'mahatet1': {
                 id: 'mahatet1',
                 title: 'Maha TET Paper 1 मालिका (महाराष्ट्र - प्राथमिक)',
-                subtext: 'इयत्ता 1 ते 5 साठी 20 संपूर्ण दैनिक सराव चाचण्या',
-                badgeText: '20 Tests Live',
+                subtext: 'इयत्ता 1 ते 5 साठी 30 संपूर्ण दैनिक सराव चाचण्या',
+                badgeText: '30 Tests Live',
                 badgeClass: 'bg-blue-100 text-blue-800 border-blue-200',
                 themeBarClass: 'bg-blue-600',
                 borderClass: 'border-blue-200',
@@ -242,14 +242,24 @@
                     { id: 17, title: 'दैनिक सराव टेस्ट 17', topics: 'अध्ययनातील पठार अवस्था, केवलप्रयोगी अव्यय, Antonyms, काटकोन त्रिकोण पायथागोरस, बारव पारंपरिक जलसाठे', directUrl: 'test.html?cat=mahatet1&test=17', tags: ['Learning Curve', 'केवलप्रयोगी', 'Pythagoras', 'Water'] },
                     { id: 18, title: 'दैनिक सराव टेस्ट 18', topics: 'उपचारात्मक अध्यापन Remedial, मराठी शुद्धलेखन नियम, Subject-Verb Agreement, समभुज त्रिकोण परिमिती, सावित्रीबाई फुले', directUrl: 'test.html?cat=mahatet1&test=18', tags: ['Remedial', 'शुद्धलेखन', 'Grammar', 'History'] },
                     { id: 19, title: 'दैनिक सराव टेस्ट 19', topics: 'उद्गामी अध्यापन पद्धत, वाक्प्रचार अर्थ, Collective Nouns, संख्यांचे वर्गमूळ, वाळवंटी वनस्पती अनुकूलन काटे', directUrl: 'test.html?cat=mahatet1&test=19', tags: ['Methods', 'वाक्प्रचार', 'Square Root', 'Adaptation'] },
-                    { id: 20, title: 'संपूर्ण सराव महा टेस्ट 20', topics: 'भयमुक्त बालस्नेही शिक्षण, मिश्र वाक्य, Communicative Language CLT, 5 अंकी लहानात लहान संख्या, चिपको आंदोलन', directUrl: 'test.html?cat=mahatet1&test=20', tags: ['Master Mock', 'मिश्र वाक्य', 'CLT', 'Conservation'] }
+                    { id: 20, title: 'संपूर्ण सराव महा टेस्ट 20', topics: 'भयमुक्त बालस्नेही शिक्षण, मिश्र वाक्य, Communicative Language CLT, 5 अंकी लहानात लहान संख्या, चिपको आंदोलन', directUrl: 'test.html?cat=mahatet1&test=20', tags: ['Master Mock', 'मिश्र वाक्य', 'CLT', 'Conservation'] },
+                    { id: 21, title: 'दैनिक सराव टेस्ट 21', topics: 'पियाजे संवेदी-कारक, बहुव्रीही समास, Irregular Verbs, लसावि 4 व 6 (12), जागतिक पर्यावरण दिन 5 जून', directUrl: 'test.html?cat=mahatet1&test=21', tags: ['Piaget', 'समास', 'Maths', 'Environment'] },
+                    { id: 22, title: 'दैनिक सराव टेस्ट 22', topics: 'वायगोत्स्की मचान Scaffolding, संधी विग्रह, Present Continuous, काटकोन त्रिकोण कर्ण, राष्ट्रीय विज्ञान दिन 28 फेब्रु', directUrl: 'test.html?cat=mahatet1&test=22', tags: ['Vygotsky', 'संधी', 'Geometry', 'Science Day'] },
+                    { id: 23, title: 'दैनिक सराव टेस्ट 23', topics: 'कोहलबर्ग सुवर्ण नियम, कर्मणी प्रयोग, Collective Nouns, चौरसाचे क्षेत्रफळ 100, सह्याद्री कळसूबाई 1646 मी', directUrl: 'test.html?cat=mahatet1&test=23', tags: ['Kohlberg', 'प्रयोग', 'Square', 'Geography'] },
+                    { id: 24, title: 'दैनिक सराव टेस्ट 24', topics: 'गार्डनर सांगीतिक बुद्धिमत्ता, अव्ययीभाव समास, Prepositions in, 1 ते 50 मूळ संख्या (15), मानवी रक्त लाल हिमोग्लोबिन', directUrl: 'test.html?cat=mahatet1&test=24', tags: ['Gardner', 'समास', 'Prime Numbers', 'Biology'] },
+                    { id: 25, title: 'दैनिक सराव टेस्ट 25', topics: 'समावेशक शिक्षण, यमक अलंकार, Question Tag, सरळव्याज 5000 रु., काझीरंगा एकशिंगी गेंडा आसाम', directUrl: 'test.html?cat=mahatet1&test=25', tags: ['Inclusion', 'अलंकार', 'Interest', 'Sanctuary'] },
+                    { id: 26, title: 'दैनिक सराव टेस्ट 26', topics: 'ब्रूनर क्रियात्मक अवस्था, रीती भूतकाळ, Degrees of Comparison, समभुज चौकोन परिमिती, प्रकाशसंश्लेषण हरितलवक', directUrl: 'test.html?cat=mahatet1&test=26', tags: ['Bruner', 'काळ', 'Geometry', 'Photosynthesis'] },
+                    { id: 27, title: 'दैनिक सराव टेस्ट 27', topics: 'थॉर्नडाईक परिणाम नियम, वाक्प्रचार अर्थ, Silent Reading, सरासरी 10,20,30,40 (25), गोदावरी उगम त्र्यंबकेश्वर', directUrl: 'test.html?cat=mahatet1&test=27', tags: ['Thorndike', 'वाक्प्रचार', 'Average', 'Rivers'] },
+                    { id: 28, title: 'दैनिक सराव टेस्ट 28', topics: 'मास्लो गरजांचा मनोरा, केवल वाक्य, Direct-Indirect Speech, त्रिकोण आंतरकोन 180°, अजिंठा लेणी छत्रपती संभाजीनगर', directUrl: 'test.html?cat=mahatet1&test=28', tags: ['Maslow', 'वाक्य', 'Geometry', 'Heritage'] },
+                    { id: 29, title: 'दैनिक सराव टेस्ट 29', topics: 'डिस्लेक्सिया वाचन विकार, शब्दसिद्धी तत्सम, Active Passive Voice, नळ व टाकी, नेताजी सुभाषचंद्र बोस आझाद हिंद सेना', directUrl: 'test.html?cat=mahatet1&test=29', tags: ['Dyslexia', 'तत्सम', 'Time Work', 'History'] },
+                    { id: 30, title: 'संपूर्ण सराव महा टेस्ट 30', topics: 'बालकेंद्री शिक्षण, नीलकंठ बहुव्रीही, Vocabulary Benevolent, त्रिकोण बेरीज 180°, डिप्रेस्ड क्लासेस मिशन विठ्ठल शिंदे', directUrl: 'test.html?cat=mahatet1&test=30', tags: ['Master Mock', 'बहुव्रीही', 'Vocab', 'Social Reform'] }
                 ]
             },
             'mahatet2': {
                 id: 'mahatet2',
                 title: 'Maha TET Paper 2 मालिका (महाराष्ट्र - उच्च प्राथमिक)',
-                subtext: 'इयत्ता 6 ते 8 साठी 20 संपूर्ण दैनिक सराव चाचण्या (गणित-विज्ञान व सामाजिक शास्त्रे)',
-                badgeText: '20 Tests Live',
+                subtext: 'इयत्ता 6 ते 8 साठी 30 संपूर्ण दैनिक सराव चाचण्या (गणित-विज्ञान व सामाजिक शास्त्रे)',
+                badgeText: '30 Tests Live',
                 badgeClass: 'bg-teal-100 text-teal-800 border-teal-200',
                 themeBarClass: 'bg-teal-600',
                 borderClass: 'border-teal-200',
@@ -276,14 +286,24 @@
                     { id: 17, title: 'दैनिक सराव टेस्ट 17', topics: 'सहकार्यात्मक अध्ययन गटकार्य, अतिशयोक्ती अलंकार, Voice By whom, त्रिकोण बाह्यकोन प्रमेय, मूत्रपिंड नेफ्रॉन्स, सर्वोच्च न्यायालय', directUrl: 'test.html?cat=mahatet2&test=17', tags: ['Collaboration', 'अतिशयोक्ती', 'Kidney', 'Supreme Court'] },
                     { id: 18, title: 'दैनिक सराव टेस्ट 18', topics: 'VARK अध्ययन शैली मॉडेल, उपमा अलंकार साधर्म्य, Syntax does not, (a+b)³ विस्तार, पट्टीचुंबक ध्रुव, गोदावरी नदी प्रणाली', directUrl: 'test.html?cat=mahatet2&test=18', tags: ['VARK', 'उपमा', 'Expansion', 'Godavari'] },
                     { id: 19, title: 'दैनिक सराव टेस्ट 19', topics: 'नैदानिक चाचणी Diagnostic, मराठी अभिजात भाषा दर्जा, Idioms Ignore, अंकगणिती श्रेढी AP, अन्नजाळे Food Web, चले जाव 1942', directUrl: 'test.html?cat=mahatet2&test=19', tags: ['Diagnostic', 'अभिजात भाषा', 'AP Series', 'Quit India'] },
-                    { id: 20, title: 'संपूर्ण सराव महा टेस्ट 20', topics: 'HOTS उच्च विचार कौशल्ये, मिश्र वाक्य, Subject-Verb Concord, वर्तुळ व्यास 2r, प्रिझम वर्णपंक्ती, संविधानाचे शिल्पकार डॉ. आंबेडकर', directUrl: 'test.html?cat=mahatet2&test=20', tags: ['Master Mock', 'HOTS', 'Prism', 'Constitution'] }
+                    { id: 20, title: 'संपूर्ण सराव महा टेस्ट 20', topics: 'HOTS उच्च विचार कौशल्ये, मिश्र वाक्य, Subject-Verb Concord, वर्तुळ व्यास 2r, प्रिझम वर्णपंक्ती, संविधानाचे शिल्पकार डॉ. आंबेडकर', directUrl: 'test.html?cat=mahatet2&test=20', tags: ['Master Mock', 'HOTS', 'Prism', 'Constitution'] },
+                    { id: 21, title: 'à¤¦à¥ˆà¤¨à¤¿à¤• à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 21', topics: 'à¤¸à¥à¤Ÿà¥…à¤¨à¥à¤²à¥‡ à¤¹à¥‰à¤² à¤•à¤¿à¤¶à¥‹à¤°à¤¾à¤µà¤¸à¥à¤¥à¤¾, à¤¯à¤¥à¤¾à¤¶à¤•à¥à¤¤à¥€ à¤…à¤µà¥à¤¯à¤¯à¥€à¤­à¤¾à¤µ, Adjective Clause, à¤ªà¤¾à¤¯à¤¥à¤¾à¤—à¥‹à¤°à¤¸ à¤•à¤°à¥à¤£ 10 à¤¸à¥‡à¤®à¥€, à¤°à¤¾à¤¯à¤—à¤¡ à¤¶à¤¿à¤µà¤›à¤¤à¥à¤°à¤ªà¤¤à¥€ à¤°à¤¾à¤œà¥à¤¯à¤¾à¤­à¤¿à¤·à¥‡à¤•', directUrl: 'test.html?cat=mahatet2&test=21', tags: ['Adolescence', 'à¤…à¤µà¥à¤¯à¤¯à¥€à¤­à¤¾à¤µ', 'Pythagoras', 'Shivaji Maharaj'] },
+                    { id: 22, title: 'à¤¦à¥ˆà¤¨à¤¿à¤• à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 22', topics: 'à¤…à¤²à¥à¤¬à¤°à¥à¤Ÿ à¤¬à¤¾à¤‚à¤¦à¥à¤°à¤¾ à¤¸à¤¾à¤®à¤¾à¤œà¤¿à¤• à¤…à¤§à¥à¤¯à¤¯à¤¨, à¤‰à¤ªà¤®à¤¾ à¤…à¤²à¤‚à¤•à¤¾à¤°, Question Tag, à¤µà¤°à¥à¤¤à¥à¤³ à¤ªà¤°à¥€à¤˜ 88 à¤¸à¥‡à¤®à¥€, 1857 à¤®à¥€à¤°à¤¤ à¤›à¤¾à¤µà¤£à¥€ à¤‰à¤ à¤¾à¤µ', directUrl: 'test.html?cat=mahatet2&test=22', tags: ['Bandura', 'à¤‰à¤ªà¤®à¤¾', 'Circle', '1857 Revolt'] },
+                    { id: 23, title: 'à¤¦à¥ˆà¤¨à¤¿à¤• à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 23', topics: 'à¤¸à¥à¤Ÿà¤°à¥à¤¨à¤¬à¤°à¥à¤— à¤¤à¥à¤°à¤¿à¤˜à¤Ÿà¤• à¤¬à¥à¤¦à¥à¤§à¤¿à¤®à¤¤à¥à¤¤à¤¾, à¤°à¥€à¤¤à¥€ à¤­à¥‚à¤¤à¤•à¤¾à¤³, Direct Indirect, à¤µà¤¿à¤·à¤®à¤­à¥à¤œ à¤¤à¥à¤°à¤¿à¤•à¥‹à¤£, à¤—à¥Œà¤¤à¤® à¤¬à¥à¤¦à¥à¤§ à¤œà¥à¤žà¤¾à¤¨à¤ªà¥à¤°à¤¾à¤ªà¥à¤¤à¥€ à¤¬à¥‹à¤§à¤—à¤¯à¤¾', directUrl: 'test.html?cat=mahatet2&test=23', tags: ['Sternberg', 'à¤•à¤¾à¤³', 'Triangles', 'Ancient India'] },
+                    { id: 24, title: 'à¤¦à¥ˆà¤¨à¤¿à¤• à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 24', topics: 'à¤Ÿà¥‰à¤°à¥‡à¤¨à¥à¤¸ à¤…à¤ªà¤¸à¤¾à¤°à¥€ à¤µà¤¿à¤šà¤¾à¤°, à¤µà¤¿à¤¶à¥‡à¤· à¤¸à¤‚à¤¯à¥à¤•à¥à¤¤ à¤µà¥à¤¯à¤‚à¤œà¤¨à¥‡ à¤•à¥à¤·-à¤œà¥à¤ž, Voice Was repaired, à¤¶à¤‚à¤•à¥‚ à¤˜à¤¨à¤«à¤³ 1/3 Ï€rÂ²h, 73 à¤µà¥€ à¤˜à¤Ÿà¤¨à¤¾à¤¦à¥à¤°à¥à¤¸à¥à¤¤à¥€ à¤ªà¤‚à¤šà¤¾à¤¯à¤¤ à¤°à¤¾à¤œ', directUrl: 'test.html?cat=mahatet2&test=24', tags: ['Creativity', 'à¤µà¤°à¥à¤£à¤µà¤¿à¤šà¤¾à¤°', 'Mensuration', 'Panchayat'] },
+                    { id: 25, title: 'à¤¦à¥ˆà¤¨à¤¿à¤• à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 25', topics: 'à¥²à¤Ÿà¤•à¤¿à¤¨à¥à¤¸à¤¨ à¤¸à¥à¤®à¥ƒà¤¤à¥€ à¤ªà¥à¤°à¤¾à¤°à¥‚à¤ª, à¤¸à¤šà¥à¤šà¤°à¤¿à¤¤à¥à¤° à¤µà¥à¤¯à¤‚à¤œà¤¨ à¤¸à¤‚à¤§à¥€, Spelling Accommodate, 1 à¤¤à¥‡ 50 à¤®à¥‚à¤³ à¤¸à¤‚à¤–à¥à¤¯à¤¾ 15, à¤¸à¤¿à¤‚à¤§à¥‚ à¤¸à¤‚à¤¸à¥à¤•à¥ƒà¤¤à¥€ à¤µà¤¿à¤¶à¤¾à¤² à¤¸à¥à¤¨à¤¾à¤¨à¤—à¥ƒà¤¹', directUrl: 'test.html?cat=mahatet2&test=25', tags: ['Memory', 'à¤¸à¤‚à¤§à¥€', 'Spelling', 'Harappa'] },
+                    { id: 26, title: 'à¤¦à¥ˆà¤¨à¤¿à¤• à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 26', topics: 'à¤µà¥à¤¯à¤—à¥‹à¤¤à¥à¤¸à¥à¤•à¥€ MKO à¤®à¤šà¤¾à¤¨, à¤¦à¥ƒà¤·à¥à¤Ÿà¤¾à¤‚à¤¤ à¤…à¤²à¤‚à¤•à¤¾à¤°, Complex sentences, à¤˜à¤¾à¤¤à¤¾à¤‚à¤• 2â· 128, à¤•à¤³à¤¸à¥‚à¤¬à¤¾à¤ˆ 1646 à¤®à¥€, GST 1 à¤œà¥à¤²à¥ˆ 2017', directUrl: 'test.html?cat=mahatet2&test=26', tags: ['Vygotsky', 'à¤¦à¥ƒà¤·à¥à¤Ÿà¤¾à¤‚à¤¤', 'Exponents', 'Geography'] },
+                    { id: 27, title: 'à¤¦à¥ˆà¤¨à¤¿à¤• à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 27', topics: 'à¤¡à¥…à¤¨à¤¿à¤¯à¤² à¤—à¥‹à¤²à¤®à¤¨ à¤­à¤¾à¤µà¤¨à¤¿à¤• EQ, à¤¨à¤Ÿà¤¸à¤®à¥à¤°à¤¾à¤Ÿ à¤•à¥à¤¸à¥à¤®à¤¾à¤—à¥à¤°à¤œ, Future Perfect, à¤ªà¥à¤°à¤¤à¤¿à¤§à¥à¤µà¤¨à¥€ Echo 17.2 à¤®à¥€, à¤¸à¤®à¥à¤°à¤¾à¤Ÿ à¤…à¤¶à¥‹à¤• à¤¬à¥à¤°à¤¾à¤¹à¥à¤®à¥€ à¤²à¤¿à¤ªà¥€', directUrl: 'test.html?cat=mahatet2&test=27', tags: ['Emotional EQ', 'à¤¨à¤¾à¤Ÿà¤•', 'Physics Echo', 'Ashoka'] },
+                    { id: 28, title: 'à¤¦à¥ˆà¤¨à¤¿à¤• à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 28', topics: 'à¤¬à¤¿à¤— à¤«à¤¾à¤‡à¤µà¥à¤¹ OCEAN à¤µà¥à¤¯à¤•à¥à¤¤à¤¿à¤®à¤¤à¥à¤¤à¥à¤µ, à¤ªà¤‚à¤šà¤µà¤Ÿà¥€ à¤¦à¥à¤µà¤¿à¤—à¥, Vocabulary Alacrity, à¤µà¥ƒà¤¤à¥à¤¤à¤šà¤¿à¤¤à¥€ à¤µà¤•à¥à¤°à¤ªà¥ƒà¤·à¥à¤  2Ï€rh, à¤•à¤¾à¤à¤—à¥à¤°à¥‡à¤¸ 1885 à¤µà¥à¤¯à¥‹à¤®à¥‡à¤¶à¤šà¤‚à¤¦à¥à¤°', directUrl: 'test.html?cat=mahatet2&test=28', tags: ['Personality', 'à¤¦à¥à¤µà¤¿à¤—à¥', 'Cylinder', 'Congress 1885'] },
+                    { id: 29, title: 'à¤¦à¥ˆà¤¨à¤¿à¤• à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 29', topics: 'à¤¡à¤¿à¤¸à¤•à¥…à¤²à¥à¤•à¥à¤¯à¥à¤²à¤¿à¤¯à¤¾ à¤—à¤£à¤¿à¤¤ à¤µà¤¿à¤•à¤¾à¤°, à¤…à¤³à¤µà¤¾à¤µà¤°à¤šà¥‡ à¤ªà¤¾à¤£à¥€, à¤†à¤—à¤—à¤¾à¤¡à¥€ à¤µà¥‡à¤— 72 à¤•à¤¿à¤®à¥€/à¤¤à¤¾à¤¸ (20 à¤®à¥€/à¤¸à¥‡), à¤¬à¥…à¤°à¥‹à¤®à¥€à¤Ÿà¤° à¤¹à¤µà¥‡à¤šà¤¾ à¤¦à¤¾à¤¬, à¤¸à¥à¤µà¤°à¤¾à¤œà¥à¤¯ à¤ªà¤•à¥à¤· 1923', directUrl: 'test.html?cat=mahatet2&test=29', tags: ['Dyscalculia', 'à¤µà¤¾à¤•à¥à¤ªà¥à¤°à¤šà¤¾à¤°', 'Speed Math', 'Swaraj Party'] },
+                    { id: 30, title: 'à¤¸à¤‚à¤ªà¥‚à¤°à¥à¤£ à¤¸à¤°à¤¾à¤µ à¤®à¤¹à¤¾ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 30', topics: 'NEP 2020 (5+3+3+4), à¤‰à¤¤à¥à¤ªà¥à¤°à¥‡à¤•à¥à¤·à¤¾ à¤…à¤²à¤‚à¤•à¤¾à¤°, TBLT Task Based, à¤Ÿà¤‚à¤—à¤¸à¥à¤Ÿà¤¨ à¤µà¤¿à¤œà¥‡à¤šà¤¾ à¤¦à¤¿à¤µà¤¾, à¤ªà¥à¤°à¤¤à¤¿à¤¸à¤°à¤•à¤¾à¤° à¤•à¥à¤°à¤¾à¤‚à¤¤à¤¿à¤¸à¤¿à¤‚à¤¹ à¤¨à¤¾à¤¨à¤¾ à¤ªà¤¾à¤Ÿà¥€à¤² à¤¸à¤¾à¤¤à¤¾à¤°à¤¾', directUrl: 'test.html?cat=mahatet2&test=30', tags: ['Master Mock', 'NEP 2020', 'Physics Light', 'Pratisarkar'] }
                 ]
             },
             'ctet1': {
                 id: 'ctet1',
                 title: 'CTET Paper 1 मालिका (Central TET - Primary)',
                 subtext: 'Class 1 to 5 NCERT Curriculum (CDP, Maths, EVS & Language Pedagogy)',
-                badgeText: '20 Tests Live',
+                badgeText: '30 Tests Live',
                 badgeClass: 'bg-orange-100 text-orange-800 border-orange-200',
                 themeBarClass: 'bg-orange-600',
                 borderClass: 'border-orange-200',
@@ -310,14 +330,24 @@
                     { id: 17, title: 'केंद्रीय सराव टेस्ट 17', topics: 'Gifted learners enrichment challenges, Time interval calculation 150 min, Sloth 17-hour tree sleeper, Top-down listening', directUrl: 'test.html?cat=ctet1&test=17', tags: ['Gifted', 'Time Math', 'Sloth', 'Listening'] },
                     { id: 18, title: 'केंद्रीय सराव टेस्ट 18', topics: 'Family primary socialization agent, Letter H symmetry lines, Amrita Devi Bishnoi Khejadi trees, Authentic real texts', directUrl: 'test.html?cat=ctet1&test=18', tags: ['Socialization', 'Symmetry', 'Bishnoi', 'Authentic Texts'] },
                     { id: 19, title: 'केंद्रीय सराव टेस्ट 19', topics: 'Standardized tests limitations, Fractions division (1/2 ÷ 1/8 = 4), Mid-Day Meal nutritious meals, Grammar in context', directUrl: 'test.html?cat=ctet1&test=19', tags: ['Assessment', 'Division', 'Mid-Day Meal', 'Grammar'] },
-                    { id: 20, title: 'केंद्रीय सराव महा टेस्ट 20', topics: 'Progressive child-centered researchers, Mathematization of thinking, Integrated EVS, Natural language acquisition', directUrl: 'test.html?cat=ctet1&test=20', tags: ['Master Mock', 'Mathematization', 'Integrated EVS', 'Acquisition'] }
+                    { id: 20, title: 'केंद्रीय सराव महा टेस्ट 20', topics: 'Progressive child-centered researchers, Mathematization of thinking, Integrated EVS, Natural language acquisition', directUrl: 'test.html?cat=ctet1&test=20', tags: ['Master Mock', 'Mathematization', 'Integrated EVS', 'Acquisition'] },
+                    { id: 21, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 21', topics: 'Cephalocaudal Principle, Centration Piaget, Leh Ladakh flat mud roofs, Cheraw bamboo dance Mizoram, Krashen i+1', directUrl: 'test.html?cat=ctet1&test=21', tags: ['Cephalocaudal', 'Centration', 'Ladakh Houses', 'Cheraw Dance'] },
+                    { id: 22, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 22', topics: 'Object Permanence 0-2 yrs, Bodily-Kinesthetic Gardner, Al-Biruni stepwells Uzbekistan, Tailorbird nest sewing, BODMAS', directUrl: 'test.html?cat=ctet1&test=22', tags: ['Object Perm', 'Kinesthetic', 'Al-Biruni', 'Tailorbird'] },
+                    { id: 23, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 23', topics: 'Vygotskian Scaffolding, Heinz Dilemma Kohlberg, Kuduk tribal language Jharkhand, Anita Khushwaha bee-keeping Bihar, 4 venomous snakes', directUrl: 'test.html?cat=ctet1&test=23', tags: ['Scaffolding', 'Heinz Dilemma', 'Kuduk', 'Bee-keeping'] },
+                    { id: 24, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 24', topics: 'Language as cultural tool Vygotsky, ADHD task chunking, Braille 6 raised dots, Golconda fort Hyderabad, Cube 6 faces 12 edges', directUrl: 'test.html?cat=ctet1&test=24', tags: ['Cultural Tools', 'ADHD', 'Braille 6 dots', 'Golconda'] },
+                    { id: 25, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 25', topics: 'Gifted learner curiosity, Portfolio longitudinal assessment, Ronald Ross 1902 malaria parasite, Sagarmatha Everest Nepal, Abacus place value', directUrl: 'test.html?cat=ctet1&test=25', tags: ['Gifted', 'Portfolio', 'Ronald Ross', 'Everest'] },
+                    { id: 26, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 26', topics: 'Bronfenbrenner Microsystem, MKO Vygotsky, Tangram 7 pieces, Anemia Amla Spinach Jaggery, Jim Corbett Uttarakhand', directUrl: 'test.html?cat=ctet1&test=26', tags: ['Bronfenbrenner', 'MKO', 'Tangram', 'Anemia Diet'] },
+                    { id: 27, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 27', topics: 'Intrapersonal Gardner, Piaget Schemas, Ladakh cold desert rain shadow, Tiger 6x night vision, Fractions sum 11/12', directUrl: 'test.html?cat=ctet1&test=27', tags: ['Intrapersonal', 'Schemas', 'Ladakh Cold', 'Tiger Vision'] },
+                    { id: 28, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 28', topics: 'Proximodistal motor trend, Pre-operational Egocentrism, Pashmina Changpa goats 5000m, Sloth 17-hr sleep, Only even prime 2', directUrl: 'test.html?cat=ctet1&test=28', tags: ['Proximodistal', 'Egocentrism', 'Pashmina', 'Sloth'] },
+                    { id: 29, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 29', topics: 'Inclusive school philosophy, Metacognition self-monitoring, Bishnoi 1730 Khejadi sacrifice, Mid-Day Meal 2001 mandate, Print-rich classroom', directUrl: 'test.html?cat=ctet1&test=29', tags: ['Inclusion', 'Metacognition', 'Bishnoi', 'Mid-Day Meal'] },
+                    { id: 30, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤®à¤¹à¤¾ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 30', topics: 'NEP 2020 Foundational Literacy FLN, 6 NCERT EVS themes, Rainwater harvesting aquifers, LSRW sequence, Personification', directUrl: 'test.html?cat=ctet1&test=30', tags: ['Master Mock', 'FLN NEP', 'EVS Themes', 'Rainwater'] }
                 ]
             },
             'ctet2': {
                 id: 'ctet2',
                 title: 'CTET Paper 2 मालिका (Central TET - Upper Primary)',
                 subtext: 'Class 6 to 8 NCERT Pattern (CDP, Science & Maths / Social Science)',
-                badgeText: '20 Tests Live',
+                badgeText: '30 Tests Live',
                 badgeClass: 'bg-purple-100 text-purple-800 border-purple-200',
                 themeBarClass: 'bg-purple-600',
                 borderClass: 'border-purple-200',
@@ -344,7 +374,17 @@
                     { id: 17, title: 'केंद्रीय सराव टेस्ट 17', topics: 'Self-Determination Autonomy & Competence, Salt dissolution physical change, Drawing Ace probability 1/13, Jallianwala Bagh 1919 Dyer, Schema Theory', directUrl: 'test.html?cat=ctet2&test=17', tags: ['Autonomy', 'Physical Change', 'Cards Probability', 'Jallianwala'] },
                     { id: 18, title: 'केंद्रीय सराव टेस्ट 18', topics: 'High-order counterfactual questioning, Concave lens Myopia correction, Quadrilateral interior angles 360°, Irish Constitution DPSPs, Idioms', directUrl: 'test.html?cat=ctet2&test=18', tags: ['HOTS', 'Myopia', 'Quadrilateral', 'DPSP'] },
                     { id: 19, title: 'केंद्रीय सराव टेस्ट 19', topics: 'Descriptive actionable feedback, Non-renewable coal energy, Algebraic identity x²+1/x²=11, Sant Tukaram Maharaj Abhangas, Authentic task assessment', directUrl: 'test.html?cat=ctet2&test=19', tags: ['Feedback', 'Coal Energy', 'Algebra', 'Tukaram Maharaj'] },
-                    { id: 20, title: 'केंद्रीय सराव महा टेस्ट 20', topics: 'Constructivist collaborative inquiry, Upper-primary scientific temper, Arithmetic to algebra transition, Critical democratic citizenship, Advanced rhetoric', directUrl: 'test.html?cat=ctet2&test=20', tags: ['Master Mock', 'Scientific Temper', 'Algebra Transition', 'Citizenship'] }
+                    { id: 20, title: 'केंद्रीय सराव महा टेस्ट 20', topics: 'Constructivist collaborative inquiry, Upper-primary scientific temper, Arithmetic to algebra transition, Critical democratic citizenship, Advanced rhetoric', directUrl: 'test.html?cat=ctet2&test=20', tags: ['Master Mock', 'Scientific Temper', 'Algebra Transition', 'Citizenship'] },
+                    { id: 21, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 21', topics: 'Erikson Identity vs Role Confusion, Hypothetico-deductive reasoning, Static friction maximum, Liquid non-metal Bromine, Alauddin Khalji price control', directUrl: 'test.html?cat=ctet2&test=21', tags: ['Erikson', 'Formal Ops', 'Friction', 'Khalji'] },
+                    { id: 22, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 22', topics: 'Kohlberg Stage 6 Universal Ethics, Pythagorean triplet 5-12-13, Sound pitch frequency Hz, Zinc + HCl Hydrogen pop, Dalhousie Doctrine of Lapse', directUrl: 'test.html?cat=ctet2&test=22', tags: ['Universal Ethics', 'Pythagoras', 'Sound Pitch', 'Doctrine Lapse'] },
+                    { id: 23, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 23', topics: 'Metacognitive self-regulation, Pascal N/mÂ² pressure, Rusting Oxygen + Moisture, Chanakya Arthashastra, Swaran Singh Committee 51A', directUrl: 'test.html?cat=ctet2&test=23', tags: ['Metacognition', 'Pressure Pascal', 'Rusting', 'Arthashastra'] },
+                    { id: 24, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 24', topics: 'Naturalistic intelligence Gardner, Spiral Curriculum Bruner, Angle of incidence equals reflection, Mohenjo-daro Dancing Girl, RTI Act 2005', directUrl: 'test.html?cat=ctet2&test=24', tags: ['Naturalistic', 'Spiral Curric', 'Light Reflection', 'RTI 2005'] },
+                    { id: 25, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 25', topics: 'Rogers Unconditional Positive Regard, Inverse proportion 24 hours, Work done zero at 90Â°, Buland Darwaza Akbar, Arya Samaj 1875 Dayanand', directUrl: 'test.html?cat=ctet2&test=25', tags: ['Rogers', 'Proportion', 'Work Done', 'Arya Samaj'] },
+                    { id: 26, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 26', topics: 'Adolescent idealism Piaget, Twice-exceptional 2e learners, Cuboid surface area 2(lb+bh+hl), Echo 17.2m, Troposphere weather sphere', directUrl: 'test.html?cat=ctet2&test=26', tags: ['Idealism', '2e Learners', 'Mensuration', 'Troposphere'] },
+                    { id: 27, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 27', topics: 'Carol Gilligan Ethics of Care, Quadratic factors (x+3)(x+4), Neutralization acid+base, 1907 Surat split Congress, 86th Amendment Article 21A', directUrl: 'test.html?cat=ctet2&test=27', tags: ['Gilligan', 'Algebra', 'Neutralization', 'Surat Split'] },
+                    { id: 28, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 28', topics: 'Social vs Cognitive constructivism, Compound interest formula, Die prime 1/2, Archimedes buoyant force, Akbar Din-i-Ilahi 1582, Brahmo Samaj', directUrl: 'test.html?cat=ctet2&test=28', tags: ['Constructivism', 'Compound Int', 'Archimedes', 'Brahmo Samaj'] },
+                    { id: 29, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 29', topics: 'ZPD challenge zone, Kolb experiential learning cycle, Ohm law V=IR current halves, Pancreatic Insulin glucose, Quit India 1942 Gowalia Tank', directUrl: 'test.html?cat=ctet2&test=29', tags: ['ZPD', 'Kolb Cycle', 'Ohms Law', 'Quit India 1942'] },
+                    { id: 30, title: 'à¤•à¥‡à¤‚à¤¦à¥à¤°à¥€à¤¯ à¤¸à¤°à¤¾à¤µ à¤®à¤¹à¤¾ à¤Ÿà¥‡à¤¸à¥à¤Ÿ 30', topics: 'NEP 2020 conceptual mastery, Convex polygon exterior angles 360Â°, Galvanization zinc coating, Dr Ambedkar Drafting Committee, Jallianwala Bagh 1919', directUrl: 'test.html?cat=ctet2&test=30', tags: ['Master Mock', 'NEP 2020', 'Ambedkar', 'Jallianwala'] }
                 ]
             }
         };
@@ -398,7 +438,7 @@
                             </div>
                         </div>
                         <span class="${cat.badgeClass} text-xs font-bold px-3 py-1 rounded-lg border shrink-0 self-start sm:self-auto">
-                            ${filteredTests.length} / 20 Tests
+                            ${filteredTests.length} / 30 Tests
                         </span>
                     </div>
                 `;
