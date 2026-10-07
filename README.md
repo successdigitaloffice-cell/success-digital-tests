@@ -9,6 +9,7 @@
 
 ## 📚 उपलब्ध चाचण्या (Active Tests)
 - [TET Paper 1 - सराव टेस्ट 01](success_digital_tet_paper_1_test_01.html)
+- [TET Paper 1 - सराव टेस्ट 02](success_digital_tet_paper_1_test_02.html)
 
 ---
 
