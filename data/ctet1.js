@@ -1,4 +1,4 @@
-﻿// Success Digital - CTET Paper 1 Question Bank (Primary - Class 1 to 5)
+// Success Digital - CTET Paper 1 Question Bank (Primary - Class 1 to 5)
 // EXACTLY 20 Unique, Non-Repeating Questions per Test (Tests 1 to 20 = 400 Questions Total)
 // Zero mentions of any future year
 
@@ -659,7 +659,7 @@ window.allTestsBank['ctet1'][29] = [
     { subject: "Language", type: "Grammar", tagText: "Adjectives", question: "Choose the correct comparative form: 'This route is ____ than the highway.'", options: ["safer", "more safer", "safest", "most safe"], answer: 0, explanation: "The comparative form of 'safe' is 'safer' (double comparative 'more safer' is grammatically incorrect)." },
     { subject: "Language", type: "Vocabulary", tagText: "Compound Words", question: "Which of the following is a compound word formed by joining two distinct words?", options: ["Sunlight (Sun + Light)", "Quickly", "Teacher", "Unhappy"], answer: 0, explanation: "'Sunlight' is a compound noun formed by merging the two independent base words 'Sun' and 'Light'." },
     { subject: "Language", type: "Grammar", tagText: "Punctuation", question: "Which punctuation mark is used to denote direct speech within a sentence?", options: ["Quotation marks / Inverted commas (अवतरण चिन्हे)", "Semicolon", "Hyphen", "Parentheses"], answer: 0, explanation: "Quotation marks (\"...\") enclose the exact words spoken by a speaker in direct dialogue." },
-    { subject: "Language", type: "Pedagogy", tagText: "Formative Feedback", question: "Which teacher comment provides constructive formative feedback on a young child's story draft?", options: [\"'I loved your exciting dragon description! Can we add what happened after it flew into the cave?'\", \"'Very bad spelling, rewrite completely.'\", \"'3 out of 10.'\", \"'Your handwriting is unacceptable.'\"], answer: 0, explanation: "Constructive feedback acknowledges creative effort and scaffolds the next concrete communicative improvement." }
+    { subject: "Language", type: "Pedagogy", tagText: "Formative Feedback", question: "Which teacher comment provides constructive formative feedback on a young child's story draft?", options: ["'I loved your exciting dragon description! Can we add what happened after it flew into the cave?'", "'Very bad spelling, rewrite completely.'", "'3 out of 10.'", "'Your handwriting is unacceptable.'"], answer: 0, explanation: "Constructive feedback acknowledges creative effort and scaffolds the next concrete communicative improvement." }
 ];
 
 window.allTestsBank['ctet1'][30] = [
